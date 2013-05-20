@@ -96,9 +96,11 @@
                                     <includes>
                                         <include>**/*.xml</include>
                                         <include>**/*.xslt</include>
+                                        <include>**/*.css</include>
                                         <include>**/*.htm</include>
                                         <include>**/*.jpg</include>
                                         <include>**/*.gif</include>
+                                        <include>**/*.cct</include>
                                         <include>**/*.properties</include>
                                     </includes>
                                 </resource>

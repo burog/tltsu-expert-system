@@ -9,7 +9,6 @@ import tltsu.expertsystem.utils.Utils;
 
 import java.io.*;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
@@ -32,7 +31,7 @@ public abstract class AbstractUser implements Serializable
 
     public AbstractUser(String pathToXml, String name)
     {
-        userName = name; // TODO сделать какойнитьбудь поиск по уже существующим пользователям
+        userName = name;
         eduStep = 0;
         chapters = new LinkedList<Integer>();
         levels = new LinkedList<Integer>();
@@ -59,9 +58,9 @@ public abstract class AbstractUser implements Serializable
 
     public abstract void changeEduState(String state);
 
-    public abstract Event calculateEduState(); //TODO придумать умную вычислялку состояния для юзера
+    public abstract Event calculateEduState();
 
-    public abstract boolean isEduComplete(); //TODO придумать умную вычислялку состояния для юзера
+    public abstract boolean isEduComplete();
 
 
     public void processChapterTestResult(ChapterTest chapterTest)
@@ -116,9 +115,9 @@ public abstract class AbstractUser implements Serializable
         chapterTest = new ChapterTest(getCourse(), chapters.getLast(), levels.getLast());
         while (!chapterTest.isTestComplete()) // ходим по всем частям
         {
-            chapterTest.nextPart();
             chapterTest.testCurrPart();      // в testCurrPart ходим по вопросам пока не ответим. там же считаем результат.
-            
+            chapterTest.nextPart();
+
             // SHOW error in userAnswer if exist
 //            chapterTest.mistakesWorking();
         }
@@ -171,7 +170,7 @@ public abstract class AbstractUser implements Serializable
 
     public String getInfo()
     {
-        return "Name-"+userName+" Chapters:"+chapters +" Levels:" + levels + "  Results"+ chapterResults + " Course" + course +
+        return "Name-"+userName+" Chapters:"+chapters +" Levels:" + levels + "  Results"+ chapterResults + " Course " + course +
                " Edu step"+ eduStep ;
     }
 

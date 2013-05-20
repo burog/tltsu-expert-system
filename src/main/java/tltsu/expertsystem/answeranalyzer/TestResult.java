@@ -29,6 +29,6 @@ public class TestResult // TODO migrate this class to enum ?
 
     public String toString ()
     {
-        return "Result"+result+" Error: "+error;
+        return "Result: "+result + (error.isEmpty()? "" : " Error: "+error);
     }
 }

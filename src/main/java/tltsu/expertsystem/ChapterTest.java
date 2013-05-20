@@ -70,7 +70,7 @@ public class ChapterTest implements Serializable
 
     public boolean isTestComplete()
     {         // getCurrentPart()+1  becouse currentParn begining with 0.
-        return getCurrentPart()+1 >= chapterTestConfig.getCountOfParts() /*|| или 2 ответа зафейлины или другие "ништянки"*/;
+        return getCurrentPart() >= chapterTestConfig.getCountOfParts() /*|| или 2 ответа зафейлины или другие "ништянки"*/;
     }
 
     private void mistakesWorking(TestResult questionResult)

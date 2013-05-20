@@ -5,6 +5,7 @@
 <entry key="MAX_CHAPTER">13</entry>
 <entry key="NORMAL_TEACH_TIME">33</entry>
 <entry key="NORMAL_TEST_TIME">25</entry>
-<entry key="MAX_NUMBER_QUESTION_IN_GROUP_STR">7</entry>
+<entry key="MAX_NUMBER_QUESTION_IN_GROUP_STR">3</entry>
 <entry key="TEACHER_NAME">D.A.MENDELEEV</entry>
+<entry key="COURSE">diff_?_?.htm</entry>
 </properties>

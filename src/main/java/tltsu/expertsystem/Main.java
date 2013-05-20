@@ -25,8 +25,6 @@ public class Main
 //    static String events = "C:\\Users\\fadeev\\IdeaProjects\\akerfsm\\es\\src\\generate\\configs\\events.xml";
 //    static String fsm = "C:\\Users\\fadeev\\IdeaProjects\\akerfsm\\es\\src\\generate\\configs\\FSM.xml";
 
-    static private final int INDEX_NAME = 0;
-    static private final int INDEX_NEED_CREATE = 1;
 
     static
     {
@@ -48,17 +46,26 @@ public class Main
 //                String javaSource = BuilderFSM.buildFsm(args[0], args[1], args[2], PACKAGE_NAME, "fsm0_0");
 //                System.out.println(javaSource);
 
-//        prepareAndRunEDU();
 
-        TestQuestion question = new InputQuestion("Найти производную функция, f(x)= (4-4*x)*4*x", "");
-        question.showLecture();
+        EduSystem.prepareAndRunEDU();
+//
+//        TestQuestion question = new InputQuestion("Найти производную функция, f(x)= (4-4*x)*4*x", "");
+        /*ConfigurationOfChapterTest cct = ConfigurationOfChapterTest.load("diff_?_?.htm",0,1);
+        for (int i = 0; i <= 1; i++)
+        {
+            for (int j = 0;j <= 2; j++)
+            {
+                ConfigurationOfChapterTest.Pair pair = cct.getQuestionWithAnswer(i, j);
+                TestQuestion question = new InputQuestion(pair.question, pair.answer);
+                question.showLecture();
+                log.debug(question.getTestResult());
+            }
+        }*/
 
-        TestResult questionResult = AnalyzeAnswer.analyzeFormula("2*x+y^2", "2^y+2*x");
-        log.info(questionResult);
-
-
-        new SimpleLecture("Correction of mistakes", questionResult.error).showLecture();
-        
+//        TestResult questionResult = AnalyzeAnswer.analyzeFormula("2*x+y^2", "2^y+2*x");
+//        log.info(questionResult);
+//        new SimpleLecture("Correction of mistakes", questionResult.error).showLecture();
+//
 //        ConfigurationOfChapterTest configurationOfChapterTest = ConfigurationOfChapterTest.load("charph_?_?", 0, 1);
 //        log.info(configurationOfChapterTest.getQuestionWithAnswer(0, 0));
 //        log.info(configurationOfChapterTest.getQuestionWithAnswer(0, 1));
@@ -78,23 +85,18 @@ public class Main
 //        log.info(configurationOfChapterTest.getQuestionWithAnswer(3, 1));
 
 
-//        configurationOfChapterTest.addPair("Решите уравнение: \nу=2*8+4", "20", 0);
-//        configurationOfChapterTest.addPair("Решите уравнение: \nу=2*8+5", "21", 0);
-//
-//        configurationOfChapterTest.addPair("Решите уравнение: \nу=2*8+6", "22", 1);
-//        configurationOfChapterTest.addPair("Решите уравнение: \nу=2*8+7", "23", 1);
-//        configurationOfChapterTest.addPair("Решите уравнение: \nу=2*8+8", "24", 1);
-//
-//        configurationOfChapterTest.addPair("Решите уравнение: \nу=x*8+2*x", "10*x", 2);
-//        configurationOfChapterTest.addPair("Решите уравнение: \nу=x*8+x+x+x+x", "12*x", 2);
-//        configurationOfChapterTest.addPair("Решите уравнение: \nу=x*8+x+x", "10*x", 2);
-//        configurationOfChapterTest.addPair("Решите уравнение: \nу=x*3+9*x", "12*x", 2);
-//        configurationOfChapterTest.addPair("Решите уравнение: \nу=x*6+4*x", "10*x", 2);
-//
-//        configurationOfChapterTest.addPair("Решите уравнение Чему равно х: x=y*3+9*y", "12*y", 3);
-//        configurationOfChapterTest.addPair("Решите уравнение Чему равно х: \nx=y*6+4*y", "10*y", 3);
+        /*ConfigurationOfChapterTest configurationOfChapterTest = new ConfigurationOfChapterTest();
 
-//        configurationOfChapterTest.save("charph_?_?", 0, 1);
+        configurationOfChapterTest.addPair("Разложите многочлен на множители: \nx^3 + x^2", "x^2 * (x+1)", 0);
+        configurationOfChapterTest.addPair("Разложите многочлен на множители: \n4*x^3+6*x^2 ", "2*x^2 * ( 2*x+3 ) ", 0);
+        configurationOfChapterTest.addPair("Разложите многочлен на множители: \n3x+6y", "3*(x+2*y)", 0);
+
+        configurationOfChapterTest.addPair("Найдите производную функции : \nf(x)=2*cos(x) - 4*x^2", "-2*sin(x) - 8 *x", 1);
+        configurationOfChapterTest.addPair("Найдите производную функции : \nf(x)=x^3 + 3*x^2 - 72*x + 90", "3*x^2 + 6*x -72", 1);
+        configurationOfChapterTest.addPair("Найдите производную функции : \nf(x)=-3/x", "2/x^2", 1);
+
+        configurationOfChapterTest.save("diff_?_?.ccf", 0, 1);*/
+
 
 
 
@@ -105,55 +107,7 @@ public class Main
 
 
 
-    static void prepareAndRunEDU()
-    {
-        log.trace("Now start EDU System");
-        AbstractQuestion needCreateUser = new StartWindow();
-        needCreateUser.showLecture();
-        AbstractUser user;
 
-        String[] userInput = needCreateUser.getUserAnswer().split("#");
-        log.trace("witch user and are need create user? " + needCreateUser.getUserAnswer());
-        try
-        {
-            user = Utils.createOrLoadUser(userInput[INDEX_NAME], userInput[INDEX_NEED_CREATE]);
-        }
-        catch (SerializeException e)
-        {
-            log.error("Error while create/load user, is need create "+userInput[INDEX_NEED_CREATE] + " with name = "+userInput[INDEX_NAME],e);
-            AbstractDialog error = new SimpleLecture("Error", e.getMessage()+"\nEducation is over");
-            error.setResizable(false);
-            error.showLecture();
-            return;
-        }
-
-
-        try
-        {
-            EduSystem.runEdu(user);
-        }
-        catch (Exception e)
-        {
-            log.error("Some error.", e);
-        }
-        finally
-        {
-            log.info("Finally try save user");
-
-            try
-            {
-                user.save();
-            }
-            catch (SerializeException e)
-            {
-                log.error("Can't save user");
-                AbstractDialog error = new SimpleLecture("Error", "Can't save user.");
-                error.setResizable(false);
-                error.showLecture();
-            }
-        }
-
-    }
 
     static void testSimpleFsm(Fsm a)
     {
@@ -205,15 +159,7 @@ public class Main
 
     }
 
-    public static void testLogEduProperties()
-    {
-        log.error("MAX_CHAPTER int ="+EduProperties.MAX_CHAPTER);
-        log.error("TEACHER_NAME int ="+EduProperties.TEACHER_NAME);
-        log.error("MAX_LEVEL int ="+EduProperties.MAX_LEVEL);
-        log.error("NORMAL_TEST_TIME int ="+EduProperties.NORMAL_TEST_TIME);
-        log.error("NORMAL_TEACH_TIME int ="+EduProperties.NORMAL_TEACH_TIME);
-        log.error("MAX_NUMBER_QUESTION_IN_GROUP int ="+EduProperties.MAX_NUMBER_QUESTION_IN_GROUP);
-    }
+
 
     @Deprecated
     static void testUser (AbstractUser user)

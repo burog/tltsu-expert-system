@@ -5,7 +5,6 @@ import tltsu.expertsystem.utils.SerializeException;
 import tltsu.expertsystem.utils.Utils;
 
 import java.io.*;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -56,10 +55,12 @@ public class ConfigurationOfChapterTest implements Serializable
         {
 //            URL path = Utils.getUrlByPattern(course, level, chapter);
             String path = course.substring(0, course.indexOf("."));
-            path = path.replaceFirst("\\?", String.valueOf(level)).replaceFirst("\\?", String.valueOf(chapter)) + ".cct";
+//            path = path.replaceFirst("\\?", String.valueOf(level)).replaceFirst("\\?", String.valueOf(chapter)) + ".cct";
 
-            FileInputStream fis = new FileInputStream(new File(path));
-            ObjectInputStream oin = new ObjectInputStream(fis);
+
+            InputStream is = Utils.getStreamByPattern("material/test/"+path+".cct", String.valueOf(level), String.valueOf(chapter));
+
+            ObjectInputStream oin = new ObjectInputStream(is);
             return (ConfigurationOfChapterTest) oin.readObject();
         }
         catch (Exception e)

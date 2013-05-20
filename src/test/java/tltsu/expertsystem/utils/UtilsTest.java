@@ -17,25 +17,25 @@ public class UtilsTest  extends Assert
         BasicConfigurator.configure();
     }
 
-    @Test
-    public void testGetUrlByPattern() throws IOException
-    {
-        String pattern = "material/charph_?_?.htm";
-        String chapter = "0";
-        String level = "1";
-        URL url = Utils.getUrlByPattern(pattern, chapter, level);
-
-        int chapterINT = 0;
-        int levelINT = 1;
-        URL url2 = Utils.getUrlByPattern(pattern, chapterINT, levelINT);
-
-        String etalonPath = "material/charph_0_1.htm";
-        URL etalonURL = Main.class.getResource(etalonPath);
-
-        assertEquals(etalonURL.toExternalForm(), url.toExternalForm());
-        assertEquals(etalonURL.toExternalForm(), url2.toExternalForm());
-
-    }
+//    @Test
+//    public void testGetUrlByPattern() throws IOException
+//    {
+//        String pattern = "material/charph_?_?.htm";
+//        String chapter = "0";
+//        String level = "1";
+//        URL url = Utils.getUrlByPattern(pattern, chapter, level);
+//
+//        int chapterINT = 0;
+//        int levelINT = 1;
+//        URL url2 = Utils.getUrlByPattern(pattern, chapterINT, levelINT);
+//
+//        String etalonPath = "material/charph_0_1.htm";
+//        URL etalonURL = Main.class.getResource(etalonPath);
+//
+//        assertEquals(etalonURL.toExternalForm(), url.toExternalForm());
+//        assertEquals(etalonURL.toExternalForm(), url2.toExternalForm());
+//
+//    }
 
 
     @Test

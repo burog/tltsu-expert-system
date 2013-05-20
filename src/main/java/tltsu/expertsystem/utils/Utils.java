@@ -3,9 +3,9 @@ package tltsu.expertsystem.utils;
 import org.apache.log4j.Logger;
 import tltsu.expertsystem.*;
 import tltsu.expertsystem.AbstractUser;
-import tltsu.expertsystem.MiddleUser;
+import tltsu.expertsystem.User;
 
-import java.io.*;
+import java.io.InputStream;
 import java.net.URL;
 import java.util.LinkedList;
 import java.util.List;
@@ -44,7 +44,7 @@ public class Utils
         if (needCreate)
         {
             log.debug("your user "+name+"are CREATED!");
-            user = new MiddleUser(EduProperties.COURSE, name);
+            user = new User(EduProperties.COURSE, name);
         }
         else
         {
@@ -71,18 +71,37 @@ public class Utils
         }
         if (resultPath == null)
             throw new IllegalArgumentException("Argument pattern course can't be null.");
+        log.trace("resultPath = "+resultPath);
         return Main.class.getResource(resultPath);
     }
 
+    public static InputStream getStreamByPattern(String patternCourse, String... args)
+    {
+        String resultPath = patternCourse;
+        for (String arg : args)
+        {
+            resultPath = resultPath.replaceFirst("\\?", arg);
+        }
+        if (resultPath == null)
+            throw new IllegalArgumentException("Argument pattern course can't be null.");
+        log.trace("resultPath = "+resultPath);
+        return Main.class.getResourceAsStream(resultPath);
+    }
+
     /**
-     * @See getUrlByPattern
+     * See {@link #getUrlByPattern(String, String[]) getUrlByPattern}
      */
     public static URL getUrlByPattern(String patternCourse, int... args)
     {
         return getUrlByPattern(patternCourse, convert(args));
     }
-    
-    public static String[] convert(int[] converted)
+
+    /**
+     * Convert int array to string array.
+     * @param converted array of int numbers
+     * @return array of numbers in text representation
+     */
+    static String[] convert(int[] converted)
     {
         String[] result = new String[converted.length];
         int i = 0;
@@ -93,13 +112,13 @@ public class Utils
     }
 
     /**
-     * числа беруться в диапазоне от 1 до {@link  tltsu.expertsystem.EduProperties#MAX_NUMBER_QUESTION_IN_GROUP}
+     * Return numbers in interval from 1 to {@link  tltsu.expertsystem.EduProperties#MAX_NUMBER_QUESTION_IN_GROUP}
      */
     public static int getNextRandom()
     {
         if (maxQuestionInGroup.isEmpty())
         {
-            for(int i=1; i<= EduProperties.MAX_NUMBER_QUESTION_IN_GROUP; i++)
+            for(int i=0; i< EduProperties.MAX_NUMBER_QUESTION_IN_GROUP; i++)
                 maxQuestionInGroup.add(i);
         }
 
@@ -107,7 +126,7 @@ public class Utils
         Integer randVal;
         do
         {
-            randVal = rand.nextInt(EduProperties.MAX_NUMBER_QUESTION_IN_GROUP+1);
+            randVal = rand.nextInt(EduProperties.MAX_NUMBER_QUESTION_IN_GROUP);
         }
         while (!maxQuestionInGroup.contains(randVal));
 
