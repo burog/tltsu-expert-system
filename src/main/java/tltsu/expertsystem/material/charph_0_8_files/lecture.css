@@ -1,0 +1,389 @@
+
+
+.la_lecture_container {
+    background: white;
+    margin: 0;
+  }
+
+
+.la_lecture_body {
+    background: white;
+    margin: 0;
+    padding: 0;
+  }
+
+
+.la_lecture_container_popup {
+    /*background: #E7E7CE;*/
+    background: white;
+    margin: 0 0 0 0;
+  }
+
+
+.la_lecture_body_popup {
+    background: white;
+    margin: 0 0 0 25px;
+    padding: 0 0 0 6px;
+  }
+
+.lecture_cell {
+    margin: 0 10% 0 10%;
+
+}
+
+
+.lecture_p {
+  }
+
+
+.lecture_mark {
+  }
+
+
+.lecture_mark_title {
+    background-color: #cccc99;
+    padding-left : 1px;
+    padding-bottom : 1px;
+    height: 20px;
+  }
+
+
+.lecture_mark_title img,  .lecture_mark_title input {
+    vertical-align : middle;
+    padding-right : 1px;
+    padding-bottom : 1px;
+    padding-left : 1px;
+  }
+
+
+.lecture_mark_title span {
+    margin: 0px 2px 0px 2px;
+    font-size:9pt;
+  }
+
+
+.lecture_mark_title_user {
+    font-size:8pt;
+    font-style:italic;
+    font-weight : bolder;
+  }
+
+
+.lecture_mark_title_date {
+    font-size:7pt;
+    font-weight : lighter;
+  }
+
+
+.lecture_mark_la {
+    margin-bottom : 4px;
+    margin-left : 4px;
+    margin-right : 10px;
+    margin-top : 4px;
+    padding-bottom : 4px;
+    padding-left : 4px;
+    padding-right : 4px;
+    padding-top : 4px;
+    border: 1px solid #ff9900;
+    background-color: #ffffff;
+  }
+
+
+.lecture_mark_la_hidden {
+    display:none;
+  }
+
+
+.configure {
+    background-color : #EFF1EC;
+  }
+
+
+.configure legend {
+    font-weight : bolder;
+  }
+
+
+.configure label {
+    font-size:8pt;
+  }
+
+
+.configure input {
+    font-size:9pt;
+  }
+
+
+.configure fieldset {
+    padding-bottom : 1px;
+  }
+
+
+.configure a, .configure a:visited, .configure a:active {
+    color: black;
+    display: block;
+    font-size:8pt;
+    text-decoration:none;
+    padding-bottom : 1px;
+    padding-left : 1px;
+    padding-top : 1px;
+  }
+
+
+.configure a:hover {
+    background-color: #ffffff;
+    font-size:8pt;
+    text-decoration:none;
+  }
+
+
+#tooltip {
+    max-width : 500px;
+    margin: 5px;
+    background-color: #ffecce;
+    border:1px dotted #ff9900;
+    font-size:8pt;
+  }
+
+#la_indicator {
+    margin-right: 10px;
+    width:15px;
+    height:15px;
+    cursor: pointer;
+}
+
+.la_indicator_collapse {
+    background-image:url('/la/images/collapse.gif');
+  }
+
+
+.la_indicator_open {
+    background-image:url('/la/images/open.gif');
+  }
+
+
+a.comments_nav, a:visited.comments_nav, a:active.comments_nav {
+    color:#990000;
+    font-size:8pt;
+    text-decoration:none;
+    cursor: pointer;
+  }
+
+
+a:hover.comments_nav {
+    color:#ff9900;
+    font-size:8pt;
+    text-decoration:none;
+    cursor: pointer;
+  }
+
+#comments_add_text {
+    color: black;
+}
+
+#loading {
+    /*z-index : 2;
+    */ top : 1px;
+    right: 1px;
+    color: white;
+    background-color: red;
+    font-size:8pt;
+    margin-top : 4px;
+    margin-right : 4px;
+    margin-bottom : 4px;
+    margin-left : 4px;
+    padding-bottom : 1px;
+    padding-left : 2px;
+    padding-right : 2px;
+    padding-top : 1px;
+  }
+
+
+.la_action img {
+    cursor : pointer;
+    height : 16px;
+    width : 16px;
+    vertical-align : middle;
+    margin: 0 2px 0 2px;
+  }
+
+
+#menu_action_head {
+    background-color: #cccc99;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    font-weight : bolder;
+    display: block;
+  }
+
+
+#menu_action_head span {
+    padding-bottom : 1px;
+    padding-right : 5px;
+    padding-left : 5px;
+    padding-top : 1px;
+  }
+
+
+#menu_action {
+    background: white;
+    position : absolute;
+    right : 0px;
+    border:1px solid #ff9900;
+    display : block;
+    text-align : left;
+  }
+
+
+#menu_action li {
+    text-align : left;
+    list-style-type : none;
+  }
+
+
+#menu_action a, #menu_action a:visited, #menu_action a:active {
+    background-color : white;
+    cursor:pointer;
+    color: black;
+    font-size:8pt;
+    text-decoration:none;
+    display: block;
+    padding-bottom : 1px;
+    padding-right : 5px;
+    padding-left : 5px;
+    padding-top : 1px;
+  }
+
+
+#menu_action a:hover {
+    background-color : #d0d2ce;
+    font-size : 8pt;
+    text-decoration : none;
+    display: block;
+    padding-bottom : 1px;
+    padding-right : 5px;
+    padding-left : 5px;
+    padding-top : 1px;
+  }
+
+
+#comments_nav {
+    color:#666666;
+    font-size:8pt;
+    text-decoration:none;
+  }
+
+
+#comments_nav span {
+    margin: 0;
+  }
+
+
+#comments_nav a:link, #comments_nav a:visited, #comments_nav a:active {
+    color:#990000;
+    font-size:8pt;
+    text-decoration:none;
+    margin-right: 0;
+  }
+
+
+#comments_nav a:hover {
+    color:#ff9900;
+    font-size:8pt;
+    text-decoration:none;
+  }
+
+
+.comments_help_block {
+    border: 1px solid #ff9900;
+    display : block;
+    text-align : left;
+    margin-bottom : 4px;
+    margin-left : 4px;
+    margin-right : 10px;
+    margin-top : 4px;
+    padding-bottom : 4px;
+    padding-left : 4px;
+    padding-right : 4px;
+    padding-top : 4px;
+  }
+
+
+.comments_help_block h2 {
+    background-color: #cccc99;
+    color: black;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight : bolder;
+    margin-top : 0px;
+    padding-left : 3px;
+  }
+
+
+#results {
+    width : 99%;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-right: 2px;
+    margin-left: 2px;
+  }
+
+
+#results thead, #results tfoot {
+    background-color : #cccc99;
+  }
+
+
+#results td {
+    font-size:8pt;
+  }
+
+
+.odd {
+    background-color : #f8f4e2;
+  }
+
+
+.comment-indicator-inactive {
+    color:black;
+    font-size:11px;
+    text-align:center;
+    width:25px;
+    height:25px;
+    cursor: pointer;
+    display:block;
+    background-image:url(/la/images/comment-active.gif);
+  }
+
+
+.comment-indicator-active {
+    color:black;
+    font-size:11px;
+    text-align:center;
+    width:25px;
+    height:25px;
+    cursor: pointer;
+    display:block;
+    background-image:url(/la/images/comment-inactive.gif);
+  }
+
+
+div.clip  {
+	width:800px;
+	height:665px;
+	overflow:hidden;
+/** min-width:350px;min-height:200px; **/
+}
+
+
+#lecture_noauth {
+/*    margin: 20px; */
+	margin: auto;
+	width: 50%;
+    font-size: 12pt;
+    padding: 10px;
+    border: 1px solid blue;
+}
+
+
+

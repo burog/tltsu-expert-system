@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<events>
+    <event>
+        <name>A</name>
+        <value>a</value>
+        <type>String</type>
+    </event>
+    <event>
+        <name>S</name>
+        <value> </value>
+        <type>String</type>
+    </event>
+    <event>
+        <name>N</name>
+        <value>\n</value>
+        <type>String</type>
+    </event>
+</events>

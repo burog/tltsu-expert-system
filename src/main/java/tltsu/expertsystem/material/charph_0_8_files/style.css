@@ -1,0 +1,17 @@
+.tooltip2
+{
+	color: #44aadd;
+	font-family: Arial;
+	text-align: left;
+	font-weight: bold;
+}
+
+.tipDiv 
+{
+  position:absolute; visibility:hidden; left:0; top:0; z-index:10000;
+  background-color:#dee7f7; border:1px solid #336; 
+  
+  color:#000; font-size:11px; line-height:1.2;
+}
+
+.advert_block_gold td.center {padding:0px}

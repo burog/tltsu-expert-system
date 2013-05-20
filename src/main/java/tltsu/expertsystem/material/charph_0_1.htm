@@ -1,0 +1,1071 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+
+
+<link href="http://popup.osp.ru/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://popup.osp.ru/tooltip_js_cfg/tooltip-core.js"></script>
+<script type="text/javascript" src="http://popup.osp.ru/tooltip_js_cfg/tooltip-dynamic.js"></script>
+<script type="text/javascript">document.write('<script type="text/javascript" src="http://popup.osp.ru/tooltip_cfg/tooltip-cfg-16.js?rnd=' + Math.round(Math.random() * 100000) + '"><\/script>')</script>
+
+
+<title>INTUIT.ru: Курс: Объектное ..: Лекция №1: Классы</title>
+
+<meta name="description" content="INTUIT.ru: учебный курс: Объектное программирование в классах на С# 3.0. Лекция: Классы"/>
+
+<meta name="keywords" content="учебный курс Объектное программирование в классах на С# 3.0 Классы
+INTUIT"/> 
+
+<script type="text/javascript" src="/ssi/menu.js?2009-06-04"></script>
+<link rel="shortcut icon" href="/favicon.ico" />
+
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+<meta name="Pragma" content="no-cache" />
+<meta name="Cache-Control" content="no-cache" />
+<link href="/ssi/course.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/ssi/course.js"></script>
+
+<link href="/ssi/lecture.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">var lid=6416</script>
+<script type="text/javascript" src="/ssi/prototype.js"></script>
+<script type="text/javascript" src="/ssi/lecture_lib.js"></script>
+
+<link href="/ssi/int4/history/history.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/ssi/AC_OETags.js" language="javascript"></script>
+<script type="text/javascript" src="/ssi/video2.js" language="javascript"></script>
+<script type="text/javascript" src="/ssi/video4x.js" language="javascript"></script>
+<script type="text/javascript" src="/ssi/int4/history/history.js" language="javascript"></script>
+<script type="text/javascript" src="/ssi/int4/jquery-1.4.2.js" language="javascript"></script>
+
+<script type="text/javascript" src="/ssi/last_qa.js"></script>
+<link href="/ssi/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body bgcolor="white">
+<!---->
+<!--header-->
+<!---->
+<div class="topbanner">
+<div style="text-align: center;">
+<div id="banner-top" style="display: none;"></div>
+
+<script type="text/javascript">
+// <!--
+	var body = document.getElementById('body');
+	if(body) {
+		body.topmargin = 0;
+		body.marginheight = 0;
+		body.style.topmargin='0';
+		body.style.marginTop = 0;
+	}
+// -->
+</script>
+
+
+<!---->
+</div></div>
+
+
+<!-- topbox -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="white">
+<tr>
+<td class="border">
+
+<!-- header:logo, menu -->
+<table border="0" cellpadding="6" cellspacing="0" width="100%">
+
+<tr valign="top">
+<td align="left" width="33%"><a href="/"><img src="/img/logo.gif" border="0" width="285" height="52" alt="Интернет Университет информационных технологий"></a></td>
+
+<td width="34%"></td>
+
+<td valign=top align=right class="epigraph">Твой путь к знаниям</a></td>
+</tr>
+
+</table>
+<!-- //header:logo, menu -->
+<!-- menu -->
+<table border="0" cellpadding="" cellspacing="0" width="100%" bgcolor="#ff9900" background="/img/bgtopmenu2.gif">
+<tr>
+<td align="left" height="24" class="topmenu"><form action="/search" name="ya_search">
+<input name="text" type="text" value="" style="margin-left:3px; margin-top:3px;">&nbsp;&nbsp;<a href=# onClick="document.ya_search.submit();">Искать!</a></td>
+</form></td>
+<td align="right" height="24" class="topmenu">
+<a 
+	id="menu_courses"
+	onMouseOver="return menu_mov('courses');" 
+	onMouseOut="return menu_mot('courses');" 
+	href="/courses.html">Курсы</a> 
+|
+<a 
+	id="menu_education"
+	onMouseOver="return menu_mov('education');" 
+	onMouseOut="return menu_mot('education');" 
+	href="/speciality/">Обучение</a> 
+|
+<a 
+	id="menu_school"
+	onMouseOver="return menu_mov('school');" 
+	onMouseOut="return menu_mot('school');" 
+	href="/catalog/school/">Школа</a> 
+|
+<a 
+	id="menu_shop"
+	onMouseOver="return menu_mov('shop');" 
+	onMouseOut="return menu_mot('shop');" 
+	href="/shop/">Магазин</a> 
+|
+<a 
+	id="menu_communication"
+	onMouseOver="return menu_mov('communication');" 
+	onMouseOut="return menu_mot('communication');" 
+	href="http://forum.intuit.ru/">Общение</a> 
+|
+
+
+<a 
+	id="menu_news"
+	onMouseOver="return menu_mov('news');" 
+	onMouseOut="return menu_mot('news');" 
+	href="/news/">Новости</a>  
+
+|
+<a 
+	id="menu_help"
+	onMouseOver="return menu_mov('help');" 
+	onMouseOut="return menu_mot('help');" 
+	href="/help/">Помощь</a> 
+
+
+</td></tr>
+<tr>
+<td align="right" colspan="2" 
+	onMouseOver="return menu2_mov();" 
+	onMouseOut="return menu2_mot();" 
+	class="menu2">
+<div 
+	class="menu_collections"
+	id="cmenu_courses">
+<div class="menu_polosa">
+<a href="/courses.html">все</a>
+| 
+<a href="/video/">видеокурсы</a>
+| 
+<a href="/rating_courses/?sort=start">новые</a>
+| 
+<a href="/rating_courses/?sort=mstudents">популярные</a>
+| 
+<a href="/video/tree/video/speech/">доклады</a>
+<div class="delim">||</div>
+<a href="/underway_courses.html">курсы в разработке</a>
+| 
+<a href="/author_list.html">авторы</a>
+</div>
+</div>
+
+<div 
+	class="menu_collections"
+	id="cmenu_shop">
+<div class="menu_polosa">
+<a href="/shop/books/">книги</a>
+| 
+<a href="/shop/soft/">курсы на CD</a>
+| 
+<a href="/shop/video/">видеокурcы на DVD</a>
+| 
+<a href="/shop/books/sale/">распродажа</a>
+| 
+<a href="/shop/books/novelty/">новинки</a>
+<div class="delim">||</div>
+<a href="/user/cart/">корзина</a>
+| 
+<a href="/user/account/">личный счет</a> 
+|
+<a href="/shop/order/history.xhtml">заказы</a>
+| 
+<a href="/user.html">настройка</a>
+</div>
+</div>
+
+
+<div 
+	class="menu_collections"
+	id="cmenu_education">
+<div class="menu_polosa">
+
+<a href="/groups/catalog/">учебные группы</a>
+| 
+<a href="/speciality/">учебные программы</a>
+<div class="delim">||</div> 
+<a href="http://hpcu.ru" target="_blank">HPCU.ru: Суперкомпьютерные технологии</a>
+|
+<a target="_blank" href="http://www.aspiranttest.com/">АспирантТест</a>
+|
+<a target="_blank" href="http://www.diofant.ru/" target="_blank">Diofant.ru</a>
+</div>
+</div>
+
+<div 
+	class="menu_collections"
+	id="cmenu_school">
+<div class="menu_polosa">
+<a href="/catalog/school/">курсы</a>
+| 
+<a href="/catalog/school/school/">видеокурсы</a>
+| 
+<a href="/shop/video/school/">видеокурсы на DVD</a>
+</div>
+</div>
+
+
+<div 
+	class="menu_collections"
+	id="cmenu_communication">
+<div class="menu_polosa">
+<a href="http://forum.intuit.ru/">форум</a>
+| 
+<a href="http://ask.intuit.ru/">вопросы и ответы</a>
+| 
+<a href="/help/askform.xhtml">задать вопрос</a>
+<div class="delim">||</div>
+<a href="/rating_students/">рейтинг студентов</a>
+</div>
+</div>
+
+
+<div 
+	class="menu_collections"
+	id="cmenu_help">
+<div class="menu_polosa">
+<a href="/help/about.html">о проекте</a>
+| 
+<a href="/help/learning.html">об учебе</a>
+| 
+<a href="/help/how.html">как учиться</a>
+| 
+<a href="/help/pay.html">платное обучение</a>
+| 
+<a href="/help/user.html">настройки</a>
+| 
+<a href="/help/orders.html">магазин</a>
+| 
+<a href="/help/groups.html">группы</a>
+</div>
+</div>
+
+<div
+	class="menu_collections"
+	id="cmenu_news">
+<div class="menu_polosa">
+<a href="/news/">лента новостей</a>
+|
+<a 
+	title="RSS" href="/news.rss" 
+	target="_blank"><img class="rss" border="0" width="12" height="12" src="/img/rss.gif">RSS</a>
+| 
+<a href="/job/">работа</a>
+| 
+<a href="http://www.intuit.ru/user/subscribe/">подписка</a>
+<div class="delim">||</div>
+<a target="_blank" href="http://www.osp.ru/">OSP.ru</a>
+| 
+<a target="_blank" href="http://tv.osp.ru/">видеоновости</a>
+</div>
+</div>
+
+
+<div 
+	class="menu_collections"
+	id="cmenu_default">
+<div class="menu_polosa">
+&nbsp;
+</div>
+</div>
+
+</td>
+</tr>
+</table>
+<script>
+	menu_reset();
+</script>
+<!-- //menu -->
+</td>
+</tr>
+</table>
+<!-- //topbox -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td align="center" class="menu">
+<table border=0 cellpadding=1 cellspacing=0 width=100% class="orang_border"><tr><td>
+<table border=0 cellpadding=4 cellspacing=0 width=100% bgcolor="#ffffcc">
+<tr align=center>
+<td width="100%" class="rtxt">
+<!--
+<a href="http://www.intuit.ru/department/graphics/bapscs5/"><b><font color="#990000">Очный курс по Photoshop в Москве</font></b></a> 
+||
+<a href="http://www.intuit.ru/job/"><b><font color="#000099">Работа в ИНТУИТ: специалисты по Java, Python</font></b></a> 
+||
+-->
+<a href="http://www.intuit.ru/ms-grants/"><b><font color="#990000">НОВЫЙ КОНКУРС ГРАНТОВ ОТ MICROSOFT</font></b></a> 
+|| 
+<a href="http://www.intuit.ru/konkurs/"><font color="#009900">Приглашаем авторов курсов</font></a> 
+|| 
+<a href="http://www.intuit.ru/shop/other/"><font color="#990000">ВСЕ ВИДЕОКУРСЫ</font> на одном диске</a> 
+<!--
+||
+<a href="http://www.intuit.ru/ms-grants/"><b><font color="#990000">НОВЫЙ КОНКУРС ГРАНТОВ ОТ MICROSOFT</font></b></a> 
+ и <a href="/shop/product-2493478.html"><font color="#990000">381 КУРС</font> на DVD</a>
+-->
+</td>
+</tr></table>
+</td></tr></table>
+</td>
+</tr>
+</table>
+
+<br>
+
+<!--/header-->
+<!---->
+<!--/menu-->
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="73">
+<tr valign="top">
+<td width="6"><img src="/img/empty.gif" height="1" width="6"></td>
+<td>
+<div class="course_content">
+
+
+<span 
+	title="Спонсорская поддержка проекта"
+	class="course_title_right">
+<a 
+	class="course_title_right" 
+	href="/user/account/sponsor.xhtml"><img 
+		width="15"
+		height="17"
+	src="/img/rubm.gif"></a>
+<a 
+	class="course_title_right" 
+	href="/user/account/sponsor.xhtml">поддержка курса</a></span>
+
+
+<a href="/goto/course/toopincsharp30/" class="course_title">Объектное программирование в классах на С# 3.0</a>
+
+
+<br>
+
+
+
+
+
+
+
+<span class="course_lecture_info_block"
+		style="cursor: pointer; cursor: hand">
+
+
+
+<span
+	style="display:none;"
+	onClick="course_show_info(false)"
+
+	title="скрыть информацию о курсе"
+	id="lecture_show_info_off">
+<span class="course_lecture_info">информация</span>
+<span style="font-weight: bold;">
+[<span 
+	style="font-weight: 900;"
+	onMouseOver="this.style.color='blue'"
+	onMouseOut="this.style.color='#000000'"
+
+>-</span>]</span>
+
+</span>
+
+
+
+<span
+	onClick="course_show_info(true)"
+
+	title="показать информацию о курсе"
+	id="lecture_show_info_on">
+<span class="course_lecture_info">информация</span>
+<span style="font-weight: bold;">
+[<span 
+	style="font-weight: 900;"
+	onMouseOver="this.style.color='blue'"
+	onMouseOut="this.style.color='#000000'"
+
+>+</span>]</span>
+
+</span>
+
+
+</span>
+
+
+Автор:
+
+<a class="course_author"  
+	title="Биллиг Владимир Арнольдович"
+	href="/lector/39.html">В.А. Биллиг</a>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+<div 
+	id="course_stat" 
+	style="display: none"
+>
+<hr class="course_hr">
+<table border="0" cellpadding="2" cellspacing="2" width="100%" ><tr>
+
+<td valign="BOTTOM">
+<a 
+	class="course_stat"
+	onClick="window.open(this.href,'', 'toolbars=no,status=no,location=no,resizable=yes,scrollbars=no');return false;"
+	href="/help/popup/course_info.html">?</a>
+</td>
+<td valign="top" class="course_stat">
+Уровень: <span id="course_level" class="course_stat_data">для специалистов</span>
+||
+Статус: <span id="course_status" class="course_stat_data">бесплатный</span>
+||
+Опубликован: <span id="course_pub_time" class="course_stat_data">02.12.2009</span>
+
+<br>
+<span title="оценка курса выпускниками">Рейтинг: <span id="course_rating" class="course_stat_data">4.52</span></span>
+||
+<span title="количество студентов за последний месяц">Популярность: <span id="course_pop" class="course_stat_data">31</span></span>
+||
+Студентов: <span class="course_stat_data" id="course_stud1" title="всего студентов">991</span>/<span class="course_stat_data" id="course_stud2"  title="всего выпускников">83</span>
+
+</td>
+
+</tr></table>
+</div>
+
+
+
+<hr class="course_hr">
+
+<div class="course_menu">
+
+Студентам: 
+
+<span class="course_offline">
+<a 
+	title="Автономная система для изучения курса без подключения к интернету, включает тексты лекций и все тесты."
+	href="/shop/courses/?media=download&expand_selected=1&courses=604">версия для локальной работы</a>
+</span>
+
+
+
+
+
+
+
+|
+<a href="/department/pl/toopincsharp30/lit.html" class="course_menu_item">литература</a>
+
+
+
+|
+<a href="/shop/books/departments/pl/toopincsharp30/" class="course_menu_item">учебники</a>
+
+
+|
+<a href="/department/pl/toopincsharp30/forum/" class="course_menu_item">форум</a>
+
+|
+<a href="/department/pl/toopincsharp30/class/opinions/" class="course_menu_item">мнения</a>
+|
+<a href="/department/pl/toopincsharp30/class/classmates/" class="course_menu_item">однокурсники</a>
+|
+<a href="/department/pl/toopincsharp30/class/rating/" class="course_menu_item">рейтинг</a>
+
+</div>
+<hr class="course_hr">
+
+
+
+<div class="course_menu_lection">
+
+
+
+<span class="course_title_right">
+
+
+<div class="name">
+<div class="left">&nbsp;</div>
+<div class="text"><a 
+	href="/department/pl/toopincsharp30/class/examination/">экзамен</a></div>
+<div class="right">&nbsp;</div>
+</div>
+
+<div class="name">
+<div class="left">&nbsp;</div>
+<div class="text"><a 
+	href="/department/pl/toopincsharp30/class/examination_extern/">экстернат</a></div>
+<div class="right">&nbsp;</div>
+</div>
+
+
+<div class="name">
+<div class="left">&nbsp;</div>
+<div class="text"><a 
+	title="образец диплома"
+	onClick="return popup_diploma(this)" 
+	target="_blank" 
+	href="/department/pl/toopincsharp30/diplom/ru/">диплом</a></div>
+<div class="right">&nbsp;</div>
+</div>
+
+</span>
+
+
+
+
+
+
+
+
+
+
+<div class="menu_lections">
+
+<div class="name">
+<div class="left">&nbsp;</div>
+<div class="text">Лекции:</div>
+<div class="right">&nbsp;</div>
+</div>
+
+
+<div class="lections">
+<ul>
+
+<li class="selected" title="Классы">1</li>
+
+
+
+<li title="Структуры"><a href="../2/" class="normal">2</a></li>
+
+<li title="Перечисления"><a href="../3/" class="normal">3</a></li>
+
+<li title="Отношения между классами. Клиенты и наследники"><a href="../4/" class="normal">4</a></li>
+
+<li title="Интерфейсы. Множественное наследование"><a href="../5/" class="normal">5</a></li>
+
+<li title="Делегаты. Функциональный тип данных"><a href="../6/" class="normal">6</a></li>
+
+<li title="Классы с событиями"><a href="../7/" class="normal">7</a></li>
+
+<li title="Универсальность. Классы с родовыми параметрами"><a href="../8/" class="normal">8</a></li>
+
+<li title="Декларативность. Атрибуты и теги"><a href="../9/" class="normal">9</a></li>
+
+<li title="Корректность и устойчивость программных систем"><a href="../10/" class="normal">10</a></li>
+
+</ul>
+    <div class="clear">&nbsp;</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
+
+	<!-- content -->
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+
+
+<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+</td></tr>
+
+
+
+
+
+<tr>
+<td colspan="2" align=left>
+<div class="lecture_title">1. Лекция:
+ Классы</div>
+</td>
+</tr>
+
+<tr>
+
+<td width="75%" align=left><font class="rtitle">Страницы:</font>
+
+
+<font class="rtitle">1</font>
+
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="2.html">2</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="3.html">3</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="4.html">4</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="5.html">5</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="test/">вопросы</a> <font class="stitle">|</font> 
+<a class="rtitle" href="2.html"><b>&raquo;</b></a>
+</td>
+<td align=right>
+
+<a href="print/" class="rtitle" target="_blank">для печати и PDA</a>
+
+
+</td>
+
+</tr>
+
+
+
+
+	<tr><td height="2" colspan=2><img src="/img/empty.gif" width="1" height="2"></td></tr>
+
+<tr><td align="left" class="lecture_pl1" colspan="2">
+<div class="lecture_write_to_us">Если Вы заметили ошибку - <a class="llecture_red" target="_blank" href="/help/askform.xhtml?course=604&url=http://www.intuit.ru/department/pl/toopincsharp30/1/1.html">сообщите нам</a>
+или выделите ее и нажмите Ctrl+Enter</div>
+</td></tr>
+
+
+<tr><td class="lecture_pl1" colspan="2">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr id="menu_lecture">
+<td><div id="la_indicator" style="display:none;" /></td>
+<td>
+<div id="comments_nav" >
+<a id="comments_toggle" style="display:none;" class="comments_nav" href="javascript:toggle_write_to_us();_toggleComments();"> Включить комментарии</a>
+<span id="comments_configure" style="display:none;">||&nbsp;<a class="comments_nav" href="javascript:_configureComments()">Настройки</a></span>
+<span id="comments_moderate" style="display:none;" >||&nbsp;<a class="comments_nav" href="javascript:_moderateComments()">Модерация</a></span>
+<span id="comments_help" style="display:none;">||&nbsp;<a class="comments_nav" href="javascript:_helpComments()">Помощь</a></span>
+</div>
+</td>
+</tr>
+</table>
+
+</td></tr>
+	<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+
+	<tr><td colspan=2>
+
+
+<div id="lecture_annotation" class="lecture_annotation">
+<div id="lecture_annotation_content">В лекции рассматриваются все детали проектирования и построения класса. Обсуждается роль полей, как глобальной информации, доступной всем методам класса. Рассматривается интерфейс – открытая часть класса, методы класса и их частные случаи – конструкторы, свойства, операции. 
+Лекция сопровождается задачами на построение классов.
+</div>
+<hr class="course_hr">
+</div>
+
+
+<div class="_ga1_on_">
+<div id="lecture_container">
+<div id="lecture_body">
+
+<!---->
+<div class="bannere240x400">
+<div id="banner-240x400" style="display: none;"></div>
+
+</div>
+<!---->
+
+
+
+
+<div  id="lecture_content"><h1>Содержание</h1><div id="lecture_content_adds"></div><ul><li><a href="#sect2">Классы и ООП</a></li><ul><li><a href="#sect3">Две роли классов</a></li></ul><li><a href="#sect4">Синтаксис класса</a></li><li><a href="#sect5">Классы как типы данных</a></li><ul><li><a href="#sect6">Поля класса</a></li><ul><li><a href="#sect7">Доступ к полям</a></li><ul><li><a href="#sect8">Модификатор private</a></li><li><a href="#sect9">Модификатор protected</a></li><li><a href="#sect10">Модификатор internal</a></li><li><a href="#sect11">Комбинация атрибутов protected и internal</a></li></ul></ul><li><a href="#sect12">Методы класса</a></li><ul><li><a href="#sect13">Доступ к методам</a></li></ul><li><a href="#sect14">Конструкторы класса</a></li><ul><li><a href="#sect15">Деструкторы класса</a></li><li><a href="2.html#sect16">Методы-свойства</a></li><li><a href="2.html#sect17">Индексаторы</a></li><li><a href="3.html#sect18">Операции</a></li><li><a href="3.html#sect19">Конструкторы класса Person</a></li></ul><li><a href="3.html#sect20">Класс как модуль</a></li><li><a href="3.html#sect21">Класс со статическими полями и методами</a></li></ul><li><a href="3.html#sect22">Проектирование класса Rational</a></li><ul><li><a href="3.html#sect23">Свойства класса Rational</a></li><li><a href="3.html#sect24">Конструкторы класса Rational</a></li><li><a href="3.html#sect25">Методы класса Rational</a></li><ul><li><a href="3.html#sect26">Закрытый метод НОД</a></li><li><a href="3.html#sect27">Печать рациональных чисел</a></li><li><a href="3.html#sect28">Тестирование создания рациональных чисел</a></li></ul><li><a href="4.html#sect29">Операции над рациональными числами</a></li><li><a href="4.html#sect30">Константы класса Rational</a></li><li><a href="5.html#sect31">Класс RationalException</a></li><li><a href="5.html#sect32">Итоги. Как проектировать класс</a></li></ul><li><a href="5.html#sect33">Архитектура Решения</a></li><ul><li><a href="5.html#sect34">Задачи</a></li><li><a href="5.html#sect35">Трансляция выражений</a></li><li><a href="5.html#sect36">Задачи на трансляцию выражений</a></li><li><a href="5.html#sect37">Проекты</a></li></ul></ul></div><a  name="sect1"></a><h3 ></h3><p  id="id_498"><b>Проект к данной лекции  Вы можете скачать</b>  <a target="_blank" href="Ch1.zip"><img border="0" src="http://www.intuit.ru/img/icons/zip.gif"></a> <a target="_blank" href="Ch1.zip">здесь</a>.</p><div  class="lecture_mark" id="mark_498"></div><a  name="sect2"></a><h3 >Классы и ООП</h3><p  id="id_1">Объектно-ориентированное программирование и проектирование построено на классах. Любую программную систему, построенную в объектном стиле, можно рассматривать как совокупность классов, возможно, объединенных в пространства имен, проекты, решения, как это делается при программировании в Visual Studio .Net.</p><div  class="lecture_mark" id="mark_1"></div><a  name="sect3"></a><h4 >Две роли классов</h4><p  id="id_2">У класса две различные роли: модуля и типа данных. <b>Класс - это модуль</b>, архитектурная единица построения программной системы. Модульность построения - основное свойство программных систем. В ООП программная система, строящаяся по модульному принципу, состоит из классов, являющихся основным видом модуля. Модуль может не представлять собой содержательную единицу; его размер и содержание определяется архитектурными соображениями, а не семантическими. Теоретически можно построить монолитную систему, состоящую из одного модуля,  решающую ту же задачу, что и система, состоящая из многих модулей. Практически большую систему, создаваемую коллективом разработчиком, без разделения системы на модули построить не удается. Модульность построения - основное средство борьбы со сложностью системы.</p><div  class="lecture_mark" id="mark_2"></div><p  id="id_3">Вторая роль класса не менее важна. <b>Класс - это тип данных</b>, задающий реализацию некоторой абстракции данных, характерной для проблемной области, в интересах которой создается программная система. С этих позиций классы - не просто кирпичики, из которых строится система. Каждый кирпичик теперь имеет важную содержательную начинку. Представьте себе современный дом, построенный из блоков, и дом будущего, где каждый блок выполняет определенную функцию: один следит за температурой, другой - за составом воздуха в доме. ОО-программная система напоминает дом будущего.</p><div  class="lecture_mark" id="mark_3"></div><p  id="id_4">Состав класса как типа данных определяется не архитектурными соображениями, а той абстракцией данных, которую должен реализовать класс. Если вы создаете класс <span class="texample">Account</span>, реализующий такую абстракцию, как банковский счет, то в этот класс нельзя добавить поля из класса <span class="texample">Car</span>, задающего автомобиль. С другой стороны, в этом классе должны быть все поля и все методы, которые необходимы клиентам класса, оперирующим с банковскими счетами.</p><div  class="lecture_mark" id="mark_4"></div><p  id="id_7">Объектно-ориентированная разработка программной системы основана на стиле, называемом <b>проектированием от данных</b>. Проектирование системы сводится к поиску абстракций данных, подходящих для конкретной задачи. Каждая из таких абстракций реализуется в виде класса, который и становится модулем - архитектурной единицей построения нашей системы. В основе класса лежит абстрактный тип данных.</p><div  class="lecture_mark" id="mark_7"></div><p  id="id_8">В хорошо спроектированной ОО-системе большинство классов играет обе роли, так что каждый модуль системы имеет вполне определенную смысловую нагрузку. Типичная ошибка - рассматривать класс только как архитектурную единицу, объединяя под обложкой класса разнородные поля и функции, после чего становится неясным, какой же тип данных задает этот класс.</p><div  class="lecture_mark" id="mark_8"></div><p  id="id_9">В принципе, возможна ситуация, когда класс играет только одну роль - роль модуля. Такие модули обычно, как и типы данных, имеют содержательную начинку. В чем главное отличие этих двух видов классов? Если класс представляет собой тип данных, то можно объявлять объекты этого класса. Как следствие, в процессе работы системы может существовать множество объектов этого класса, каждый со своими свойствами, каждый из них может вызывать методы класса, у каждого могут возникать события. Классы, играющие единственную роль модуля, объектов создавать не могут. Точнее, существует единственный объект этого класса, представляющий модуль. Поля и методы этого модуля доступны клиентам такого класса.</p><div  class="lecture_mark" id="mark_9"></div><p  id="id_10">Язык C# допускает как классы, являющиеся типами данных, так и классы, играющие единственную роль модуля. Классы, являющиеся только модулями и предоставляющие свои сервисы другим классам, хорошо знакомы, поскольку появлялись в самых первых программах. К ним относятся, например, такие классы, как <span class="texample">Console</span>, <span class="texample">Convert</span>, <span class="texample">Math</span>.</p><div  class="lecture_mark" id="mark_10"></div><a  name="sect4"></a><h3 >Синтаксис класса</h3><p  id="id_14">Ни одна из предыдущих лекций не обходилась без появления классов и обсуждения многих деталей, связанных с ними. Сейчас попробуем сделать некоторые уточнения, подвести итоги и с новых позиций взглянуть на уже знакомые вещи. Начнем с <b>синтаксиса описания класса</b>:</p><div  class="lecture_mark" id="mark_14"></div><div  class="example" id="id_15"><pre>[атрибуты][модификаторы]class имя_класса[:список_родителей]
+{тело_класса}</pre></div><div  class="lecture_mark" id="mark_15"></div><p  id="id_16">Атрибутам будет посвящена отдельная лекция. Возможными модификаторами в объявлении класса могут быть модификаторы <span class="texample">abstract</span>, <span class="texample">sealed</span>, о которых подробно будет говориться при рассмотрении наследования, и четыре модификатора доступа, два из которых - <span class="texample">private</span>  и <span class="texample">protected</span>  - могут быть заданы только для вложенных классов. По умолчанию класс имеет атрибут доступа <span class="texample">internal</span>.Чтобы сделать класс доступным не только классам одного проекта, его явно нужно объявить с атрибутом <span class="texample">public</span>. Так что в простых случаях объявление класса может выглядеть так:</p><div  class="lecture_mark" id="mark_16"></div><div  class="example" id="id_23"><pre>public class Rational {тело_класса}</pre></div><div  class="lecture_mark" id="mark_23"></div><p  id="id_24">В теле класса могут быть объявлены:</p><div  class="lecture_mark" id="mark_24"></div><ul  id="id_25"><li>константы;</li><li>поля;</li><li>конструкторы и деструкторы;</li><li>методы;</li><li>события;</li><li>классы (структуры, делегаты, интерфейсы, перечисления).</li></ul><div  class="lecture_mark" id="mark_25"></div><p  id="id_32">Из синтаксиса следует, что классы могут быть вложенными. Такая ситуация довольно редкая. Ее стоит использовать, когда некоторый класс носит вспомогательный характер, разрабатывается в интересах другого класса, и есть полная уверенность, что внутренний класс никому не понадобится, кроме класса, в который он вложен и, возможно, его потомков. Внутренние классы обычно имеют модификатор доступа <span class="texample">private</span>  или <span class="texample">protected</span>.</p><div  class="lecture_mark" id="mark_32"></div><a  name="sect5"></a><h3 >Классы как типы данных</h3><a  name="sect6"></a><h4 >Поля класса</h4><p  id="id_35">Основу любого класса, представляющего тип данных, составляют его конструкторы, поля и методы. <b>Поля класса</b>  синтаксически являются обычными переменными (объектами) языка. Их описание удовлетворяет обычным правилам объявления переменных.</p><div  class="lecture_mark" id="mark_35"></div><p  id="id_36">Содержательно поля задают представление абстракции данных, которую реализует класс. Поля характеризуют <b>свойства объектов класса</b>. Если проектируется класс <span class="texample">Car</span>, то поля задают свойства автомобилей, для класса <span class="texample">Person</span>  поля задают свойства личности.</p><div  class="lecture_mark" id="mark_36"></div><p  id="id_39">Напомню, что, когда создается новый объект класса, он содержит набор полей класса. Два объекта одного класса имеют один и тот же набор полей, но разнятся значениями, хранимыми в этих полях. Все объекты класса <span class="texample">Person</span>  могут иметь поле, характеризующее рост персоны, но один объект может быть высокого роста, другой - низкого, а третий - среднего роста.</p><div  class="lecture_mark" id="mark_39"></div><p  id="id_41">К проектированию полей класса нужно подходить весьма тщательно. Полями класса должны быть только необходимые свойства объекта, которые могут понадобиться в одном из проектов, связанных с данным классом. Поля класса существенным образом влияют на память, необходимую программной системе в процессе ее работы. Если проектируется класс <span class="texample">Account</span>, задающий банковский счет, то можно включить в его состав поле <span class="texample">balance</span>, задающее текущее значение счета. Но тогда сотни тысяч объектов, задающих счета клиентов, будут иметь это поле, и суммарная память, требуемая системе, существенно возрастет. Альтернативой является включение в класс <span class="texample">Account</span>  метода <span class="texample">balance</span>, который будет вычислять баланс, всякий раз, когда тот понадобится. Возрастет объем вычислений, но существенно сократится требуемая память. На этот компромисс между памятью и временем всегда приходится идти при проектировании класса.</p><div  class="lecture_mark" id="mark_41"></div><a  name="sect7"></a><h5 >Доступ к полям</h5><p  id="id_46">Каждое поле имеет <b>модификатор доступа</b>, принимающий одно из четырех значений: <span class="texample">public</span>, <span class="texample">private</span>, <span class="texample">protected</span>, <span class="texample">internal</span>. Возможно совместное задание двух атрибутов <span class="texample">protected</span>  и <span class="texample">internal</span>.</p><div  class="lecture_mark" id="mark_46"></div><a  name="sect8"></a><h6 >Модификатор private</h6><p  id="id_53">Модификатор <span class="texample">private</span>  является атрибутом доступа по умолчанию. Он закрывает поля от всех других классов, разрешая прямой доступ к ним (чтение и запись) только методам самого класса. Помните, все поля всегда доступны всем методам класса. Они являются для методов класса глобальной информацией, с которой работают все методы, извлекая из полей нужные им данные и изменяя их значения в ходе работы.</p><div  class="lecture_mark" id="mark_53"></div><a  name="sect9"></a><h6 >Модификатор protected</h6><p  id="id_55">Этот модификатор открывает поля классам наследникам. Если класс <span class="texample">A</span>  объявил некоторое поле с модификатором <span class="texample">protected</span>, то методы класса <span class="texample">B</span>, который является наследником класса <span class="texample">A</span>  и, следовательно, наследует поля класса <span class="texample">A</span>, могут непосредственно работать с наследуемыми полями.</p><div  class="lecture_mark" id="mark_55"></div><a  name="sect10"></a><h6 >Модификатор internal</h6><p  id="id_61">Этот модификатор открывает поля дружественным классам. 
+Два класса <span class="texample">A</span>  и <span class="texample">B</span>  называются дружественными, если они принадлежат одной сборке - одному проекту. 
+Если класс <span class="texample">A</span>  объявил некоторое поле с модификатором <span class="texample">internal</span>, то методы дружественного класса <span class="texample">B</span>, являющегося  клиентом класса <span class="texample">A</span>, могут непосредственно работать с таким полем.</p><div  class="lecture_mark" id="mark_61"></div><a  name="sect11"></a><h6 >Комбинация атрибутов protected и internal</h6><p  id="id_68">Эта комбинация открывает поле тем классам, которые являются либо наследниками, либо дружественными классами. Если требуется более строгое ограничение доступа к полю, чтобы оно было доступно только тем наследникам, которые являются дружественными классами, то сам класс нужно объявить с модификатором <span class="texample">internal</span>, а соответствующее поле - с модификатором <span class="texample">protected</span>.</p><div  class="lecture_mark" id="mark_68"></div><p  id="id_71">Если поля доступны только для методов класса, то они имеют модификатор доступа <span class="texample">private</span>, который можно опускать. Такие поля считаются закрытыми, но часто желательно, чтобы некоторые из них были доступны в более широком контексте. Если некоторые поля класса <span class="texample">A</span>  должны быть доступны для методов класса <span class="texample">B</span>, являющегося потомком класса <span class="texample">A</span>, то эти поля следует снабдить модификатором <span class="texample">protected</span>. Такие поля называются защищенными. Если некоторые поля должны быть доступны для методов классов <span class="texample">B1</span>, <span class="texample">B2</span>, и так далее, дружественных по отношению к классу <span class="texample">A</span>, то эти поля следует снабдить модификатором <span class="texample">internal</span>, а все дружественные классы <span class="texample">B</span>  поместить в один проект ( <span class="texample">assembly</span> ). Такие поля называются дружественными. Наконец, если некоторые поля должны быть доступны для методов любого класса <span class="texample">B</span>, которому доступен сам класс <span class="texample">A</span>, то эти поля следует снабдить модификатором <span class="texample">public</span>. Такие поля называются общедоступными или открытыми.</p><div  class="lecture_mark" id="mark_71"></div><a  name="sect12"></a><h4 >Методы класса</h4><p  id="id_86">Все процедуры и функции, объявленные в классе, являются <b>методами класса</b>. Их описание удовлетворяет обычным правилам синтаксиса. Методы содержат описания операций, доступных над объектами класса, определяя, тем самым, поведение объектов. Все объекты одного класса имеют один и тот же набор методов.</p><div  class="lecture_mark" id="mark_86"></div><a  name="sect13"></a><h5 >Доступ к методам</h5><p  id="id_87">Каждый метод имеет <b>модификатор доступа</b>, принимающий одно из четырех значений: <span class="texample">public</span>, <span class="texample">private</span>, <span class="texample">protected</span>, <span class="texample">internal</span>. Модификатором доступа по умолчанию является модификатор <span class="texample">private</span>. Независимо от значения модификатора доступа, все методы доступны для вызова при выполнении метода класса. Если методы имеют модификатор доступа <span class="texample">private</span>, возможно, опущенный, то тогда они доступны для вызова только внутри методов самого класса. Такие методы считаются <b>закрытыми</b>. Понятно, что класс, у которого все методы закрыты, абсурден, поскольку никто не смог бы вызвать ни один из его методов. Как правило, у класса есть открытые методы, задающие интерфейс класса, и закрытые методы. Интерфейс - это лицо класса, именно он определяет, чем класс интересен своим клиентам, что он может делать, какие сервисы предоставляет клиентам. Закрытые методы составляют важную часть класса, позволяя клиентам не вникать во многие детали реализации. Эти 
+
+
+методы клиентам класса недоступны, они о них могут ничего не знать, и, самое главное, изменения в закрытых методах никак не отражаются на клиентах класса при условии корректной работы открытых методов.</p><div  class="lecture_mark" id="mark_87"></div><p  id="id_94">Если некоторые методы класса <span class="texample">A</span>  должны быть доступны для вызовов в методах класса <span class="texample">B</span>, являющегося потомком класса <span class="texample">A</span>, то такие методы следует снабдить атрибутом <span class="texample">protected</span>. Если некоторые методы должны быть доступны только для методов классов <span class="texample">B1</span>, <span class="texample">B2</span>  и так далее, дружественных по отношению к классу <span class="texample">A</span>, то такие методы следует снабдить атрибутом <span class="texample">internal</span>, а все дружественные классы <span class="texample">B</span>  поместить в один проект. Наконец, если некоторые методы должны быть доступны для методов любого класса <span class="texample">B</span>, которому доступен сам класс <span class="texample">A</span>, то такие методы снабжаются атрибутом <span class="texample">public</span>.</p><div  class="lecture_mark" id="mark_94"></div><p  id="id_107">У класса есть методы, решающие специальные задачи, - конструкторы, методы-свойства, - к рассмотрению которых сейчас и переходим.</p><div  class="lecture_mark" id="mark_107"></div><a  name="sect14"></a><h4 >Конструкторы класса</h4><p  id="id_108"><b>Конструктор</b>  - неотъемлемый компонент класса. Нет классов, задающих тип данных и не имеющих конструкторов. Конструктор представляет собой специальный метод класса, позволяющий создавать объекты класса. У конструкторов две синтаксические особенности:</p><div  class="lecture_mark" id="mark_108"></div><ul  id="id_109"><li>имя конструктора фиксировано и совпадает с именем класса,</li><li>для конструктора не задается возвращаемое значение.</li></ul><div  class="lecture_mark" id="mark_109"></div><p  id="id_112">Из первого свойства следует, что конструкторы класса представляют собой множество перегруженных методов и должны отличаться сигнатурой - числом аргументов либо типами аргументов. Чтобы справиться с этим ограничением, иногда приходится в один из конструкторов добавлять фиктивный аргумент, изменяя тем самым его сигнатуру.</p><div  class="lecture_mark" id="mark_112"></div><p  id="id_113">Если в классе явно не задан ни один конструктор, то к классу автоматически добавляется конструктор по умолчанию - конструктор без аргументов. Заметьте, что если в классе явно определен  один или несколько конструкторов, то автоматического добавления конструктора без аргументов не происходит.</p><div  class="lecture_mark" id="mark_113"></div><p  id="id_114">Большинство конструкторов класса имеют модификатор доступа <span class="texample">public</span>. Помните, что класс создается в интересах своих клиентов.  Конструкторы позволяют клиентам класса создавать объекты класса и работать с ними. Конструкторы позволяют не только создать объект класса, но и задать начальные значения полей класса, то есть позволяют создать объект с заданными свойствами. Аргументы конструктора задают значения, позволяющие инициализировать поля класса. Если конструктор по умолчанию, не имеющий аргументов, инициализирует поля класса значениями по умолчанию, то полный конструктор - это такой конструктор, который инициализирует поля класса значениями, переданными в аргументах конструктора. Как правило, у полного конструктора число аргументов совпадает с числом полей класса. Каждый аргумент содержит значение соответствующего поля. Поскольку в момент создания объекта не всегда можно задать полный набор его свойств, класс старается обеспечить клиентам широкий набор конструкторов, позволяющих создать и 
+инициализировать объект свойствами, известными клиенту в момент создания того или иного объекта.</p><div  class="lecture_mark" id="mark_114"></div><p  id="id_116">Как и когда происходит создание объектов? Чаще всего, при объявлении сущности в момент ее инициализации. Давайте обратимся к примеру и рассмотрим создание трех объектов класса <span class="texample">Person</span>:</p><div  class="lecture_mark" id="mark_116"></div><div  class="example" id="id_118"><pre>Person pers1 = new Person(), pers2 = new Person();
+Person pers3= new Person("Петрова");</pre></div><div  class="lecture_mark" id="mark_118"></div><p  id="id_119">Сущности <span class="texample">pers1</span>, <span class="texample">pers2</span>, <span class="texample">pers3</span>  класса <span class="texample">Person</span>  объявляются с инициализацией, задаваемой унарной операцией <span class="texample">new</span>, которой в качестве аргумента передается конструктор класса <span class="texample">Person</span>. У класса <span class="texample">Person</span>  несколько конструкторов - это типичная практика, - отличающихся сигнатурой. В данном примере в первой строке вызывается конструктор без аргументов, во второй строке для сущности <span class="texample">pers3</span>  вызывается конструктор с одним аргументом типа <span class="texample">string</span>. Разберем в деталях процесс создания.</p><div  class="lecture_mark" id="mark_119"></div><p  id="id_129">Первым делом в стеке для сущностей <span class="texample">pers</span>  создается ссылка, пока висячая со значением <span class="texample">null</span>.</p><div  class="lecture_mark" id="mark_129"></div><p  id="id_132">Затем в динамической памяти создается объект - структура данных с полями, определяемыми классом <span class="texample">Person</span>. Поля объекта инициализируются значениями по умолчанию: ссылочные поля - значением <span class="texample">null</span>, арифметические - нулями, строковые - пустой строкой. Эту работу выполняет конструктор по умолчанию, который, можно считать, всегда вызывается в начале процесса создания.</p><div  class="lecture_mark" id="mark_132"></div><p  id="id_135">Если поля класса объявлены с инициализацией, то выполняется инициализация полей объекта заданными значениями.</p><div  class="lecture_mark" id="mark_135"></div><p  id="id_136">Если вызван конструктор с аргументами, то начинает выполняться тело этого конструктора. Как правило, при этом происходит инициализация тех полей объекта, значения которых переданы конструктору. Так, например, поле <span class="texample">fam</span>  объекта <span class="texample">pers3</span>  получит значение "Петрова".</p><div  class="lecture_mark" id="mark_136"></div><p  id="id_139">На заключительном этапе ссылка связывается с созданным объектом.</p><div  class="lecture_mark" id="mark_139"></div><p  id="id_140">Реально, процесс создания объектов сложнее из-за проблем наследования. Когда  у класса есть родительский класс, поля объекта, наследуемые от родителя, создаются конструктором родителя, который и должен быть вызван в первую очередь. Но об этих тонкостях поговорим при рассмотрении наследования.</p><div  class="lecture_mark" id="mark_140"></div><p  id="id_141">Конструктор может быть объявлен с атрибутом <span class="texample">private</span>. Понятно, что в этом случае внешний пользователь не может применить его для создания объектов. Но это могут делать методы класса, создавая объекты для собственных нужд со специальной инициализацией. Пример такого конструктора будет дан позже.</p><div  class="lecture_mark" id="mark_141"></div><p  id="id_143">Подводя итоги, можно отметить, что объекты создаются динамически в процессе выполнения программы, для создания объекта всегда вызывается тот или иной конструктор класса.</p><div  class="lecture_mark" id="mark_143"></div><a  name="sect15"></a><h5 >Деструкторы класса</h5><p  id="id_144">Если задача создания объектов полностью возлагается на программиста, то задача удаления ненужных объектов в Visual Studio .Net снята с программиста и возложена на соответствующий инструментарий - сборщик мусора. В классическом варианте <b>деструктор</b>  служит для удаления объектов и освобождения ресурсов, занятых объектом, в первую очередь оперативной памяти.</p><div  class="lecture_mark" id="mark_144"></div><p  id="id_145">В языке C# y класса может быть деструктор, но он не занимается удалением объектов и не вызывается нормальным образом в ходе выполнения программы. Деструктор класса, если он есть, вызывается автоматически в процессе сборки мусора. Его роль - в освобождении других ресурсов, например, файлов, открытых объектом. Деструктор C# фактически является финализатором ( <span class="texample">finalizer</span> ), с которым мы еще встретимся при обсуждении исключительных ситуаций. Приведу формальное описание деструктора класса <span class="texample">Person</span>:</p><div  class="lecture_mark" id="mark_145"></div><div  class="example" id="id_148"><pre>~Person()
+  {
+   //Код деструктора
+  }</pre></div><div  class="lecture_mark" id="mark_148"></div><p  id="id_149">Имя деструктора строится из имени класса с предшествующим ему символом ~ (тильда). Как и у статического конструктора, у деструктора не указывается модификатор доступа.</p><div  class="lecture_mark" id="mark_149"></div>
+
+    
+
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+on_load_lecture();
+</script>
+
+	</td>
+	</tr>
+	<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+
+	<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+	<tr><td colspan=2 align="center">
+
+<a href="2.html" class="attention">Дальше &raquo;</b></a>
+
+	</td></tr>
+	<tr><td height="16" colspan=2><img src="/img/empty.gif" width="1" height="16"></td></tr>
+
+	<tr><td height="2" colspan=2><img src="/img/empty.gif" width="1" height="2"></td></tr>
+<tr>
+
+<td width="75%" align=left><font class="rtitle">Страницы:</font>
+
+
+<font class="rtitle">1</font>
+
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="2.html">2</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="3.html">3</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="4.html">4</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="5.html">5</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="test/">вопросы</a> <font class="stitle">|</font> 
+<a class="rtitle" href="2.html"><b>&raquo;</b></a>
+</td>
+<td align=right>
+
+<a href="print/" class="rtitle" target="_blank">для печати и PDA</a>
+
+
+</td>
+
+</tr>
+
+	<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+	<tr><td class="orang" height="1" colspan=2><img src="/img/empty.gif" width="1" height="1"></td></tr>
+	</table>
+	<!-- /content -->
+</div>
+</td>
+
+
+<td width="6"><img src="/img/empty.gif" width="6"></td>
+<td width="1" class="gray"><img src="/img/empty.gif"></td>
+<td width="6"><img src="/img/empty.gif" width="6"></td>
+<td width="160">
+<table border="0" cellpadding="0" cellspacing="0" background="" width="100%">
+<tr><td>
+<div id="last_qa" style="display: none"><div class="last_qa">
+<h1><a onClick="return open_last_qa(this);" href="http://ask.intuit.ru/">Вопросы и Ответы</a></h1>
+
+Помогите ответить на вопрос: <script type="text/javascript">write_lastq()</script>
+
+<div>
+<a onClick="return open_last_qa(this);" href="http://ask.intuit.ru/">Задайте свой вопрос &raquo;</a>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+	if(lastq_exists) {
+		var t = document.getElementById('last_qa');
+		if(t) t.style.display = 'block';
+	}
+</script>
+<div id="intuit_banner_01" style="display: none"></div>
+</td></tr>
+
+<tr><td align="center">&nbsp;</td></tr>
+<tr>
+<td align="center">
+<div id="banner-160x600" style="display: none;"></div>
+
+</td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+
+<tr><td align="center">
+<div class="google160x600">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-3229713645839679";
+/* Intuit_160x600 */
+google_ad_slot = "9981759856";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+
+
+</td></tr>
+</table>
+</td>
+
+
+
+</table>
+
+
+<!-- /bottom -->
+<br>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="white">
+<!---->
+<!---->
+<tr>
+<td align="center" class="border">
+    <table border="0" cellpadding="0" cellspacing="8" bgcolor="white" width="100%">
+    <tr>
+    <td width="1"><iframe id="errorHandling" src="/content-operation/error.xhtml" width="1" height="1" frameborder="0" scrolling="no"></iframe></td>
+    <td align="center" width="100%" class="rtxt">
+    Внимание! Если Вы увидите ошибку на нашем сайте, выделите её и нажмите Ctrl+Enter.
+    </td>
+    </tr>
+    </table>
+</td>
+</tr>
+<!---->
+
+<tr>
+<td align="center" class="border">
+<script type="text/javascript">
+//<![CDATA[
+yandex_partner_id = 14351;
+yandex_site_bg_color = 'FFFFFF';
+yandex_site_charset = 'windows-1251';
+yandex_ad_format = 'direct';
+yandex_font_size = 1;
+yandex_direct_type = 'horizontal';
+yandex_direct_border_type = 'ad';
+yandex_direct_limit = 4;
+yandex_direct_header_bg_color = 'FEEAC7'; yandex_direct_bg_color = 'FFF9F0'; yandex_direct_border_color = 'FF9900'; yandex_direct_title_color = '0000CC'; yandex_direct_url_color = '006600'; yandex_direct_all_color = '0000CC'; yandex_direct_text_color = '000000'; yandex_direct_hover_color = '0066FF'; yandex_direct_favicon = true; document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/system/context.js"></sc'+'ript>');
+//]]>
+</script>
+
+</td>
+</tr>
+
+
+
+
+<tr>
+<td align="center" class="border">
+    <table border="0" cellpadding="0" cellspacing="8" bgcolor="white" width="100%">
+    <tr>
+    <td>
+<b>Нужна помощь?</b><br>
+&#149; Забыли пароль? <a href="/user/remind/">Вам сюда...</a><br>
+&#149; Есть вопрос? <a href="/help/askform.xhtml">Спрашивайте!</a>
+    </td>
+    <td>
+<b>Вы можете:</b><br>
+&#149; Изменить персональные <a href="/user/edit/">данные</a><br>
+&#149; Изменить параметры <a href="/user/subscribe/">подписки</a>
+    </td>
+    <td>
+<b>Интернет-магазин:</b><br>
+&#149; Ваши заказы <a href="/shop/order/history.xhtml">здесь</a><br>
+&#149; Ваш личный <a href="/user/account/">счет</a>
+    </td>
+    </tr>
+    </table>
+</td>
+</tr>
+<!---->
+<tr>
+<td align="center" class="copy" bgcolor="#ff9900">
+    <a href="/courses.html" class="bot">Курсы</a> |
+    <a href="/speciality/" class="bot">Учебные программы</a> |
+    <a href="/shop/" class="bot">Учебники</a> | 
+    <a href="http://ask.intuit.ru/" class="bot" target="_new">Вопросы и Ответы</a> | 
+    <a href="/forum/" class="bot">Форум</a> |
+    <a href="/news/" class="bot">Новости</a> | 
+    <a href="/help/" class="bot">Помощь</a>
+    <br><br>
+    Телефон: +7 (499) 253-9312, 253-9313, факс: +7 (499) 253-9310, email: <a href="mailto:info@intuit.ru" class="bot">info@intuit.ru</a><br>
+    &copy; <a href="http://www.intuit.ru/" class="bot">INTUIT.ru::Интернет-Университет Информационных Технологий - дистанционное образование, 2003-2011</a>
+</td>
+</tr>
+</table>
+<!-- /bottom -->
+
+
+<center>
+<table width=100% border=0 cellpadding=4>
+<tr valign=top>
+<td class="topnavi" align="left">
+Проект <b><a href="http://www.osp.ru/" target="_blank">Издательства "Открытые Системы"</a></b>.<br>
+Партнеры: <a href="http://www.rmt.ru/" target="_blank">РМ Телеком</a>, <a href="http://www.kraftway.ru/" target="_blank">KRAFTWAY COMPUTERS</a>.
+</td>
+<td align=right>
+<!--begin of Rambler's Top100 code -->
+<img src="http://counter.rambler.ru/top100.cnt?435517" alt="" width=1 height=1 border=0><a href="http://top100.rambler.ru/top100/"><img src="/img/rambler.gif" alt="Rambler's Top100" width=88 height=31 border=0></a>
+<!--end of Top100 code-->
+&nbsp;
+
+<!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=496301"'+
+' target=_top><img src="http://d2.c9.b7.a0.top.list.ru/counter'+
+'?id=496301;t=75;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=496301"><img
+src="http://d2.c9.b7.a0.top.list.ru/counter?js=na;id=496301;t=75"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+&nbsp;
+
+<!-- SpyLOG -->
+<script src="http://tools.spylog.ru/counter2.2.js" type="text/javascript" id="spylog_code" counter="459372" ></script>
+<noscript>
+<a href="http://u4593.72.spylog.com/cnt?cid=459372&f=3&p=0" target="_blank">
+<img src="http://u4593.72.spylog.com/cnt?cid=459372&p=0&f=4" alt='SpyLOG' border='0' width=88 height=31 ></a> 
+</noscript>
+<!--/ SpyLOG -->
+&nbsp;
+<!--
+<script language="javascript">
+function getCookie(name) {
+var prefix = name + "="
+var cookieStartIndex = document.cookie.indexOf(prefix)
+if (cookieStartIndex == -1)
+        return null
+var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length)
+if (cookieEndIndex == -1)
+        cookieEndIndex = document.cookie.length
+return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex))
+}
+if (getCookie('adskip') == null && (getCookie('adcnt') == null || getCookie('adcnt') < 6)) {  window.open('/popup/1/','adpopup','width=300,height=320,location=no,scrollbars=no,resizable=yes,status=no,history=no,toolbar=no'); }
+</script>
+-->
+&nbsp;
+
+<!--LiveInternet counter--><script language="JavaScript"><!--
+document.write('<a href="http://www.liveinternet.ru/click" '+
+'target=_blank><img src="http://counter.yadro.ru/hit?t44.6;r'+
+escape(document.referrer)+((typeof(screen)=='undefined')?'':
+';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+';'+Math.random()+
+'" border=0 width=31 height=31 alt="liveinternet.ru"></a>')//--></script><!--/LiveInternet-->
+
+&nbsp;
+
+<!-- bigmir)net TOP 100 --><a href="http://www.bigmir.net/" target=_blank onClick='img = new Image();img.src="http://www.bigmir.net/?cl=143122";' ><script language="javascript"><!--
+bmQ='<img src=http://c.bigmir.net/?s143122&t8'
+bmD=document
+bmD.cookie="b=b"
+if(bmD.cookie)bmQ+='&c1'
+//--></script><script language="javascript1.2"><!-- 
+bmS=screen;bmQ+='&d'+(bmS.colorDepth?bmS.colorDepth:bmS.pixelDepth)+"&r"+bmS.width;
+//--></script><script language="javascript"><!--
+bmF = bmD.referrer.slice(7);
+((bmI=bmF.indexOf('/'))!=-1)?(bmF=bmF.substring(0,bmI)):(bmI=bmF.length);
+if(bmF!=window.location.href.substring(7,7+bmI))bmQ+='&f'+escape(bmD.referrer);
+bmD.write(bmQ+" border=0 width=88 height=31 alt='bigmir TOP100'>");
+//--></script></a>
+
+
+</td>
+</tr></table>
+
+</center>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17929409-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type =
+'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- GoodADVERT (SMART VIDEO in text) for http://www.intuit.ru -->
+<script type="text/javascript"><!--
+var _ga1_channel='199';
+// -->
+</script>
+<script type="text/javascript" src="http://files.goodadvert.ru/ga_1.js" charset="utf-8"></script>
+<!-- GoodADVERT -->
+
+<!--BEGIN RichBanner http://www.intuit.ru (Video)-->
+<script language="JavaScript">
+<!--
+var _rbn={};
+_rbn.v={};
+_rbn.v.inline_color = "#009900";
+_rbn.v.inline_count_max=5;
+_rbn.v.is_use_marked=0;
+_rbn.v.autostart_video = 1;
+_rbn.v.ad=[];
+document.write('<scr' + 'ipt language="JavaScript" src="http://drive.richbanner.ru/code?pid=22632&gid=19&oin=1&rid=' + (Math.floor(Math.random() * 1000000000)) +'" charset="utf-8" type="text/JavaScript"></scr' + 'ipt>');
+// -->
+</script>
+<script language="JavaScript" src="http://folder.richbanner.ru/rbn.js" charset="utf-8" type="text/JavaScript"></script>
+<!--END RichBanner -->
+
+<script type="text/javascript" src="/ssi/banner/intuit_is_bottom.js"></script>
+
+
+
+</body>
+</html>

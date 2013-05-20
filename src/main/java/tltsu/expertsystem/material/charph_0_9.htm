@@ -1,0 +1,1173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+
+
+<link href="http://popup.osp.ru/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://popup.osp.ru/tooltip_js_cfg/tooltip-core.js"></script>
+<script type="text/javascript" src="http://popup.osp.ru/tooltip_js_cfg/tooltip-dynamic.js"></script>
+<script type="text/javascript">document.write('<script type="text/javascript" src="http://popup.osp.ru/tooltip_cfg/tooltip-cfg-16.js?rnd=' + Math.round(Math.random() * 100000) + '"><\/script>')</script>
+
+
+<title>INTUIT.ru: Курс: Объектное ..: Лекция №3: Перечисления</title>
+
+<meta name="description" content="INTUIT.ru: учебный курс: Объектное программирование в классах на С# 3.0. Лекция: Перечисления"/>
+
+<meta name="keywords" content="учебный курс Объектное программирование в классах на С# 3.0 Перечисления
+INTUIT"/> 
+
+<script type="text/javascript" src="/ssi/menu.js?2009-06-04"></script>
+<link rel="shortcut icon" href="/favicon.ico" />
+
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+<meta name="Pragma" content="no-cache" />
+<meta name="Cache-Control" content="no-cache" />
+<link href="/ssi/course.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/ssi/course.js"></script>
+
+<link href="/ssi/lecture.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">var lid=6418</script>
+<script type="text/javascript" src="/ssi/prototype.js"></script>
+<script type="text/javascript" src="/ssi/lecture_lib.js"></script>
+
+<link href="/ssi/int4/history/history.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/ssi/AC_OETags.js" language="javascript"></script>
+<script type="text/javascript" src="/ssi/video2.js" language="javascript"></script>
+<script type="text/javascript" src="/ssi/video4x.js" language="javascript"></script>
+<script type="text/javascript" src="/ssi/int4/history/history.js" language="javascript"></script>
+<script type="text/javascript" src="/ssi/int4/jquery-1.4.2.js" language="javascript"></script>
+
+<script type="text/javascript" src="/ssi/last_qa.js"></script>
+<link href="/ssi/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body bgcolor="white">
+<!---->
+<!--header-->
+<!---->
+<div class="topbanner">
+<div style="text-align: center;">
+<div id="banner-top" style="display: none;"></div>
+
+<script type="text/javascript">
+// <!--
+	var body = document.getElementById('body');
+	if(body) {
+		body.topmargin = 0;
+		body.marginheight = 0;
+		body.style.topmargin='0';
+		body.style.marginTop = 0;
+	}
+// -->
+</script>
+
+
+<!---->
+</div></div>
+
+
+<!-- topbox -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="white">
+<tr>
+<td class="border">
+
+<!-- header:logo, menu -->
+<table border="0" cellpadding="6" cellspacing="0" width="100%">
+
+<tr valign="top">
+<td align="left" width="33%"><a href="/"><img src="/img/logo.gif" border="0" width="285" height="52" alt="Интернет Университет информационных технологий"></a></td>
+
+<td width="34%"></td>
+
+<td valign=top align=right class="epigraph">Твой путь к знаниям</a></td>
+</tr>
+
+</table>
+<!-- //header:logo, menu -->
+<!-- menu -->
+<table border="0" cellpadding="" cellspacing="0" width="100%" bgcolor="#ff9900" background="/img/bgtopmenu2.gif">
+<tr>
+<td align="left" height="24" class="topmenu"><form action="/search" name="ya_search">
+<input name="text" type="text" value="" style="margin-left:3px; margin-top:3px;">&nbsp;&nbsp;<a href=# onClick="document.ya_search.submit();">Искать!</a></td>
+</form></td>
+<td align="right" height="24" class="topmenu">
+<a 
+	id="menu_courses"
+	onMouseOver="return menu_mov('courses');" 
+	onMouseOut="return menu_mot('courses');" 
+	href="/courses.html">Курсы</a> 
+|
+<a 
+	id="menu_education"
+	onMouseOver="return menu_mov('education');" 
+	onMouseOut="return menu_mot('education');" 
+	href="/speciality/">Обучение</a> 
+|
+<a 
+	id="menu_school"
+	onMouseOver="return menu_mov('school');" 
+	onMouseOut="return menu_mot('school');" 
+	href="/catalog/school/">Школа</a> 
+|
+<a 
+	id="menu_shop"
+	onMouseOver="return menu_mov('shop');" 
+	onMouseOut="return menu_mot('shop');" 
+	href="/shop/">Магазин</a> 
+|
+<a 
+	id="menu_communication"
+	onMouseOver="return menu_mov('communication');" 
+	onMouseOut="return menu_mot('communication');" 
+	href="http://forum.intuit.ru/">Общение</a> 
+|
+
+
+<a 
+	id="menu_news"
+	onMouseOver="return menu_mov('news');" 
+	onMouseOut="return menu_mot('news');" 
+	href="/news/">Новости</a>  
+
+|
+<a 
+	id="menu_help"
+	onMouseOver="return menu_mov('help');" 
+	onMouseOut="return menu_mot('help');" 
+	href="/help/">Помощь</a> 
+
+
+</td></tr>
+<tr>
+<td align="right" colspan="2" 
+	onMouseOver="return menu2_mov();" 
+	onMouseOut="return menu2_mot();" 
+	class="menu2">
+<div 
+	class="menu_collections"
+	id="cmenu_courses">
+<div class="menu_polosa">
+<a href="/courses.html">все</a>
+| 
+<a href="/video/">видеокурсы</a>
+| 
+<a href="/rating_courses/?sort=start">новые</a>
+| 
+<a href="/rating_courses/?sort=mstudents">популярные</a>
+| 
+<a href="/video/tree/video/speech/">доклады</a>
+<div class="delim">||</div>
+<a href="/underway_courses.html">курсы в разработке</a>
+| 
+<a href="/author_list.html">авторы</a>
+</div>
+</div>
+
+<div 
+	class="menu_collections"
+	id="cmenu_shop">
+<div class="menu_polosa">
+<a href="/shop/books/">книги</a>
+| 
+<a href="/shop/soft/">курсы на CD</a>
+| 
+<a href="/shop/video/">видеокурcы на DVD</a>
+| 
+<a href="/shop/books/sale/">распродажа</a>
+| 
+<a href="/shop/books/novelty/">новинки</a>
+<div class="delim">||</div>
+<a href="/user/cart/">корзина</a>
+| 
+<a href="/user/account/">личный счет</a> 
+|
+<a href="/shop/order/history.xhtml">заказы</a>
+| 
+<a href="/user.html">настройка</a>
+</div>
+</div>
+
+
+<div 
+	class="menu_collections"
+	id="cmenu_education">
+<div class="menu_polosa">
+
+<a href="/groups/catalog/">учебные группы</a>
+| 
+<a href="/speciality/">учебные программы</a>
+<div class="delim">||</div> 
+<a href="http://hpcu.ru" target="_blank">HPCU.ru: Суперкомпьютерные технологии</a>
+|
+<a target="_blank" href="http://www.aspiranttest.com/">АспирантТест</a>
+|
+<a target="_blank" href="http://www.diofant.ru/" target="_blank">Diofant.ru</a>
+</div>
+</div>
+
+<div 
+	class="menu_collections"
+	id="cmenu_school">
+<div class="menu_polosa">
+<a href="/catalog/school/">курсы</a>
+| 
+<a href="/catalog/school/school/">видеокурсы</a>
+| 
+<a href="/shop/video/school/">видеокурсы на DVD</a>
+</div>
+</div>
+
+
+<div 
+	class="menu_collections"
+	id="cmenu_communication">
+<div class="menu_polosa">
+<a href="http://forum.intuit.ru/">форум</a>
+| 
+<a href="http://ask.intuit.ru/">вопросы и ответы</a>
+| 
+<a href="/help/askform.xhtml">задать вопрос</a>
+<div class="delim">||</div>
+<a href="/rating_students/">рейтинг студентов</a>
+</div>
+</div>
+
+
+<div 
+	class="menu_collections"
+	id="cmenu_help">
+<div class="menu_polosa">
+<a href="/help/about.html">о проекте</a>
+| 
+<a href="/help/learning.html">об учебе</a>
+| 
+<a href="/help/how.html">как учиться</a>
+| 
+<a href="/help/pay.html">платное обучение</a>
+| 
+<a href="/help/user.html">настройки</a>
+| 
+<a href="/help/orders.html">магазин</a>
+| 
+<a href="/help/groups.html">группы</a>
+</div>
+</div>
+
+<div
+	class="menu_collections"
+	id="cmenu_news">
+<div class="menu_polosa">
+<a href="/news/">лента новостей</a>
+|
+<a 
+	title="RSS" href="/news.rss" 
+	target="_blank"><img class="rss" border="0" width="12" height="12" src="/img/rss.gif">RSS</a>
+| 
+<a href="/job/">работа</a>
+| 
+<a href="http://www.intuit.ru/user/subscribe/">подписка</a>
+<div class="delim">||</div>
+<a target="_blank" href="http://www.osp.ru/">OSP.ru</a>
+| 
+<a target="_blank" href="http://tv.osp.ru/">видеоновости</a>
+</div>
+</div>
+
+
+<div 
+	class="menu_collections"
+	id="cmenu_default">
+<div class="menu_polosa">
+&nbsp;
+</div>
+</div>
+
+</td>
+</tr>
+</table>
+<script>
+	menu_reset();
+</script>
+<!-- //menu -->
+</td>
+</tr>
+</table>
+<!-- //topbox -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td align="center" class="menu">
+<table border=0 cellpadding=1 cellspacing=0 width=100% class="orang_border"><tr><td>
+<table border=0 cellpadding=4 cellspacing=0 width=100% bgcolor="#ffffcc">
+<tr align=center>
+<td width="100%" class="rtxt">
+<!--
+<a href="http://www.intuit.ru/department/graphics/bapscs5/"><b><font color="#990000">Очный курс по Photoshop в Москве</font></b></a> 
+||
+<a href="http://www.intuit.ru/job/"><b><font color="#000099">Работа в ИНТУИТ: специалисты по Java, Python</font></b></a> 
+||
+-->
+<a href="http://www.intuit.ru/ms-grants/"><b><font color="#990000">НОВЫЙ КОНКУРС ГРАНТОВ ОТ MICROSOFT</font></b></a> 
+|| 
+<a href="http://www.intuit.ru/konkurs/"><font color="#009900">Приглашаем авторов курсов</font></a> 
+|| 
+<a href="http://www.intuit.ru/shop/other/"><font color="#990000">ВСЕ ВИДЕОКУРСЫ</font> на одном диске</a> 
+<!--
+||
+<a href="http://www.intuit.ru/ms-grants/"><b><font color="#990000">НОВЫЙ КОНКУРС ГРАНТОВ ОТ MICROSOFT</font></b></a> 
+ и <a href="/shop/product-2493478.html"><font color="#990000">381 КУРС</font> на DVD</a>
+-->
+</td>
+</tr></table>
+</td></tr></table>
+</td>
+</tr>
+</table>
+
+<br>
+
+<!--/header-->
+<!---->
+<!--/menu-->
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="73">
+<tr valign="top">
+<td width="6"><img src="/img/empty.gif" height="1" width="6"></td>
+<td>
+<div class="course_content">
+
+
+<span 
+	title="Спонсорская поддержка проекта"
+	class="course_title_right">
+<a 
+	class="course_title_right" 
+	href="/user/account/sponsor.xhtml"><img 
+		width="15"
+		height="17"
+	src="/img/rubm.gif"></a>
+<a 
+	class="course_title_right" 
+	href="/user/account/sponsor.xhtml">поддержка курса</a></span>
+
+
+<a href="/goto/course/toopincsharp30/" class="course_title">Объектное программирование в классах на С# 3.0</a>
+
+
+<br>
+
+
+
+
+
+
+
+<span class="course_lecture_info_block"
+		style="cursor: pointer; cursor: hand">
+
+
+
+<span
+	style="display:none;"
+	onClick="course_show_info(false)"
+
+	title="скрыть информацию о курсе"
+	id="lecture_show_info_off">
+<span class="course_lecture_info">информация</span>
+<span style="font-weight: bold;">
+[<span 
+	style="font-weight: 900;"
+	onMouseOver="this.style.color='blue'"
+	onMouseOut="this.style.color='#000000'"
+
+>-</span>]</span>
+
+</span>
+
+
+
+<span
+	onClick="course_show_info(true)"
+
+	title="показать информацию о курсе"
+	id="lecture_show_info_on">
+<span class="course_lecture_info">информация</span>
+<span style="font-weight: bold;">
+[<span 
+	style="font-weight: 900;"
+	onMouseOver="this.style.color='blue'"
+	onMouseOut="this.style.color='#000000'"
+
+>+</span>]</span>
+
+</span>
+
+
+</span>
+
+
+Автор:
+
+<a class="course_author"  
+	title="Биллиг Владимир Арнольдович"
+	href="/lector/39.html">В.А. Биллиг</a>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+<div 
+	id="course_stat" 
+	style="display: none"
+>
+<hr class="course_hr">
+<table border="0" cellpadding="2" cellspacing="2" width="100%" ><tr>
+
+<td valign="BOTTOM">
+<a 
+	class="course_stat"
+	onClick="window.open(this.href,'', 'toolbars=no,status=no,location=no,resizable=yes,scrollbars=no');return false;"
+	href="/help/popup/course_info.html">?</a>
+</td>
+<td valign="top" class="course_stat">
+Уровень: <span id="course_level" class="course_stat_data">для специалистов</span>
+||
+Статус: <span id="course_status" class="course_stat_data">бесплатный</span>
+||
+Опубликован: <span id="course_pub_time" class="course_stat_data">02.12.2009</span>
+
+<br>
+<span title="оценка курса выпускниками">Рейтинг: <span id="course_rating" class="course_stat_data">4.52</span></span>
+||
+<span title="количество студентов за последний месяц">Популярность: <span id="course_pop" class="course_stat_data">31</span></span>
+||
+Студентов: <span class="course_stat_data" id="course_stud1" title="всего студентов">991</span>/<span class="course_stat_data" id="course_stud2"  title="всего выпускников">83</span>
+
+</td>
+
+</tr></table>
+</div>
+
+
+
+<hr class="course_hr">
+
+<div class="course_menu">
+
+Студентам: 
+
+<span class="course_offline">
+<a 
+	title="Автономная система для изучения курса без подключения к интернету, включает тексты лекций и все тесты."
+	href="/shop/courses/?media=download&expand_selected=1&courses=604">версия для локальной работы</a>
+</span>
+
+
+
+
+
+
+
+|
+<a href="/department/pl/toopincsharp30/lit.html" class="course_menu_item">литература</a>
+
+
+
+|
+<a href="/shop/books/departments/pl/toopincsharp30/" class="course_menu_item">учебники</a>
+
+
+|
+<a href="/department/pl/toopincsharp30/forum/" class="course_menu_item">форум</a>
+
+|
+<a href="/department/pl/toopincsharp30/class/opinions/" class="course_menu_item">мнения</a>
+|
+<a href="/department/pl/toopincsharp30/class/classmates/" class="course_menu_item">однокурсники</a>
+|
+<a href="/department/pl/toopincsharp30/class/rating/" class="course_menu_item">рейтинг</a>
+
+</div>
+<hr class="course_hr">
+
+
+
+<div class="course_menu_lection">
+
+
+
+<span class="course_title_right">
+
+
+<div class="name">
+<div class="left">&nbsp;</div>
+<div class="text"><a 
+	href="/department/pl/toopincsharp30/class/examination/">экзамен</a></div>
+<div class="right">&nbsp;</div>
+</div>
+
+<div class="name">
+<div class="left">&nbsp;</div>
+<div class="text"><a 
+	href="/department/pl/toopincsharp30/class/examination_extern/">экстернат</a></div>
+<div class="right">&nbsp;</div>
+</div>
+
+
+<div class="name">
+<div class="left">&nbsp;</div>
+<div class="text"><a 
+	title="образец диплома"
+	onClick="return popup_diploma(this)" 
+	target="_blank" 
+	href="/department/pl/toopincsharp30/diplom/ru/">диплом</a></div>
+<div class="right">&nbsp;</div>
+</div>
+
+</span>
+
+
+
+
+
+
+
+
+
+
+<div class="menu_lections">
+
+<div class="name">
+<div class="left">&nbsp;</div>
+<div class="text">Лекции:</div>
+<div class="right">&nbsp;</div>
+</div>
+
+
+<div class="lections">
+<ul>
+
+<li title="Классы"><a href="../1/" class="normal">1</a></li>
+
+<li title="Структуры"><a href="../2/" class="normal">2</a></li>
+
+<li class="selected" title="Перечисления">3</li>
+
+
+
+<li title="Отношения между классами. Клиенты и наследники"><a href="../4/" class="normal">4</a></li>
+
+<li title="Интерфейсы. Множественное наследование"><a href="../5/" class="normal">5</a></li>
+
+<li title="Делегаты. Функциональный тип данных"><a href="../6/" class="normal">6</a></li>
+
+<li title="Классы с событиями"><a href="../7/" class="normal">7</a></li>
+
+<li title="Универсальность. Классы с родовыми параметрами"><a href="../8/" class="normal">8</a></li>
+
+<li title="Декларативность. Атрибуты и теги"><a href="../9/" class="normal">9</a></li>
+
+<li title="Корректность и устойчивость программных систем"><a href="../10/" class="normal">10</a></li>
+
+</ul>
+    <div class="clear">&nbsp;</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
+
+	<!-- content -->
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+
+
+<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+</td></tr>
+
+
+
+
+
+<tr>
+<td colspan="2" align=left>
+<div class="lecture_title">3. Лекция:
+ Перечисления</div>
+</td>
+</tr>
+
+<tr>
+
+<td width="75%" align=left><font class="rtitle">Страницы:</font>
+
+
+<font class="rtitle">1</font>
+
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="2.html">2</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="3.html">3</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="4.html">4</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="test/">вопросы</a> <font class="stitle">|</font> 
+<a class="rtitle" href="2.html"><b>&raquo;</b></a>
+</td>
+<td align=right>
+
+<a href="print/" class="rtitle" target="_blank">для печати и PDA</a>
+
+
+</td>
+
+</tr>
+
+
+
+
+	<tr><td height="2" colspan=2><img src="/img/empty.gif" width="1" height="2"></td></tr>
+
+<tr><td align="left" class="lecture_pl1" colspan="2">
+<div class="lecture_write_to_us">Если Вы заметили ошибку - <a class="llecture_red" target="_blank" href="/help/askform.xhtml?course=604&url=http://www.intuit.ru/department/pl/toopincsharp30/3/1.html">сообщите нам</a>
+или выделите ее и нажмите Ctrl+Enter</div>
+</td></tr>
+
+
+<tr><td class="lecture_pl1" colspan="2">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr id="menu_lecture">
+<td><div id="la_indicator" style="display:none;" /></td>
+<td>
+<div id="comments_nav" >
+<a id="comments_toggle" style="display:none;" class="comments_nav" href="javascript:toggle_write_to_us();_toggleComments();"> Включить комментарии</a>
+<span id="comments_configure" style="display:none;">||&nbsp;<a class="comments_nav" href="javascript:_configureComments()">Настройки</a></span>
+<span id="comments_moderate" style="display:none;" >||&nbsp;<a class="comments_nav" href="javascript:_moderateComments()">Модерация</a></span>
+<span id="comments_help" style="display:none;">||&nbsp;<a class="comments_nav" href="javascript:_helpComments()">Помощь</a></span>
+</div>
+</td>
+</tr>
+</table>
+
+</td></tr>
+	<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+
+	<tr><td colspan=2>
+
+
+<div id="lecture_annotation" class="lecture_annotation">
+<div id="lecture_annotation_content">Еще один важный частный случай класса – перечисление позволяет задать разработчику конечное множество значений, которые могут получать объекты классы. Показано, как перечисление, заданное шкалой, позволяет строить эффективные по памяти и времени алгоритмы для широкого класса задач. Лекция сопровождается задачами.
+</div>
+<hr class="course_hr">
+</div>
+
+
+<div class="_ga1_on_">
+<div id="lecture_container">
+<div id="lecture_body">
+
+<!---->
+<div class="bannere240x400">
+<div id="banner-240x400" style="display: none;"></div>
+
+</div>
+<!---->
+
+
+
+
+<div  id="lecture_content"><h1>Содержание</h1><div id="lecture_content_adds"></div><ul><li><a href="#sect2">Классы перечисления</a></li><ul><li><a href="#sect3">Персоны и профессии</a></li><li><a href="2.html#sect4">Шкалы</a></li><ul><li><a href="2.html#sect5">Шкалы и запросы</a></li><ul><li><a href="2.html#sect6">Запрос на поиск элемента, соответствующего образцу</a></li><li><a href="2.html#sect7">Запрос на поиск элемента,  у которого нет свойств, заданных в образце</a></li><li><a href="2.html#sect8">Запрос на поиск элемента, обладающего некоторыми свойствами образца</a></li><li><a href="2.html#sect9">Запрос на поиск элемента, обладающего некоторыми, но не всеми свойствами образца</a></li><li><a href="2.html#sect10">Запрос на поиск элемента,  в точности совпадающего с образцом</a></li></ul><li><a href="2.html#sect11">Шкалы и печать</a></li><li><a href="2.html#sect12">Пример работы со свойствами объектов класса Person</a></li><li><a href="3.html#sect13">Пример. Класс Job</a></li></ul><li><a href="4.html#sect14">Задачи</a></li></ul></ul></div><a  name="sect1"></a><h3 ></h3><p  id="id_281"><b>Проект к данной лекции  Вы можете скачать</b>  <a target="_blank" href="Ch3.zip"><img border="0" src="http://www.intuit.ru/img/icons/zip.gif"></a> <a target="_blank" href="Ch3.zip">здесь</a>.</p><div  class="lecture_mark" id="mark_281"></div><a  name="sect2"></a><h3 >Классы перечисления</h3><p  id="id_1"><b>Перечисление</b>  - это частный случай класса, класс, заданный без собственных методов. Перечисление задает конечное множество возможных значений, которые могут получать объекты класса перечисление. Поскольку у перечислений нет собственных методов, то синтаксис объявления этого класса упрощается, остается обычный заголовок и тело класса, содержащее список возможных значений. Вот формальное определение синтаксиса перечислений:</p><div  class="lecture_mark" id="mark_1"></div><div  class="example" id="id_2"><pre>[атрибуты][модификаторы]enum имя_перечисления[:базовый класс]
+{список_возможных_значений}</pre></div><div  class="lecture_mark" id="mark_2"></div><p  id="id_3">Описание атрибутов отложим на последующие лекции. Модификаторами могут быть четыре известных модификатора доступа и модификатор <span class="texample">new</span>. Ключевое слов <span class="texample">enum</span>  (сокращение слова <span class="texample">enumeration</span> ) говорит, что определяется частный случай класса - перечисление. Список возможных значений задает те значения, которые могут получать объекты этого класса. Возможные значения должны быть идентификаторами. Как и всюду в C#, при построении идентификаторов допускаются не только символы латиницы, но и символы кириллицы. Для имен переменных и других программных сущностей принято использовать латиницу,  для элементов перечисления использование слов русского языка является нормой. Идентификаторы являются константами, называемыми перечислителями ( <span class="texample">enumerator</span> ),  а само перечисление можно рассматривать как список перечислителей.</p><div  class="lecture_mark" id="mark_3"></div><p  id="id_8">Идентификаторы, заданные в перечислении, как правило, имеют содержательный смысл и являются именами сущностей предметной области. Они используются для организации интерфейса пользователя, при вводе и выводе, при описании действий над объектами перечисления. В памяти компьютера элементы перечисления представлены числами, так что перечисление является числовым типом данных, а не символьным, как могло бы казаться. Множество элементов перечисления проецируется на целочисленный тип данных. По умолчанию элементы перечисления проецируются на начальный отрезок типа <span class="texample">int</span>. В этом случае при описании перечисления из <span class="texample">n</span>  идентификаторов первый из идентификаторов отображается в число 0, последний - в число <span class="texample">n-1</span>. Значения, заданные списком, проецируются на плотное подмножество базового класса.</p><div  class="lecture_mark" id="mark_8"></div><p  id="id_12">Процессом отображения перечисления на числовой тип данных можно управлять. Базовый класс, который задан при описании перечисления, указывает, в какой тип отображается перечисление. Понятно, что в качестве базового класса можно указывать только классы, задающие целочисленный тип. Кроме типа <span class="texample">char</span>, любой целочисленный тип может выступать в роли базового класса. При желании можно задать не только  базовый класс, но и интервал представления внутри базового класса. Если для первого идентификатора в списке указать целочисленное значение, то оно будет использоваться как указание задания левой границы интервала представления. Все остальные значения будут проецироваться на интервал с заданной левой границей.</p><div  class="lecture_mark" id="mark_12"></div><p  id="id_14">Более того, множество целых, на которое проецируется список элементов перечисления, вовсе не обязано быть плотным. Числовое значение, на которое будет проецироваться данный идентификатор, можно задать для каждого идентификатора. Эта крайне важная и полезная особенность перечислений, активно используемая программистами при работе со шкалами. О шкалах мы говорили при рассмотрении логических операций над целыми числами. Обсудим их подробно и в данной лекции.</p><div  class="lecture_mark" id="mark_14"></div><p  id="id_15">Приведу примеры объявлений <b>классов-перечислений</b>:</p><div  class="lecture_mark" id="mark_15"></div><div  class="example" id="id_16"><pre>public enum Profession{teacher, engineer, businessman};
+public enum MyColors {red, blue, yellow, black, white};
+public enum TwoColors {black, white};
+public enum Rainbow {красный, оранжевый, желтый, зеленый, голубой, синий, фиолетовый};
+public enum Sex: byte {man=1, woman};
+public enum Days:long {Sun,Mon,Tue,Wed,Thu, Fri, Sat};</pre></div><div  class="lecture_mark" id="mark_16"></div><p  id="id_17">Вот несколько моментов, на которые следует обратить внимание при объявлении перечислений.</p><div  class="lecture_mark" id="mark_17"></div><ul  id="id_18"><li>Как и другие классы, перечисления могут быть объявлены непосредственно в пространстве имен проекта или могут быть вложены в описание класса. Последний вариант часто применяется, когда перечисление используется в интересах одного класса. В этом случае оно может иметь модификатор доступа <span class="texample">private</span>.</li><li>Константы разных перечислений могут совпадать, как в перечислениях <span class="texample">MyColors</span>  и <span class="texample">TwoColors.</span>  Имя константы всегда уточняется именем перечисления.</li><li>Константы могут задаваться словами русского языка, как в перечислении <span class="texample">Rainbow</span>.</li><li>Разрешается задавать базовый класс перечисления. Для перечисления <span class="texample">Sex</span>  базовым классом является <span class="texample">byte</span>, а для перечисления <span class="texample">Days</span>  - класс <span class="texample">long</span>.</li><li>Разрешается не только задавать базовый класс, но и указывать начальный элемент подмножества, на которое проецируется множество значений перечисления. Для перечисления <span class="texample">Sex</span>  в качестве базового класса выбран класс <span class="texample">byte</span>, а подмножество значений начинается с 1, так что хранимым значением константы <span class="texample">man</span>  является <span class="texample">1</span>, а <span class="texample">woman</span>  - <span class="texample">2</span>.</li></ul><div  class="lecture_mark" id="mark_18"></div><p  id="id_38">Рассмотрим теперь пример работы с объектами - экземплярами различных перечислений. С этой целью введем в программный проект класс <span class="texample">Testing</span>  - он является клиентом выше определенных перечислений, методы которого реализуют тесты, позволяющие анализировать работу с перечислениями.</p><div  class="lecture_mark" id="mark_38"></div><div  class="example" id="id_40"><pre>/// &lt;summary&gt;
+/// Методы класса позволяют тестировать
+/// перечисления - создавать и обрабатывать
+/// объекты перечислений, определенных в проекте
+/// &lt;/summary&gt;
+class Testing
+{
+    /// &lt;summary&gt;
+    /// Создание объектов перечислений,
+    /// присваивание значений и вывод на печать
+    /// &lt;/summary&gt;
+    public void TestEnum()
+    {
+        const string COLOR_EQUAL =
+            "Цвета совпадают!";
+        const string COLOR_DIFFERENT =
+            "Цвета не совпадают!";
+        const string ENUM_RAINBOW =
+            "Цвета перечисления Rainbow:";
+
+        Rainbow color = new Rainbow();
+        //MyColors color1 = MyColors(MyColors.blue);
+        MyColors color1 = MyColors.white;
+        TwoColors color2;
+        color2 = TwoColors.white;
+        Console.WriteLine("цвет1 = {0}, цвет2 = {1}",
+            color1, color2);
+
+        //if(color1 != color2) color2 = color1;
+        if (color1.ToString() == color2.ToString())
+            Console.WriteLine(COLOR_EQUAL);
+        else Console.WriteLine(COLOR_DIFFERENT);
+        
+        Rainbow color3;
+        color3 = (Rainbow)4;
+        color1 = MyColors.blue;
+        Console.WriteLine("цвет1 = {0}, цвет2 = {1}",
+            color1, color3);
+        if (color3 == Rainbow.голубой) 
+            Console.WriteLine(COLOR_EQUAL);
+        else Console.WriteLine(COLOR_DIFFERENT);
+
+        Console.WriteLine(ENUM_RAINBOW);
+        for (int num = 0; num &lt; 10; num++)
+        {
+            color = (Rainbow)num;
+            Console.WriteLine(color.ToString());
+        }
+
+        Sex who = Sex.man;
+        Days first_work_day = (Days)(long)1;
+       
+        Console.WriteLine("who={0}, first_work_day={1}",
+            who, first_work_day);
+    }
+}</pre></div><div  class="lecture_mark" id="mark_40"></div><p  id="id_41">Данный пример иллюстрирует следующие особенности работы с объектами перечислений.</p><div  class="lecture_mark" id="mark_41"></div><ul  id="id_42"><li>Объект перечисления можно создать в объектном стиле с использованием операции <span class="texample">new</span>. Но у перечислений есть только единственный конструктор без параметров, инициализирующий объект первым по порядку следования значением перечисления. В примере так создается объект <span class="texample">color</span>  класса <span class="texample">Rainbow</span>, получающий значение "красный".</li><li>Попытка создать объект <span class="texample">color1</span>  класса <span class="texample">MyColors</span>  закомментирована, поскольку у перечислений нет конструкторов с параметрами.</li><li>Объекты можно объявлять с явной инициализацией, как <span class="texample">color1</span>, или с отложенной инициализацией, как <span class="texample">color2</span>. При объявлении без явной инициализации объект получает значение первой константы перечисления, так что <span class="texample">color2</span>  в момент объявления получает значение <span class="texample">black</span>.</li><li>Объекту можно присвоить значение, которое задается константой перечисления, уточненной именем перечисления, как для <span class="texample">color1</span>  и <span class="texample">color2</span>.</li><li>Нельзя сравнивать объекты разных перечислений, например, <span class="texample">color1</span>  и <span class="texample">color2</span>. Это разные классы, для которых не определены операции преобразования типа. Но, заметьте, можно сравнивать строки, возвращаемые методом <span class="texample">ToString</span>, например, <span class="texample">color1.ToSting()</span>  и <span class="texample">color2.ToString()</span>.</li><li>Метод <span class="texample">ToString</span>, наследованный от класса <span class="texample">object</span>, для перечислений переопределен. Если для числового значения объекта существует константа перечисления, отображаемая на числовое значение, то в качестве результата возвращается соответствующий идентификатор как строка. В противном случае, когда такого отображения нет, возвращается как строка само числовое значение.</li><li>Существуют явные взаимно обратные преобразования констант базового типа и констант перечисления. Цикл, печатающий все значения перечисления <span class="texample">Rainbow</span>, демонстрирует преобразование объектов типа <span class="texample">int</span>  в объекты <span class="texample">Rainbow</span>. Заметьте, в объекты <span class="texample">Rainbow</span>  преобразуются числа, выходящие за интервал, на который проецируются константы перечисления.</li></ul><div  class="lecture_mark" id="mark_42"></div><p  id="id_72">Результаты работы метода <span class="texample">TestEnum</span>  показаны на <a href="#image.3.1">рис. 3.1</a>.</p><div  class="lecture_mark" id="mark_72"></div><p  align="left" id="id_74"><a name="image.3.1"></a><div><img src="03_01.jpg" alt="Результаты работа теста, демонстрирующего работу с объектами перечислений      " width="412" height="263"></div><br><b>Рис. 3.1.</b> 
+        Результаты работа теста, демонстрирующего работу с объектами перечислений      </p><div  class="lecture_mark" id="mark_74"></div><a  name="sect3"></a><h4 >Персоны и профессии</h4><p  id="id_75">Рассмотрим еще один пример работы с перечислениями, приближенный к реальности. Рассмотрим класс <span class="texample">Person</span>  с полями, типичными для классов, которые описывают личность, - имя, фамилия, возраст и так далее. Добавим в этот класс поле, определяющее профессию персоны. Вполне разумно иметь перечисление, например, <span class="texample">Profession</span>, задающее список возможных профессий. Сделаем это поле, как обычно, закрытым, а доступ к нему обеспечим соответствующим свойством:</p><div  class="lecture_mark" id="mark_75"></div><div  class="example" id="id_78"><pre>Profession prof;
+public Profession Prof
+ {
+   get {return (prof);}
+   set {prof = value;}
+ }</pre></div><div  class="lecture_mark" id="mark_78"></div><p  id="id_79">Добавим еще в класс <span class="texample">Person</span>  метод <span class="texample">Analysis</span>, который анализирует профессию, организуя традиционный разбор случаев и принимая решение на каждой ветви, в данном примере - выводя соответствующий текст:</p><div  class="lecture_mark" id="mark_79"></div><div  class="example" id="id_82"><pre>public void Analysis()
+ {
+    switch (prof)
+     {
+      case Profession.businessman:
+        Console.WriteLine ("профессия: бизнесмен");
+        break;
+      case Profession.teacher:
+        Console.WriteLine ("профессия: учитель");
+        break;
+      case Profession.engineer:
+        Console.WriteLine ("профессия: инженер");
+        break;
+      default:
+        Console.WriteLine ("профессия: неизвестна");
+        break;
+     }
+ }</pre></div><div  class="lecture_mark" id="mark_82"></div><p  id="id_83">Приведу простой тестирующий пример работы с объектом <span class="texample">Person</span>  и его профессией:</p><div  class="lecture_mark" id="mark_83"></div><div  class="example" id="id_85"><pre>public void TestProfession()
+ {
+   Person pers1 = new Person ("Петров");
+   pers1.Prof = Profession.teacher;
+   pers1.Analysis();
+ }</pre></div><div  class="lecture_mark" id="mark_85"></div><p  id="id_86">Рассмотрим перечисление <span class="texample">Status</span>, элементы которого задают возможный статус персоны:</p><div  class="lecture_mark" id="mark_86"></div><div  class="example" id="id_88"><pre>public enum Status
+  {
+    ребенок, школьник,
+    студент, работник, пенсионер
+  }</pre></div><div  class="lecture_mark" id="mark_88"></div><p  id="id_89">Зададим в классе <span class="texample">Person</span>  поле <span class="texample">status</span>, принадлежащее перечислению <span class="texample">Status</span>:</p><div  class="lecture_mark" id="mark_89"></div><div  class="example" id="id_93"><pre>Status status = Status.студент;</pre></div><div  class="lecture_mark" id="mark_93"></div><p  id="id_94">Предположим, что статус персоны изменяется с возрастом, определив метод-свойство для поля <span class="texample">age</span>  следующим образом:</p><div  class="lecture_mark" id="mark_94"></div><div  class="example" id="id_96"><pre>/// &lt;summary&gt;
+///стратегия: Read,Write (Чтение, запись)
+/// &lt;/summary&gt;
+public int Age
+{
+  set
+  {
+     age = value;
+     //Изменение статуса
+     if (age &lt; 7) status = Status.ребенок;
+     else if (age &lt; 17) status = Status.школьник;
+     else if (age &lt; 22) status = Status.студент;
+     else if (age &lt; 65) status = Status.работник;
+     else status = Status.пенсионер;
+  }
+  get { return (age); }
+}</pre></div><div  class="lecture_mark" id="mark_96"></div><p  id="id_97">Соответствующий тест, демонстрирующий работу с полем <span class="texample">status</span>, имеет вид:</p><div  class="lecture_mark" id="mark_97"></div><div  class="example" id="id_99"><pre>public void TestStatus()
+  {
+     Person pers = new Person("Кузнецов");
+     pers.Age = 5;
+     Console.WriteLine("возраст = {0}, статус = {1}",
+         pers.Age, pers.GetStatus);
+     pers.Age = 20;
+     Console.WriteLine("возраст = {0}, статус = {1}",
+         pers.Age, pers.GetStatus);
+     pers.Age = 35;
+     Console.WriteLine("возраст = {0}, статус = {1}",
+         pers.Age, pers.GetStatus);
+  }</pre></div><div  class="lecture_mark" id="mark_99"></div><p  id="id_100">В этом примере <span class="texample">GetStatus</span>  - это метод-свойство, обеспечивающий доступ к закрытому полю <span class="texample">status</span>. Результаты работы с объектами перечислений, полученные при вызове тестов <span class="texample">TestProfession</span>  и <span class="texample">TestStatus</span>, показаны на <a href="#image.3.2">рис. 3.2</a>.</p><div  class="lecture_mark" id="mark_100"></div><p  align="left" id="id_105"><a name="image.3.2"></a><div><img src="03_02.jpg" alt=" Результаты работы с перечислениями Profession и Status" width="436" height="119"></div><br><b>Рис. 3.2.</b> 
+         Результаты работы с перечислениями Profession и Status</p><div  class="lecture_mark" id="mark_105"></div>
+
+    
+
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+on_load_lecture();
+</script>
+
+	</td>
+	</tr>
+	<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+
+	<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+	<tr><td colspan=2 align="center">
+
+<a href="2.html" class="attention">Дальше &raquo;</b></a>
+
+	</td></tr>
+	<tr><td height="16" colspan=2><img src="/img/empty.gif" width="1" height="16"></td></tr>
+
+	<tr><td height="2" colspan=2><img src="/img/empty.gif" width="1" height="2"></td></tr>
+<tr>
+
+<td width="75%" align=left><font class="rtitle">Страницы:</font>
+
+
+<font class="rtitle">1</font>
+
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="2.html">2</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="3.html">3</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="4.html">4</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="test/">вопросы</a> <font class="stitle">|</font> 
+<a class="rtitle" href="2.html"><b>&raquo;</b></a>
+</td>
+<td align=right>
+
+<a href="print/" class="rtitle" target="_blank">для печати и PDA</a>
+
+
+</td>
+
+</tr>
+
+	<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+	<tr><td class="orang" height="1" colspan=2><img src="/img/empty.gif" width="1" height="1"></td></tr>
+	</table>
+	<!-- /content -->
+</div>
+</td>
+
+
+<td width="6"><img src="/img/empty.gif" width="6"></td>
+<td width="1" class="gray"><img src="/img/empty.gif"></td>
+<td width="6"><img src="/img/empty.gif" width="6"></td>
+<td width="160">
+<table border="0" cellpadding="0" cellspacing="0" background="" width="100%">
+<tr><td>
+<div id="last_qa" style="display: none"><div class="last_qa">
+<h1><a onClick="return open_last_qa(this);" href="http://ask.intuit.ru/">Вопросы и Ответы</a></h1>
+
+Помогите ответить на вопрос: <script type="text/javascript">write_lastq()</script>
+
+<div>
+<a onClick="return open_last_qa(this);" href="http://ask.intuit.ru/">Задайте свой вопрос &raquo;</a>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+	if(lastq_exists) {
+		var t = document.getElementById('last_qa');
+		if(t) t.style.display = 'block';
+	}
+</script>
+<div id="intuit_banner_01" style="display: none"></div>
+</td></tr>
+
+<tr><td align="center">&nbsp;</td></tr>
+<tr>
+<td align="center">
+<div id="banner-160x600" style="display: none;"></div>
+
+</td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+
+<tr><td align="center">
+<div class="google160x600">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-3229713645839679";
+/* Intuit_160x600 */
+google_ad_slot = "9981759856";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+
+
+</td></tr>
+</table>
+</td>
+
+
+
+</table>
+
+
+<!-- /bottom -->
+<br>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="white">
+<!---->
+<!---->
+<tr>
+<td align="center" class="border">
+    <table border="0" cellpadding="0" cellspacing="8" bgcolor="white" width="100%">
+    <tr>
+    <td width="1"><iframe id="errorHandling" src="/content-operation/error.xhtml" width="1" height="1" frameborder="0" scrolling="no"></iframe></td>
+    <td align="center" width="100%" class="rtxt">
+    Внимание! Если Вы увидите ошибку на нашем сайте, выделите её и нажмите Ctrl+Enter.
+    </td>
+    </tr>
+    </table>
+</td>
+</tr>
+<!---->
+
+<tr>
+<td align="center" class="border">
+<script type="text/javascript">
+//<![CDATA[
+yandex_partner_id = 14351;
+yandex_site_bg_color = 'FFFFFF';
+yandex_site_charset = 'windows-1251';
+yandex_ad_format = 'direct';
+yandex_font_size = 1;
+yandex_direct_type = 'horizontal';
+yandex_direct_border_type = 'ad';
+yandex_direct_limit = 4;
+yandex_direct_header_bg_color = 'FEEAC7'; yandex_direct_bg_color = 'FFF9F0'; yandex_direct_border_color = 'FF9900'; yandex_direct_title_color = '0000CC'; yandex_direct_url_color = '006600'; yandex_direct_all_color = '0000CC'; yandex_direct_text_color = '000000'; yandex_direct_hover_color = '0066FF'; yandex_direct_favicon = true; document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/system/context.js"></sc'+'ript>');
+//]]>
+</script>
+
+</td>
+</tr>
+
+
+
+
+<tr>
+<td align="center" class="border">
+    <table border="0" cellpadding="0" cellspacing="8" bgcolor="white" width="100%">
+    <tr>
+    <td>
+<b>Нужна помощь?</b><br>
+&#149; Забыли пароль? <a href="/user/remind/">Вам сюда...</a><br>
+&#149; Есть вопрос? <a href="/help/askform.xhtml">Спрашивайте!</a>
+    </td>
+    <td>
+<b>Вы можете:</b><br>
+&#149; Изменить персональные <a href="/user/edit/">данные</a><br>
+&#149; Изменить параметры <a href="/user/subscribe/">подписки</a>
+    </td>
+    <td>
+<b>Интернет-магазин:</b><br>
+&#149; Ваши заказы <a href="/shop/order/history.xhtml">здесь</a><br>
+&#149; Ваш личный <a href="/user/account/">счет</a>
+    </td>
+    </tr>
+    </table>
+</td>
+</tr>
+<!---->
+<tr>
+<td align="center" class="copy" bgcolor="#ff9900">
+    <a href="/courses.html" class="bot">Курсы</a> |
+    <a href="/speciality/" class="bot">Учебные программы</a> |
+    <a href="/shop/" class="bot">Учебники</a> | 
+    <a href="http://ask.intuit.ru/" class="bot" target="_new">Вопросы и Ответы</a> | 
+    <a href="/forum/" class="bot">Форум</a> |
+    <a href="/news/" class="bot">Новости</a> | 
+    <a href="/help/" class="bot">Помощь</a>
+    <br><br>
+    Телефон: +7 (499) 253-9312, 253-9313, факс: +7 (499) 253-9310, email: <a href="mailto:info@intuit.ru" class="bot">info@intuit.ru</a><br>
+    &copy; <a href="http://www.intuit.ru/" class="bot">INTUIT.ru::Интернет-Университет Информационных Технологий - дистанционное образование, 2003-2011</a>
+</td>
+</tr>
+</table>
+<!-- /bottom -->
+
+
+<center>
+<table width=100% border=0 cellpadding=4>
+<tr valign=top>
+<td class="topnavi" align="left">
+Проект <b><a href="http://www.osp.ru/" target="_blank">Издательства "Открытые Системы"</a></b>.<br>
+Партнеры: <a href="http://www.rmt.ru/" target="_blank">РМ Телеком</a>, <a href="http://www.kraftway.ru/" target="_blank">KRAFTWAY COMPUTERS</a>.
+</td>
+<td align=right>
+<!--begin of Rambler's Top100 code -->
+<img src="http://counter.rambler.ru/top100.cnt?435517" alt="" width=1 height=1 border=0><a href="http://top100.rambler.ru/top100/"><img src="/img/rambler.gif" alt="Rambler's Top100" width=88 height=31 border=0></a>
+<!--end of Top100 code-->
+&nbsp;
+
+<!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=496301"'+
+' target=_top><img src="http://d2.c9.b7.a0.top.list.ru/counter'+
+'?id=496301;t=75;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=496301"><img
+src="http://d2.c9.b7.a0.top.list.ru/counter?js=na;id=496301;t=75"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+&nbsp;
+
+<!-- SpyLOG -->
+<script src="http://tools.spylog.ru/counter2.2.js" type="text/javascript" id="spylog_code" counter="459372" ></script>
+<noscript>
+<a href="http://u4593.72.spylog.com/cnt?cid=459372&f=3&p=0" target="_blank">
+<img src="http://u4593.72.spylog.com/cnt?cid=459372&p=0&f=4" alt='SpyLOG' border='0' width=88 height=31 ></a> 
+</noscript>
+<!--/ SpyLOG -->
+&nbsp;
+<!--
+<script language="javascript">
+function getCookie(name) {
+var prefix = name + "="
+var cookieStartIndex = document.cookie.indexOf(prefix)
+if (cookieStartIndex == -1)
+        return null
+var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length)
+if (cookieEndIndex == -1)
+        cookieEndIndex = document.cookie.length
+return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex))
+}
+if (getCookie('adskip') == null && (getCookie('adcnt') == null || getCookie('adcnt') < 6)) {  window.open('/popup/1/','adpopup','width=300,height=320,location=no,scrollbars=no,resizable=yes,status=no,history=no,toolbar=no'); }
+</script>
+-->
+&nbsp;
+
+<!--LiveInternet counter--><script language="JavaScript"><!--
+document.write('<a href="http://www.liveinternet.ru/click" '+
+'target=_blank><img src="http://counter.yadro.ru/hit?t44.6;r'+
+escape(document.referrer)+((typeof(screen)=='undefined')?'':
+';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+';'+Math.random()+
+'" border=0 width=31 height=31 alt="liveinternet.ru"></a>')//--></script><!--/LiveInternet-->
+
+&nbsp;
+
+<!-- bigmir)net TOP 100 --><a href="http://www.bigmir.net/" target=_blank onClick='img = new Image();img.src="http://www.bigmir.net/?cl=143122";' ><script language="javascript"><!--
+bmQ='<img src=http://c.bigmir.net/?s143122&t8'
+bmD=document
+bmD.cookie="b=b"
+if(bmD.cookie)bmQ+='&c1'
+//--></script><script language="javascript1.2"><!-- 
+bmS=screen;bmQ+='&d'+(bmS.colorDepth?bmS.colorDepth:bmS.pixelDepth)+"&r"+bmS.width;
+//--></script><script language="javascript"><!--
+bmF = bmD.referrer.slice(7);
+((bmI=bmF.indexOf('/'))!=-1)?(bmF=bmF.substring(0,bmI)):(bmI=bmF.length);
+if(bmF!=window.location.href.substring(7,7+bmI))bmQ+='&f'+escape(bmD.referrer);
+bmD.write(bmQ+" border=0 width=88 height=31 alt='bigmir TOP100'>");
+//--></script></a>
+
+
+</td>
+</tr></table>
+
+</center>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17929409-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type =
+'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- GoodADVERT (SMART VIDEO in text) for http://www.intuit.ru -->
+<script type="text/javascript"><!--
+var _ga1_channel='199';
+// -->
+</script>
+<script type="text/javascript" src="http://files.goodadvert.ru/ga_1.js" charset="utf-8"></script>
+<!-- GoodADVERT -->
+
+<!--BEGIN RichBanner http://www.intuit.ru (Video)-->
+<script language="JavaScript">
+<!--
+var _rbn={};
+_rbn.v={};
+_rbn.v.inline_color = "#009900";
+_rbn.v.inline_count_max=5;
+_rbn.v.is_use_marked=0;
+_rbn.v.autostart_video = 1;
+_rbn.v.ad=[];
+document.write('<scr' + 'ipt language="JavaScript" src="http://drive.richbanner.ru/code?pid=22632&gid=19&oin=1&rid=' + (Math.floor(Math.random() * 1000000000)) +'" charset="utf-8" type="text/JavaScript"></scr' + 'ipt>');
+// -->
+</script>
+<script language="JavaScript" src="http://folder.richbanner.ru/rbn.js" charset="utf-8" type="text/JavaScript"></script>
+<!--END RichBanner -->
+
+<script type="text/javascript" src="/ssi/banner/intuit_is_bottom.js"></script>
+
+
+
+</body>
+</html>

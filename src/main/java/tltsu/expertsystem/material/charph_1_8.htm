@@ -1,0 +1,1163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+
+
+<link href="http://popup.osp.ru/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://popup.osp.ru/tooltip_js_cfg/tooltip-core.js"></script>
+<script type="text/javascript" src="http://popup.osp.ru/tooltip_js_cfg/tooltip-dynamic.js"></script>
+<script type="text/javascript">document.write('<script type="text/javascript" src="http://popup.osp.ru/tooltip_cfg/tooltip-cfg-16.js?rnd=' + Math.round(Math.random() * 100000) + '"><\/script>')</script>
+
+
+<title>INTUIT.ru: Курс: Объектное ..: Лекция №1: Классы</title>
+
+<meta name="description" content="INTUIT.ru: учебный курс: Объектное программирование в классах на С# 3.0. Лекция: Классы"/>
+
+<meta name="keywords" content="учебный курс Объектное программирование в классах на С# 3.0 Классы
+INTUIT"/> 
+
+<script type="text/javascript" src="/ssi/menu.js?2009-06-04"></script>
+<link rel="shortcut icon" href="/favicon.ico" />
+
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+<meta name="Pragma" content="no-cache" />
+<meta name="Cache-Control" content="no-cache" />
+<link href="/ssi/course.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/ssi/course.js"></script>
+
+<link href="/ssi/lecture.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">var lid=6416</script>
+<script type="text/javascript" src="/ssi/prototype.js"></script>
+<script type="text/javascript" src="/ssi/lecture_lib.js"></script>
+
+<link href="/ssi/int4/history/history.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/ssi/AC_OETags.js" language="javascript"></script>
+<script type="text/javascript" src="/ssi/video2.js" language="javascript"></script>
+<script type="text/javascript" src="/ssi/video4x.js" language="javascript"></script>
+<script type="text/javascript" src="/ssi/int4/history/history.js" language="javascript"></script>
+<script type="text/javascript" src="/ssi/int4/jquery-1.4.2.js" language="javascript"></script>
+
+<script type="text/javascript" src="/ssi/last_qa.js"></script>
+<link href="/ssi/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body bgcolor="white">
+<!---->
+<!--header-->
+<!---->
+<div class="topbanner">
+<div style="text-align: center;">
+<div id="banner-top" style="display: none;"></div>
+
+<script type="text/javascript">
+// <!--
+	var body = document.getElementById('body');
+	if(body) {
+		body.topmargin = 0;
+		body.marginheight = 0;
+		body.style.topmargin='0';
+		body.style.marginTop = 0;
+	}
+// -->
+</script>
+
+
+<!---->
+</div></div>
+
+
+<!-- topbox -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="white">
+<tr>
+<td class="border">
+
+<!-- header:logo, menu -->
+<table border="0" cellpadding="6" cellspacing="0" width="100%">
+
+<tr valign="top">
+<td align="left" width="33%"><a href="/"><img src="/img/logo.gif" border="0" width="285" height="52" alt="Интернет Университет информационных технологий"></a></td>
+
+<td width="34%"></td>
+
+<td valign=top align=right class="epigraph">Твой путь к знаниям</a></td>
+</tr>
+
+</table>
+<!-- //header:logo, menu -->
+<!-- menu -->
+<table border="0" cellpadding="" cellspacing="0" width="100%" bgcolor="#ff9900" background="/img/bgtopmenu2.gif">
+<tr>
+<td align="left" height="24" class="topmenu"><form action="/search" name="ya_search">
+<input name="text" type="text" value="" style="margin-left:3px; margin-top:3px;">&nbsp;&nbsp;<a href=# onClick="document.ya_search.submit();">Искать!</a></td>
+</form></td>
+<td align="right" height="24" class="topmenu">
+<a 
+	id="menu_courses"
+	onMouseOver="return menu_mov('courses');" 
+	onMouseOut="return menu_mot('courses');" 
+	href="/courses.html">Курсы</a> 
+|
+<a 
+	id="menu_education"
+	onMouseOver="return menu_mov('education');" 
+	onMouseOut="return menu_mot('education');" 
+	href="/speciality/">Обучение</a> 
+|
+<a 
+	id="menu_school"
+	onMouseOver="return menu_mov('school');" 
+	onMouseOut="return menu_mot('school');" 
+	href="/catalog/school/">Школа</a> 
+|
+<a 
+	id="menu_shop"
+	onMouseOver="return menu_mov('shop');" 
+	onMouseOut="return menu_mot('shop');" 
+	href="/shop/">Магазин</a> 
+|
+<a 
+	id="menu_communication"
+	onMouseOver="return menu_mov('communication');" 
+	onMouseOut="return menu_mot('communication');" 
+	href="http://forum.intuit.ru/">Общение</a> 
+|
+
+
+<a 
+	id="menu_news"
+	onMouseOver="return menu_mov('news');" 
+	onMouseOut="return menu_mot('news');" 
+	href="/news/">Новости</a>  
+
+|
+<a 
+	id="menu_help"
+	onMouseOver="return menu_mov('help');" 
+	onMouseOut="return menu_mot('help');" 
+	href="/help/">Помощь</a> 
+
+
+</td></tr>
+<tr>
+<td align="right" colspan="2" 
+	onMouseOver="return menu2_mov();" 
+	onMouseOut="return menu2_mot();" 
+	class="menu2">
+<div 
+	class="menu_collections"
+	id="cmenu_courses">
+<div class="menu_polosa">
+<a href="/courses.html">все</a>
+| 
+<a href="/video/">видеокурсы</a>
+| 
+<a href="/rating_courses/?sort=start">новые</a>
+| 
+<a href="/rating_courses/?sort=mstudents">популярные</a>
+| 
+<a href="/video/tree/video/speech/">доклады</a>
+<div class="delim">||</div>
+<a href="/underway_courses.html">курсы в разработке</a>
+| 
+<a href="/author_list.html">авторы</a>
+</div>
+</div>
+
+<div 
+	class="menu_collections"
+	id="cmenu_shop">
+<div class="menu_polosa">
+<a href="/shop/books/">книги</a>
+| 
+<a href="/shop/soft/">курсы на CD</a>
+| 
+<a href="/shop/video/">видеокурcы на DVD</a>
+| 
+<a href="/shop/books/sale/">распродажа</a>
+| 
+<a href="/shop/books/novelty/">новинки</a>
+<div class="delim">||</div>
+<a href="/user/cart/">корзина</a>
+| 
+<a href="/user/account/">личный счет</a> 
+|
+<a href="/shop/order/history.xhtml">заказы</a>
+| 
+<a href="/user.html">настройка</a>
+</div>
+</div>
+
+
+<div 
+	class="menu_collections"
+	id="cmenu_education">
+<div class="menu_polosa">
+
+<a href="/groups/catalog/">учебные группы</a>
+| 
+<a href="/speciality/">учебные программы</a>
+<div class="delim">||</div> 
+<a href="http://hpcu.ru" target="_blank">HPCU.ru: Суперкомпьютерные технологии</a>
+|
+<a target="_blank" href="http://www.aspiranttest.com/">АспирантТест</a>
+|
+<a target="_blank" href="http://www.diofant.ru/" target="_blank">Diofant.ru</a>
+</div>
+</div>
+
+<div 
+	class="menu_collections"
+	id="cmenu_school">
+<div class="menu_polosa">
+<a href="/catalog/school/">курсы</a>
+| 
+<a href="/catalog/school/school/">видеокурсы</a>
+| 
+<a href="/shop/video/school/">видеокурсы на DVD</a>
+</div>
+</div>
+
+
+<div 
+	class="menu_collections"
+	id="cmenu_communication">
+<div class="menu_polosa">
+<a href="http://forum.intuit.ru/">форум</a>
+| 
+<a href="http://ask.intuit.ru/">вопросы и ответы</a>
+| 
+<a href="/help/askform.xhtml">задать вопрос</a>
+<div class="delim">||</div>
+<a href="/rating_students/">рейтинг студентов</a>
+</div>
+</div>
+
+
+<div 
+	class="menu_collections"
+	id="cmenu_help">
+<div class="menu_polosa">
+<a href="/help/about.html">о проекте</a>
+| 
+<a href="/help/learning.html">об учебе</a>
+| 
+<a href="/help/how.html">как учиться</a>
+| 
+<a href="/help/pay.html">платное обучение</a>
+| 
+<a href="/help/user.html">настройки</a>
+| 
+<a href="/help/orders.html">магазин</a>
+| 
+<a href="/help/groups.html">группы</a>
+</div>
+</div>
+
+<div
+	class="menu_collections"
+	id="cmenu_news">
+<div class="menu_polosa">
+<a href="/news/">лента новостей</a>
+|
+<a 
+	title="RSS" href="/news.rss" 
+	target="_blank"><img class="rss" border="0" width="12" height="12" src="/img/rss.gif">RSS</a>
+| 
+<a href="/job/">работа</a>
+| 
+<a href="http://www.intuit.ru/user/subscribe/">подписка</a>
+<div class="delim">||</div>
+<a target="_blank" href="http://www.osp.ru/">OSP.ru</a>
+| 
+<a target="_blank" href="http://tv.osp.ru/">видеоновости</a>
+</div>
+</div>
+
+
+<div 
+	class="menu_collections"
+	id="cmenu_default">
+<div class="menu_polosa">
+&nbsp;
+</div>
+</div>
+
+</td>
+</tr>
+</table>
+<script>
+	menu_reset();
+</script>
+<!-- //menu -->
+</td>
+</tr>
+</table>
+<!-- //topbox -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td align="center" class="menu">
+<table border=0 cellpadding=1 cellspacing=0 width=100% class="orang_border"><tr><td>
+<table border=0 cellpadding=4 cellspacing=0 width=100% bgcolor="#ffffcc">
+<tr align=center>
+<td width="100%" class="rtxt">
+<!--
+<a href="http://www.intuit.ru/department/graphics/bapscs5/"><b><font color="#990000">Очный курс по Photoshop в Москве</font></b></a> 
+||
+<a href="http://www.intuit.ru/job/"><b><font color="#000099">Работа в ИНТУИТ: специалисты по Java, Python</font></b></a> 
+||
+-->
+<a href="http://www.intuit.ru/ms-grants/"><b><font color="#990000">НОВЫЙ КОНКУРС ГРАНТОВ ОТ MICROSOFT</font></b></a> 
+|| 
+<a href="http://www.intuit.ru/konkurs/"><font color="#009900">Приглашаем авторов курсов</font></a> 
+|| 
+<a href="http://www.intuit.ru/shop/other/"><font color="#990000">ВСЕ ВИДЕОКУРСЫ</font> на одном диске</a> 
+<!--
+||
+<a href="http://www.intuit.ru/ms-grants/"><b><font color="#990000">НОВЫЙ КОНКУРС ГРАНТОВ ОТ MICROSOFT</font></b></a> 
+ и <a href="/shop/product-2493478.html"><font color="#990000">381 КУРС</font> на DVD</a>
+-->
+</td>
+</tr></table>
+</td></tr></table>
+</td>
+</tr>
+</table>
+
+<br>
+
+<!--/header-->
+<!---->
+<!--/menu-->
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="73">
+<tr valign="top">
+<td width="6"><img src="/img/empty.gif" height="1" width="6"></td>
+<td>
+<div class="course_content">
+
+
+<span 
+	title="Спонсорская поддержка проекта"
+	class="course_title_right">
+<a 
+	class="course_title_right" 
+	href="/user/account/sponsor.xhtml"><img 
+		width="15"
+		height="17"
+	src="/img/rubm.gif"></a>
+<a 
+	class="course_title_right" 
+	href="/user/account/sponsor.xhtml">поддержка курса</a></span>
+
+
+<a href="/goto/course/toopincsharp30/" class="course_title">Объектное программирование в классах на С# 3.0</a>
+
+
+<br>
+
+
+
+
+
+
+
+<span class="course_lecture_info_block"
+		style="cursor: pointer; cursor: hand">
+
+
+
+<span
+	style="display:none;"
+	onClick="course_show_info(false)"
+
+	title="скрыть информацию о курсе"
+	id="lecture_show_info_off">
+<span class="course_lecture_info">информация</span>
+<span style="font-weight: bold;">
+[<span 
+	style="font-weight: 900;"
+	onMouseOver="this.style.color='blue'"
+	onMouseOut="this.style.color='#000000'"
+
+>-</span>]</span>
+
+</span>
+
+
+
+<span
+	onClick="course_show_info(true)"
+
+	title="показать информацию о курсе"
+	id="lecture_show_info_on">
+<span class="course_lecture_info">информация</span>
+<span style="font-weight: bold;">
+[<span 
+	style="font-weight: 900;"
+	onMouseOver="this.style.color='blue'"
+	onMouseOut="this.style.color='#000000'"
+
+>+</span>]</span>
+
+</span>
+
+
+</span>
+
+
+Автор:
+
+<a class="course_author"  
+	title="Биллиг Владимир Арнольдович"
+	href="/lector/39.html">В.А. Биллиг</a>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+<div 
+	id="course_stat" 
+	style="display: none"
+>
+<hr class="course_hr">
+<table border="0" cellpadding="2" cellspacing="2" width="100%" ><tr>
+
+<td valign="BOTTOM">
+<a 
+	class="course_stat"
+	onClick="window.open(this.href,'', 'toolbars=no,status=no,location=no,resizable=yes,scrollbars=no');return false;"
+	href="/help/popup/course_info.html">?</a>
+</td>
+<td valign="top" class="course_stat">
+Уровень: <span id="course_level" class="course_stat_data">для специалистов</span>
+||
+Статус: <span id="course_status" class="course_stat_data">бесплатный</span>
+||
+Опубликован: <span id="course_pub_time" class="course_stat_data">02.12.2009</span>
+
+<br>
+<span title="оценка курса выпускниками">Рейтинг: <span id="course_rating" class="course_stat_data">4.52</span></span>
+||
+<span title="количество студентов за последний месяц">Популярность: <span id="course_pop" class="course_stat_data">31</span></span>
+||
+Студентов: <span class="course_stat_data" id="course_stud1" title="всего студентов">991</span>/<span class="course_stat_data" id="course_stud2"  title="всего выпускников">83</span>
+
+</td>
+
+</tr></table>
+</div>
+
+
+
+<hr class="course_hr">
+
+<div class="course_menu">
+
+Студентам: 
+
+<span class="course_offline">
+<a 
+	title="Автономная система для изучения курса без подключения к интернету, включает тексты лекций и все тесты."
+	href="/shop/courses/?media=download&expand_selected=1&courses=604">версия для локальной работы</a>
+</span>
+
+
+
+
+
+
+
+|
+<a href="/department/pl/toopincsharp30/lit.html" class="course_menu_item">литература</a>
+
+
+
+|
+<a href="/shop/books/departments/pl/toopincsharp30/" class="course_menu_item">учебники</a>
+
+
+|
+<a href="/department/pl/toopincsharp30/forum/" class="course_menu_item">форум</a>
+
+|
+<a href="/department/pl/toopincsharp30/class/opinions/" class="course_menu_item">мнения</a>
+|
+<a href="/department/pl/toopincsharp30/class/classmates/" class="course_menu_item">однокурсники</a>
+|
+<a href="/department/pl/toopincsharp30/class/rating/" class="course_menu_item">рейтинг</a>
+
+</div>
+<hr class="course_hr">
+
+
+
+<div class="course_menu_lection">
+
+
+
+<span class="course_title_right">
+
+
+<div class="name">
+<div class="left">&nbsp;</div>
+<div class="text"><a 
+	href="/department/pl/toopincsharp30/class/examination/">экзамен</a></div>
+<div class="right">&nbsp;</div>
+</div>
+
+<div class="name">
+<div class="left">&nbsp;</div>
+<div class="text"><a 
+	href="/department/pl/toopincsharp30/class/examination_extern/">экстернат</a></div>
+<div class="right">&nbsp;</div>
+</div>
+
+
+<div class="name">
+<div class="left">&nbsp;</div>
+<div class="text"><a 
+	title="образец диплома"
+	onClick="return popup_diploma(this)" 
+	target="_blank" 
+	href="/department/pl/toopincsharp30/diplom/ru/">диплом</a></div>
+<div class="right">&nbsp;</div>
+</div>
+
+</span>
+
+
+
+
+
+
+
+
+
+
+<div class="menu_lections">
+
+<div class="name">
+<div class="left">&nbsp;</div>
+<div class="text">Лекции:</div>
+<div class="right">&nbsp;</div>
+</div>
+
+
+<div class="lections">
+<ul>
+
+<li title="Классы"><a  href="../1/" class="active">1</a></li>
+
+
+<li title="Структуры"><a href="../2/" class="normal">2</a></li>
+
+<li title="Перечисления"><a href="../3/" class="normal">3</a></li>
+
+<li title="Отношения между классами. Клиенты и наследники"><a href="../4/" class="normal">4</a></li>
+
+<li title="Интерфейсы. Множественное наследование"><a href="../5/" class="normal">5</a></li>
+
+<li title="Делегаты. Функциональный тип данных"><a href="../6/" class="normal">6</a></li>
+
+<li title="Классы с событиями"><a href="../7/" class="normal">7</a></li>
+
+<li title="Универсальность. Классы с родовыми параметрами"><a href="../8/" class="normal">8</a></li>
+
+<li title="Декларативность. Атрибуты и теги"><a href="../9/" class="normal">9</a></li>
+
+<li title="Корректность и устойчивость программных систем"><a href="../10/" class="normal">10</a></li>
+
+</ul>
+    <div class="clear">&nbsp;</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
+
+	<!-- content -->
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+
+
+<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+</td></tr>
+
+
+
+
+
+<tr>
+<td colspan="2" align=left>
+<div class="lecture_title">1. Лекция:
+ <a href="../1/">Классы</a></div>
+</td>
+</tr>
+
+<tr>
+
+<td width="75%" align=left><font class="rtitle">Страницы:</font>
+<a class="rtitle" href="3.html">&laquo;</a> <font class="stitle">|</font>
+
+
+<a class="rtitle" href="1.html">1</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="2.html">2</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="3.html">3</a>
+<font class="stitle">|</font>
+
+<font class="rtitle">4</font>
+
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="5.html">5</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="test/">вопросы</a> <font class="stitle">|</font> 
+<a class="rtitle" href="5.html"><b>&raquo;</b></a>
+</td>
+<td align=right>
+
+<a href="print/" class="rtitle" target="_blank">для печати и PDA</a>
+
+
+</td>
+
+</tr>
+
+
+
+
+	<tr><td height="2" colspan=2><img src="/img/empty.gif" width="1" height="2"></td></tr>
+
+<tr><td align="left" class="lecture_pl1" colspan="2">
+<div class="lecture_write_to_us">Если Вы заметили ошибку - <a class="llecture_red" target="_blank" href="/help/askform.xhtml?course=604&url=http://www.intuit.ru/department/pl/toopincsharp30/1/4.html">сообщите нам</a>
+или выделите ее и нажмите Ctrl+Enter</div>
+</td></tr>
+
+
+<tr><td class="lecture_pl1" colspan="2">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr id="menu_lecture">
+<td><div id="la_indicator" style="display:none;" /></td>
+<td>
+<div id="comments_nav" >
+<a id="comments_toggle" style="display:none;" class="comments_nav" href="javascript:toggle_write_to_us();_toggleComments();"> Включить комментарии</a>
+<span id="comments_configure" style="display:none;">||&nbsp;<a class="comments_nav" href="javascript:_configureComments()">Настройки</a></span>
+<span id="comments_moderate" style="display:none;" >||&nbsp;<a class="comments_nav" href="javascript:_moderateComments()">Модерация</a></span>
+<span id="comments_help" style="display:none;">||&nbsp;<a class="comments_nav" href="javascript:_helpComments()">Помощь</a></span>
+</div>
+</td>
+</tr>
+</table>
+
+</td></tr>
+	<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+
+	<tr><td colspan=2>
+
+
+
+<div class="_ga1_on_">
+<div id="lecture_container">
+<div id="lecture_body">
+
+<!---->
+<div class="bannere240x400">
+<div id="banner-240x400" style="display: none;"></div>
+
+</div>
+<!---->
+
+
+
+
+
+
+    <a  name="sect29"></a><h4 >Операции над рациональными числами</h4><p  id="id_272">Определим над рациональными числами стандартный набор операций - сложение и вычитание, умножение и деление. Реализуем эти операции методами с именами <span class="texample">Plus</span>, <span class="texample">Minus</span>, <span class="texample">Mult</span>, <span class="texample">Divide</span>, соответственно. Поскольку рациональные числа - это прежде всего именно числа, то для выполнения операций над ними часто удобнее пользоваться привычными знаками операций ( <span class="texample">+</span>, <span class="texample">-</span>, <span class="texample">*</span>, <span class="texample">/</span> ). Язык C# допускает определение операций, заданных указанными символами. Этот процесс называется перегрузкой операций, и мы рассмотрим сейчас, как это делается. Перегрузка операций дает дополнительные преимущества, поскольку автоматически позволяет строить выражения над рациональными числами, используя привычные знаки операций и скобки. При вычислении выражений сохраняются привычные приоритеты операций.</p><div  class="lecture_mark" id="mark_272"></div><p  id="id_281">Конечно, можно было бы обойтись только перегруженными операциями, но полезно иметь в арсенале оба способа выполнения операций над рациональными числами. Пользователь сам будет решать, какой из способов применять в конкретной ситуации - вызывать метод или операцию.</p><div  class="lecture_mark" id="mark_281"></div><p  id="id_282">Покажем вначале реализацию метода <span class="texample">Plus</span>  и операции +:</p><div  class="lecture_mark" id="mark_282"></div><div  class="example" id="id_284"><pre>public Rational Plus(Rational a)
+{
+    int u, v;
+    u = m * a.n + n * a.m; v = n * a.n;
+    return (new Rational(u, v));
+}//Plus
+public static Rational operator +(Rational r1, Rational r2)
+{
+    return (r1.Plus(r2));
+}</pre></div><div  class="lecture_mark" id="mark_284"></div><p  id="id_285">Метод <span class="texample">Plus</span>  реализуется просто. По правилам сложения дробей вычисляется числитель и знаменатель результата, и эти данные становятся аргументами конструктора, создающего требуемое рациональное число, которое удовлетворяет правилам класса.</p><div  class="lecture_mark" id="mark_285"></div><p  id="id_287">Операция является статическим методом класса с модификатором <span class="texample">static</span>. Именем соответствующего метода является сам знак операции, которому предшествует ключевое слово <span class="texample">operator</span>. Важно понимать, что метод <span class="texample">Plus</span>  является динамическим, экземплярным методом класса. Перегруженная операция " <span class="texample">+</span> " является статическим методом, частью модуля, связанного с классом <span class="texample">Rational</span>.</p><div  class="lecture_mark" id="mark_287"></div><p  id="id_293">Аналогичным образом определим остальные операции над рациональными числами:</p><div  class="lecture_mark" id="mark_293"></div><div  class="example" id="id_294"><pre>public Rational Minus(Rational a)
+{
+   int u,v;
+   u = m*a.n - n*a.m; v= n*a.n;
+   return( new Rational(u, v));
+}//Minus
+public static Rational operator -(Rational r1, Rational r2)
+{
+   return (r1.Minus(r2));
+}
+public Rational Mult(Rational a)
+{
+   int u,v;
+   u = m*a.m; v= n*a.n;
+   return( new Rational(u, v));
+}//Mult
+public static Rational operator *(Rational r1, Rational r2)
+{
+   return (r1.Mult(r2));
+}
+public Rational Divide(Rational a)
+{
+   int u,v;
+   u = m*a.n; v= n*a.m;
+   return( new Rational(u, v));
+}//Divide
+public static Rational operator /(Rational r1, Rational r2)
+{
+   return (r1.Divide(r2));
+}</pre></div><div  class="lecture_mark" id="mark_294"></div><p  id="id_295">Вот тест, проверяющий работу этих операций:</p><div  class="lecture_mark" id="mark_295"></div><div  class="example" id="id_296"><pre>public void TestOperRational()
+{
+    Rational r1 = new Rational(1, 2), r2 = new Rational(1, 3);
+    Rational r3, r4, r5, r6;
+    r3 = r1 - r2; r4 = r1 * r2; r5 = r1 / r2; 
+    r6 = (r3 + r4) * (r5 - r3)/r4;
+    Console.WriteLine("r1 = " + r1.ToString());
+    Console.WriteLine("r2 = " + r2.ToString());
+    Console.WriteLine("r3 = " + r3.ToString());
+    Console.WriteLine("r4 = " + r4.ToString());
+    Console.WriteLine("r5 = " + r5.ToString());
+    Console.WriteLine("r6 = " + r6.ToString());
+}</pre></div><div  class="lecture_mark" id="mark_296"></div><p  id="id_297">Результаты работы этого теста показаны на <a href="#image.1.2">рис. 1.2</a>. Обратите внимание: при перегрузке операций и вычислении выражения сохранился общепринятый приоритет операций.</p><div  class="lecture_mark" id="mark_297"></div><p  align="left" id="id_298"><a name="image.1.2"></a><div><img src="01_02.jpg" alt="Операции и выражения над рациональными числами" width="396" height="155"></div><br><b>Рис. 1.2.</b> 
+        Операции и выражения над рациональными числами</p><div  class="lecture_mark" id="mark_298"></div><a  name="sect30"></a><h4 >Константы класса Rational</h4><p  id="id_299">Рассмотрим важную проблему определения констант в собственном классе. Определим две константы 0 и 1 класса <span class="texample">Rational</span>. Кажется, что сделать это невозможно из-за ограничений, накладываемых на объявление констант. Напомню, константы должны быть инициализированы в момент объявления и их значения должны быть заданы константными выражениями, известными в момент компиляции. Но в момент компиляции у класса <span class="texample">Rational</span>  нет никаких известных константных выражений. Как же быть? Справиться с проблемой поможет статический конструктор. Нам также будет полезен закрытый конструктор класса. Роль констант класса будут играть статические поля, объявленные с <b>атрибутом readonly</b>, доступные только для чтения.</p><div  class="lecture_mark" id="mark_299"></div><div  class="example" id="id_302"><pre>//Константы класса 0 и 1 - Zero и One
+      public static readonly Rational Zero, One;</pre></div><div  class="lecture_mark" id="mark_302"></div><p  id="id_303">А теперь зададим закрытый и статический конструкторы. Статический конструктор будет определять константы класса. Чтобы создать рациональное число, играющее роль константы, статический конструктор вызывает обычный конструктор. Для этого можно было бы воспользоваться имеющимся открытым конструктором, но давайте для полноты картины определим закрытый конструктор.</p><div  class="lecture_mark" id="mark_303"></div><p  id="id_304">Не забудем, что при перегрузке сигнатуры методов должны различаться, и поэтому пришлось в закрытый конструктор ввести дополнительный аргумент <span class="texample">t</span>  во избежание конфликтов. Поскольку конструктор закрытый, то гарантируется корректное задание аргументов при его вызове:</p><div  class="lecture_mark" id="mark_304"></div><div  class="example" id="id_306"><pre>Rational(int a, int b, string t)
+{
+    m = a; n = b;
+}//Закрытый конструктор
+static Rational()
+{
+    Zero = new Rational(0, 1, "");
+    One = new Rational(1, 1, "");
+}//Статический конструктор</pre></div><div  class="lecture_mark" id="mark_306"></div><p  id="id_307">Как это все работает? Статический конструктор вызывается автоматически один раз до начала работы с объектами класса. Он и задаст значения статических полей <span class="texample">Zero</span>, <span class="texample">One</span>, представляющих рациональные числа с заданным значением. Поскольку эти поля имеют модификатор <span class="texample">public</span>  <span class="texample">static</span>  <span class="texample">readonly</span>, то они доступны для всех методов класса и для клиентов класса. Они не изменяются в ходе вычислений, являясь настоящими константами класса. Прежде чем привести пример работы с константами, давайте добавим в наш класс важные булевые операции над рациональными числами - равенство и неравенство, больше и меньше. При этом две последние операции сделаем перегруженными, позволяя сравнивать рациональные числа с числами типа <span class="texample">double</span>:</p><div  class="lecture_mark" id="mark_307"></div><div  class="example" id="id_314"><pre>public static bool operator ==(Rational r1, Rational r2)
+{
+    return ((r1.m == r2.m) &amp;&amp; (r1.n == r2.n));
+}
+public static bool operator !=(Rational r1, Rational r2)
+{
+    return ((r1.m != r2.m) || (r1.n != r2.n));
+}        
+public static bool operator &lt;(Rational r1, Rational r2)
+{
+    return (r1.m * r2.n &lt; r2.m * r1.n);
+}
+public static bool operator &gt;(Rational r1, Rational r2)
+{
+    return (r1.m * r2.n &gt; r2.m * r1.n);
+}
+public static bool operator &lt;(Rational r1, double r2)
+{
+    return ((double)r1.m / (double)r1.n &lt; r2);
+}
+public static bool operator &gt;(Rational r1, double r2)
+{
+    return ((double)r1.m / (double)r1.n &gt; r2);
+}
+public override bool Equals(object obj)
+{
+    return this == (Rational)obj;
+}
+public override int GetHashCode()
+{
+    return m + n;
+}</pre></div><div  class="lecture_mark" id="mark_314"></div><p  id="id_315">Определив операции сравнения рациональных чисел,  логично переопределить и метод <span class="texample">Equals</span>, наследуемый от <span class="texample">object</span>,  а вслед за ним и метод <span class="texample">GetHashCode</span>, завершив тем самым определение собственного класса.</p><div  class="lecture_mark" id="mark_315"></div><p  id="id_319">Наш последний пример демонстрирует работу с константами, булевыми и арифметическими выражениями над рациональными числами:</p><div  class="lecture_mark" id="mark_319"></div><div  class="example" id="id_320"><pre>public void TestRationalConst()
+{
+    Rational r1 = new Rational(0, 8), r2 = new Rational(2, 5);
+    Rational r3 = new Rational(4, 10), r4 = new Rational(3, 7);
+    Rational r5 = Rational.Zero, r6, r7;
+    if ((r1 != Rational.Zero) &amp;&amp; (r2 == r3)) 
+        r6 = (r3 + Rational.One) * r4;
+    else r6 = Rational.One + Rational.One;
+    if ((r6 &gt; r3) &amp;&amp; (r4 &gt; 0.5)) r7 = r1; 
+    else r7 = r2;
+    Console.WriteLine("r1 = " + r1.ToString());
+    Console.WriteLine("r2 = " + r2.ToString());
+    Console.WriteLine("r3 = " + r3.ToString());
+    Console.WriteLine("r4 = " + r4.ToString());
+    Console.WriteLine("r5 = " + r5.ToString());
+    Console.WriteLine("r6 = " + r6.ToString());
+    Console.WriteLine("r7 = " + r7.ToString());
+}</pre></div><div  class="lecture_mark" id="mark_320"></div><p  id="id_321">Результаты работы этого примера показаны на <a href="#image.1.3">рис. 1.3</a></p><div  class="lecture_mark" id="mark_321"></div><p  align="left" id="id_322"><a name="image.1.3"></a><div><img src="01_03.jpg" alt="Константы и выражения типа Rational" width="404" height="143"></div><br><b>Рис. 1.3.</b> 
+        Константы и выражения типа Rational</p><div  class="lecture_mark" id="mark_322"></div>
+
+    
+
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+on_load_lecture();
+</script>
+
+	</td>
+	</tr>
+	<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+
+	<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+	<tr><td colspan=2 align="center">
+
+<a href="5.html" class="attention">Дальше &raquo;</b></a>
+
+	</td></tr>
+	<tr><td height="16" colspan=2><img src="/img/empty.gif" width="1" height="16"></td></tr>
+
+	<tr><td height="2" colspan=2><img src="/img/empty.gif" width="1" height="2"></td></tr>
+<tr>
+
+<td width="75%" align=left><font class="rtitle">Страницы:</font>
+<a class="rtitle" href="3.html">&laquo;</a> <font class="stitle">|</font>
+
+
+<a class="rtitle" href="1.html">1</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="2.html">2</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="3.html">3</a>
+<font class="stitle">|</font>
+
+<font class="rtitle">4</font>
+
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="5.html">5</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="test/">вопросы</a> <font class="stitle">|</font> 
+<a class="rtitle" href="5.html"><b>&raquo;</b></a>
+</td>
+<td align=right>
+
+<a href="print/" class="rtitle" target="_blank">для печати и PDA</a>
+
+
+</td>
+
+</tr>
+
+	<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+	<tr><td class="orang" height="1" colspan=2><img src="/img/empty.gif" width="1" height="1"></td></tr>
+	</table>
+	<!-- /content -->
+</div>
+</td>
+
+
+<td width="6"><img src="/img/empty.gif" width="6"></td>
+<td width="1" class="gray"><img src="/img/empty.gif"></td>
+<td width="6"><img src="/img/empty.gif" width="6"></td>
+<td width="160">
+<table border="0" cellpadding="0" cellspacing="0" background="" width="100%">
+<tr><td>
+<div id="last_qa" style="display: none"><div class="last_qa">
+<h1><a onClick="return open_last_qa(this);" href="http://ask.intuit.ru/">Вопросы и Ответы</a></h1>
+
+Помогите ответить на вопрос: <script type="text/javascript">write_lastq()</script>
+
+<div>
+<a onClick="return open_last_qa(this);" href="http://ask.intuit.ru/">Задайте свой вопрос &raquo;</a>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+	if(lastq_exists) {
+		var t = document.getElementById('last_qa');
+		if(t) t.style.display = 'block';
+	}
+</script>
+<div id="intuit_banner_01" style="display: none"></div>
+</td></tr>
+
+<tr><td align="center">&nbsp;</td></tr>
+<tr>
+<td align="center">
+<div id="banner-160x600" style="display: none;"></div>
+
+</td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+
+<tr><td align="center">
+<div class="google160x600">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-3229713645839679";
+/* Intuit_160x600 */
+google_ad_slot = "9981759856";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+
+
+</td></tr>
+</table>
+</td>
+
+
+
+</table>
+
+
+<!-- /bottom -->
+<br>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="white">
+<!---->
+<!---->
+<tr>
+<td align="center" class="border">
+    <table border="0" cellpadding="0" cellspacing="8" bgcolor="white" width="100%">
+    <tr>
+    <td width="1"><iframe id="errorHandling" src="/content-operation/error.xhtml" width="1" height="1" frameborder="0" scrolling="no"></iframe></td>
+    <td align="center" width="100%" class="rtxt">
+    Внимание! Если Вы увидите ошибку на нашем сайте, выделите её и нажмите Ctrl+Enter.
+    </td>
+    </tr>
+    </table>
+</td>
+</tr>
+<!---->
+
+<tr>
+<td align="center" class="border">
+<script type="text/javascript">
+//<![CDATA[
+yandex_partner_id = 14351;
+yandex_site_bg_color = 'FFFFFF';
+yandex_site_charset = 'windows-1251';
+yandex_ad_format = 'direct';
+yandex_font_size = 1;
+yandex_direct_type = 'horizontal';
+yandex_direct_border_type = 'ad';
+yandex_direct_limit = 4;
+yandex_direct_header_bg_color = 'FEEAC7'; yandex_direct_bg_color = 'FFF9F0'; yandex_direct_border_color = 'FF9900'; yandex_direct_title_color = '0000CC'; yandex_direct_url_color = '006600'; yandex_direct_all_color = '0000CC'; yandex_direct_text_color = '000000'; yandex_direct_hover_color = '0066FF'; yandex_direct_favicon = true; document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/system/context.js"></sc'+'ript>');
+//]]>
+</script>
+
+</td>
+</tr>
+
+
+
+
+<tr>
+<td align="center" class="border">
+    <table border="0" cellpadding="0" cellspacing="8" bgcolor="white" width="100%">
+    <tr>
+    <td>
+<b>Нужна помощь?</b><br>
+&#149; Забыли пароль? <a href="/user/remind/">Вам сюда...</a><br>
+&#149; Есть вопрос? <a href="/help/askform.xhtml">Спрашивайте!</a>
+    </td>
+    <td>
+<b>Вы можете:</b><br>
+&#149; Изменить персональные <a href="/user/edit/">данные</a><br>
+&#149; Изменить параметры <a href="/user/subscribe/">подписки</a>
+    </td>
+    <td>
+<b>Интернет-магазин:</b><br>
+&#149; Ваши заказы <a href="/shop/order/history.xhtml">здесь</a><br>
+&#149; Ваш личный <a href="/user/account/">счет</a>
+    </td>
+    </tr>
+    </table>
+</td>
+</tr>
+<!---->
+<tr>
+<td align="center" class="copy" bgcolor="#ff9900">
+    <a href="/courses.html" class="bot">Курсы</a> |
+    <a href="/speciality/" class="bot">Учебные программы</a> |
+    <a href="/shop/" class="bot">Учебники</a> | 
+    <a href="http://ask.intuit.ru/" class="bot" target="_new">Вопросы и Ответы</a> | 
+    <a href="/forum/" class="bot">Форум</a> |
+    <a href="/news/" class="bot">Новости</a> | 
+    <a href="/help/" class="bot">Помощь</a>
+    <br><br>
+    Телефон: +7 (499) 253-9312, 253-9313, факс: +7 (499) 253-9310, email: <a href="mailto:info@intuit.ru" class="bot">info@intuit.ru</a><br>
+    &copy; <a href="http://www.intuit.ru/" class="bot">INTUIT.ru::Интернет-Университет Информационных Технологий - дистанционное образование, 2003-2011</a>
+</td>
+</tr>
+</table>
+<!-- /bottom -->
+
+
+<center>
+<table width=100% border=0 cellpadding=4>
+<tr valign=top>
+<td class="topnavi" align="left">
+Проект <b><a href="http://www.osp.ru/" target="_blank">Издательства "Открытые Системы"</a></b>.<br>
+Партнеры: <a href="http://www.rmt.ru/" target="_blank">РМ Телеком</a>, <a href="http://www.kraftway.ru/" target="_blank">KRAFTWAY COMPUTERS</a>.
+</td>
+<td align=right>
+<!--begin of Rambler's Top100 code -->
+<img src="http://counter.rambler.ru/top100.cnt?435517" alt="" width=1 height=1 border=0><a href="http://top100.rambler.ru/top100/"><img src="/img/rambler.gif" alt="Rambler's Top100" width=88 height=31 border=0></a>
+<!--end of Top100 code-->
+&nbsp;
+
+<!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=496301"'+
+' target=_top><img src="http://d2.c9.b7.a0.top.list.ru/counter'+
+'?id=496301;t=75;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=496301"><img
+src="http://d2.c9.b7.a0.top.list.ru/counter?js=na;id=496301;t=75"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+&nbsp;
+
+<!-- SpyLOG -->
+<script src="http://tools.spylog.ru/counter2.2.js" type="text/javascript" id="spylog_code" counter="459372" ></script>
+<noscript>
+<a href="http://u4593.72.spylog.com/cnt?cid=459372&f=3&p=0" target="_blank">
+<img src="http://u4593.72.spylog.com/cnt?cid=459372&p=0&f=4" alt='SpyLOG' border='0' width=88 height=31 ></a> 
+</noscript>
+<!--/ SpyLOG -->
+&nbsp;
+<!--
+<script language="javascript">
+function getCookie(name) {
+var prefix = name + "="
+var cookieStartIndex = document.cookie.indexOf(prefix)
+if (cookieStartIndex == -1)
+        return null
+var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length)
+if (cookieEndIndex == -1)
+        cookieEndIndex = document.cookie.length
+return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex))
+}
+if (getCookie('adskip') == null && (getCookie('adcnt') == null || getCookie('adcnt') < 6)) {  window.open('/popup/1/','adpopup','width=300,height=320,location=no,scrollbars=no,resizable=yes,status=no,history=no,toolbar=no'); }
+</script>
+-->
+&nbsp;
+
+<!--LiveInternet counter--><script language="JavaScript"><!--
+document.write('<a href="http://www.liveinternet.ru/click" '+
+'target=_blank><img src="http://counter.yadro.ru/hit?t44.6;r'+
+escape(document.referrer)+((typeof(screen)=='undefined')?'':
+';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+';'+Math.random()+
+'" border=0 width=31 height=31 alt="liveinternet.ru"></a>')//--></script><!--/LiveInternet-->
+
+&nbsp;
+
+<!-- bigmir)net TOP 100 --><a href="http://www.bigmir.net/" target=_blank onClick='img = new Image();img.src="http://www.bigmir.net/?cl=143122";' ><script language="javascript"><!--
+bmQ='<img src=http://c.bigmir.net/?s143122&t8'
+bmD=document
+bmD.cookie="b=b"
+if(bmD.cookie)bmQ+='&c1'
+//--></script><script language="javascript1.2"><!-- 
+bmS=screen;bmQ+='&d'+(bmS.colorDepth?bmS.colorDepth:bmS.pixelDepth)+"&r"+bmS.width;
+//--></script><script language="javascript"><!--
+bmF = bmD.referrer.slice(7);
+((bmI=bmF.indexOf('/'))!=-1)?(bmF=bmF.substring(0,bmI)):(bmI=bmF.length);
+if(bmF!=window.location.href.substring(7,7+bmI))bmQ+='&f'+escape(bmD.referrer);
+bmD.write(bmQ+" border=0 width=88 height=31 alt='bigmir TOP100'>");
+//--></script></a>
+
+
+</td>
+</tr></table>
+
+</center>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17929409-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type =
+'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- GoodADVERT (SMART VIDEO in text) for http://www.intuit.ru -->
+<script type="text/javascript"><!--
+var _ga1_channel='199';
+// -->
+</script>
+<script type="text/javascript" src="http://files.goodadvert.ru/ga_1.js" charset="utf-8"></script>
+<!-- GoodADVERT -->
+
+<!--BEGIN RichBanner http://www.intuit.ru (Video)-->
+<script language="JavaScript">
+<!--
+var _rbn={};
+_rbn.v={};
+_rbn.v.inline_color = "#009900";
+_rbn.v.inline_count_max=5;
+_rbn.v.is_use_marked=0;
+_rbn.v.autostart_video = 1;
+_rbn.v.ad=[];
+document.write('<scr' + 'ipt language="JavaScript" src="http://drive.richbanner.ru/code?pid=22632&gid=19&oin=1&rid=' + (Math.floor(Math.random() * 1000000000)) +'" charset="utf-8" type="text/JavaScript"></scr' + 'ipt>');
+// -->
+</script>
+<script language="JavaScript" src="http://folder.richbanner.ru/rbn.js" charset="utf-8" type="text/JavaScript"></script>
+<!--END RichBanner -->
+
+<script type="text/javascript" src="/ssi/banner/intuit_is_bottom.js"></script>
+
+
+
+</body>
+</html>

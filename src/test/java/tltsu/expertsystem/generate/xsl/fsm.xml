@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<FSM>
+
+    <group-transition source="after">
+        <transition id="1">
+            <dest-state>after</dest-state>
+            <event>A</event>
+            <event>S</event>
+        </transition>
+
+        <transition id="2">
+            <dest-state>before</dest-state>
+            <event>N</event>
+            <code>System.out.print( #EVENT# );</code>
+        </transition>
+    </group-transition>
+
+    <group-transition source="inside">
+        <transition id="3">
+            <dest-state>after</dest-state>
+            <event>S</event>
+        </transition>
+
+        <transition id="4" >
+            <dest-state>inside</dest-state>
+            <event>A</event>
+            <code>System.out.print( #EVENT# );</code>
+        </transition>
+
+        <transition id="5">
+            <dest-state>before</dest-state>
+            <event>N</event>
+            <code>System.out.print( #EVENT# );</code>
+        </transition>
+    </group-transition>
+
+    <group-transition source="before">
+        <transition id="6" dest-state="before">
+            <dest-state>before</dest-state>
+            <event>S</event>
+        </transition>
+
+        <transition id="7">
+            <dest-state>before</dest-state>
+            <event>N</event>
+            <code>System.out.print( #EVENT# );</code>
+        </transition>
+
+        <transition id="8">
+            <dest-state>inside</dest-state>
+            <event>A</event>
+            <code>System.out.print( #EVENT# );</code>
+        </transition>
+    </group-transition>
+
+</FSM>
+
+        <!-- e() := #EVENT# -->

@@ -1,0 +1,87 @@
+
+
+@SuppressWarnings("unchecked")
+	static &lt;E extends Object&gt; FSM&lt;A, E&gt; createA() {
+		return new FSM&lt;A, E&gt;(
+
+  
+    new State&lt;A, E&gt;
+    (A.after)
+     {
+         public void handleEvent()
+         {
+               
+                 if (e().equals( _A ))
+                 {
+                    
+                    next(A.after);
+                 }
+                else 
+                 if (e().equals( _N ))
+                 {
+                    System.out.print( #EVENT# );
+                    next(A.before);
+                 }
+               
+         }
+     }
+            , 
+    new State&lt;A, E&gt;
+    (A.inside)
+     {
+         public void handleEvent()
+         {
+               
+                 if (e().equals( _S ))
+                 {
+                    
+                    next(A.after);
+                 }
+                else 
+                 if (e().equals( _A ))
+                 {
+                    System.out.print( #EVENT# );
+                    next(A.inside);
+                 }
+                else 
+                 if (e().equals( _N ))
+                 {
+                    System.out.print( #EVENT# );
+                    next(A.before);
+                 }
+               
+         }
+     }
+            , 
+    new State&lt;A, E&gt;
+    (A.before)
+     {
+         public void handleEvent()
+         {
+               
+                 if (e().equals( _S ))
+                 {
+                    
+                    next(A.before);
+                 }
+                else 
+                 if (e().equals( _N ))
+                 {
+                    System.out.print( #EVENT# );
+                    next(A.before);
+                 }
+                else 
+                 if (e().equals( _A ))
+                 {
+                    System.out.print( #EVENT# );
+                    next(A.inside);
+                 }
+               
+         }
+     }
+            
+
+
+        );
+    }
+    

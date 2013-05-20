@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key="MAX_LEVEL">2</entry>
+<entry key="MAX_CHAPTER">13</entry>
+<entry key="NORMAL_TEACH_TIME">33</entry>
+<entry key="NORMAL_TEST_TIME">25</entry>
+<entry key="MAX_NUMBER_QUESTION_IN_GROUP_STR">7</entry>
+<entry key="TEACHER_NAME">D.A.MENDELEEV</entry>
+</properties>

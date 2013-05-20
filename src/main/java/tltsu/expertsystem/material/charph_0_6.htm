@@ -1,0 +1,1046 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+
+
+<link href="http://popup.osp.ru/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://popup.osp.ru/tooltip_js_cfg/tooltip-core.js"></script>
+<script type="text/javascript" src="http://popup.osp.ru/tooltip_js_cfg/tooltip-dynamic.js"></script>
+<script type="text/javascript">document.write('<script type="text/javascript" src="http://popup.osp.ru/tooltip_cfg/tooltip-cfg-16.js?rnd=' + Math.round(Math.random() * 100000) + '"><\/script>')</script>
+
+
+<title>INTUIT.ru: Курс: Объектное ..: Лекция №2: Структуры</title>
+
+<meta name="description" content="INTUIT.ru: учебный курс: Объектное программирование в классах на С# 3.0. Лекция: Структуры"/>
+
+<meta name="keywords" content="учебный курс Объектное программирование в классах на С# 3.0 Структуры
+INTUIT"/> 
+
+<script type="text/javascript" src="/ssi/menu.js?2009-06-04"></script>
+<link rel="shortcut icon" href="/favicon.ico" />
+
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+<meta name="Pragma" content="no-cache" />
+<meta name="Cache-Control" content="no-cache" />
+<link href="/ssi/course.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/ssi/course.js"></script>
+
+<link href="/ssi/lecture.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">var lid=6417</script>
+<script type="text/javascript" src="/ssi/prototype.js"></script>
+<script type="text/javascript" src="/ssi/lecture_lib.js"></script>
+
+<link href="/ssi/int4/history/history.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/ssi/AC_OETags.js" language="javascript"></script>
+<script type="text/javascript" src="/ssi/video2.js" language="javascript"></script>
+<script type="text/javascript" src="/ssi/video4x.js" language="javascript"></script>
+<script type="text/javascript" src="/ssi/int4/history/history.js" language="javascript"></script>
+<script type="text/javascript" src="/ssi/int4/jquery-1.4.2.js" language="javascript"></script>
+
+<script type="text/javascript" src="/ssi/last_qa.js"></script>
+<link href="/ssi/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body bgcolor="white">
+<!---->
+<!--header-->
+<!---->
+<div class="topbanner">
+<div style="text-align: center;">
+<div id="banner-top" style="display: none;"></div>
+
+<script type="text/javascript">
+// <!--
+	var body = document.getElementById('body');
+	if(body) {
+		body.topmargin = 0;
+		body.marginheight = 0;
+		body.style.topmargin='0';
+		body.style.marginTop = 0;
+	}
+// -->
+</script>
+
+
+<!---->
+</div></div>
+
+
+<!-- topbox -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="white">
+<tr>
+<td class="border">
+
+<!-- header:logo, menu -->
+<table border="0" cellpadding="6" cellspacing="0" width="100%">
+
+<tr valign="top">
+<td align="left" width="33%"><a href="/"><img src="/img/logo.gif" border="0" width="285" height="52" alt="Интернет Университет информационных технологий"></a></td>
+
+<td width="34%"></td>
+
+<td valign=top align=right class="epigraph">Твой путь к знаниям</a></td>
+</tr>
+
+</table>
+<!-- //header:logo, menu -->
+<!-- menu -->
+<table border="0" cellpadding="" cellspacing="0" width="100%" bgcolor="#ff9900" background="/img/bgtopmenu2.gif">
+<tr>
+<td align="left" height="24" class="topmenu"><form action="/search" name="ya_search">
+<input name="text" type="text" value="" style="margin-left:3px; margin-top:3px;">&nbsp;&nbsp;<a href=# onClick="document.ya_search.submit();">Искать!</a></td>
+</form></td>
+<td align="right" height="24" class="topmenu">
+<a 
+	id="menu_courses"
+	onMouseOver="return menu_mov('courses');" 
+	onMouseOut="return menu_mot('courses');" 
+	href="/courses.html">Курсы</a> 
+|
+<a 
+	id="menu_education"
+	onMouseOver="return menu_mov('education');" 
+	onMouseOut="return menu_mot('education');" 
+	href="/speciality/">Обучение</a> 
+|
+<a 
+	id="menu_school"
+	onMouseOver="return menu_mov('school');" 
+	onMouseOut="return menu_mot('school');" 
+	href="/catalog/school/">Школа</a> 
+|
+<a 
+	id="menu_shop"
+	onMouseOver="return menu_mov('shop');" 
+	onMouseOut="return menu_mot('shop');" 
+	href="/shop/">Магазин</a> 
+|
+<a 
+	id="menu_communication"
+	onMouseOver="return menu_mov('communication');" 
+	onMouseOut="return menu_mot('communication');" 
+	href="http://forum.intuit.ru/">Общение</a> 
+|
+
+
+<a 
+	id="menu_news"
+	onMouseOver="return menu_mov('news');" 
+	onMouseOut="return menu_mot('news');" 
+	href="/news/">Новости</a>  
+
+|
+<a 
+	id="menu_help"
+	onMouseOver="return menu_mov('help');" 
+	onMouseOut="return menu_mot('help');" 
+	href="/help/">Помощь</a> 
+
+
+</td></tr>
+<tr>
+<td align="right" colspan="2" 
+	onMouseOver="return menu2_mov();" 
+	onMouseOut="return menu2_mot();" 
+	class="menu2">
+<div 
+	class="menu_collections"
+	id="cmenu_courses">
+<div class="menu_polosa">
+<a href="/courses.html">все</a>
+| 
+<a href="/video/">видеокурсы</a>
+| 
+<a href="/rating_courses/?sort=start">новые</a>
+| 
+<a href="/rating_courses/?sort=mstudents">популярные</a>
+| 
+<a href="/video/tree/video/speech/">доклады</a>
+<div class="delim">||</div>
+<a href="/underway_courses.html">курсы в разработке</a>
+| 
+<a href="/author_list.html">авторы</a>
+</div>
+</div>
+
+<div 
+	class="menu_collections"
+	id="cmenu_shop">
+<div class="menu_polosa">
+<a href="/shop/books/">книги</a>
+| 
+<a href="/shop/soft/">курсы на CD</a>
+| 
+<a href="/shop/video/">видеокурcы на DVD</a>
+| 
+<a href="/shop/books/sale/">распродажа</a>
+| 
+<a href="/shop/books/novelty/">новинки</a>
+<div class="delim">||</div>
+<a href="/user/cart/">корзина</a>
+| 
+<a href="/user/account/">личный счет</a> 
+|
+<a href="/shop/order/history.xhtml">заказы</a>
+| 
+<a href="/user.html">настройка</a>
+</div>
+</div>
+
+
+<div 
+	class="menu_collections"
+	id="cmenu_education">
+<div class="menu_polosa">
+
+<a href="/groups/catalog/">учебные группы</a>
+| 
+<a href="/speciality/">учебные программы</a>
+<div class="delim">||</div> 
+<a href="http://hpcu.ru" target="_blank">HPCU.ru: Суперкомпьютерные технологии</a>
+|
+<a target="_blank" href="http://www.aspiranttest.com/">АспирантТест</a>
+|
+<a target="_blank" href="http://www.diofant.ru/" target="_blank">Diofant.ru</a>
+</div>
+</div>
+
+<div 
+	class="menu_collections"
+	id="cmenu_school">
+<div class="menu_polosa">
+<a href="/catalog/school/">курсы</a>
+| 
+<a href="/catalog/school/school/">видеокурсы</a>
+| 
+<a href="/shop/video/school/">видеокурсы на DVD</a>
+</div>
+</div>
+
+
+<div 
+	class="menu_collections"
+	id="cmenu_communication">
+<div class="menu_polosa">
+<a href="http://forum.intuit.ru/">форум</a>
+| 
+<a href="http://ask.intuit.ru/">вопросы и ответы</a>
+| 
+<a href="/help/askform.xhtml">задать вопрос</a>
+<div class="delim">||</div>
+<a href="/rating_students/">рейтинг студентов</a>
+</div>
+</div>
+
+
+<div 
+	class="menu_collections"
+	id="cmenu_help">
+<div class="menu_polosa">
+<a href="/help/about.html">о проекте</a>
+| 
+<a href="/help/learning.html">об учебе</a>
+| 
+<a href="/help/how.html">как учиться</a>
+| 
+<a href="/help/pay.html">платное обучение</a>
+| 
+<a href="/help/user.html">настройки</a>
+| 
+<a href="/help/orders.html">магазин</a>
+| 
+<a href="/help/groups.html">группы</a>
+</div>
+</div>
+
+<div
+	class="menu_collections"
+	id="cmenu_news">
+<div class="menu_polosa">
+<a href="/news/">лента новостей</a>
+|
+<a 
+	title="RSS" href="/news.rss" 
+	target="_blank"><img class="rss" border="0" width="12" height="12" src="/img/rss.gif">RSS</a>
+| 
+<a href="/job/">работа</a>
+| 
+<a href="http://www.intuit.ru/user/subscribe/">подписка</a>
+<div class="delim">||</div>
+<a target="_blank" href="http://www.osp.ru/">OSP.ru</a>
+| 
+<a target="_blank" href="http://tv.osp.ru/">видеоновости</a>
+</div>
+</div>
+
+
+<div 
+	class="menu_collections"
+	id="cmenu_default">
+<div class="menu_polosa">
+&nbsp;
+</div>
+</div>
+
+</td>
+</tr>
+</table>
+<script>
+	menu_reset();
+</script>
+<!-- //menu -->
+</td>
+</tr>
+</table>
+<!-- //topbox -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td align="center" class="menu">
+<table border=0 cellpadding=1 cellspacing=0 width=100% class="orang_border"><tr><td>
+<table border=0 cellpadding=4 cellspacing=0 width=100% bgcolor="#ffffcc">
+<tr align=center>
+<td width="100%" class="rtxt">
+<!--
+<a href="http://www.intuit.ru/department/graphics/bapscs5/"><b><font color="#990000">Очный курс по Photoshop в Москве</font></b></a> 
+||
+<a href="http://www.intuit.ru/job/"><b><font color="#000099">Работа в ИНТУИТ: специалисты по Java, Python</font></b></a> 
+||
+-->
+<a href="http://www.intuit.ru/ms-grants/"><b><font color="#990000">НОВЫЙ КОНКУРС ГРАНТОВ ОТ MICROSOFT</font></b></a> 
+|| 
+<a href="http://www.intuit.ru/konkurs/"><font color="#009900">Приглашаем авторов курсов</font></a> 
+|| 
+<a href="http://www.intuit.ru/shop/other/"><font color="#990000">ВСЕ ВИДЕОКУРСЫ</font> на одном диске</a> 
+<!--
+||
+<a href="http://www.intuit.ru/ms-grants/"><b><font color="#990000">НОВЫЙ КОНКУРС ГРАНТОВ ОТ MICROSOFT</font></b></a> 
+ и <a href="/shop/product-2493478.html"><font color="#990000">381 КУРС</font> на DVD</a>
+-->
+</td>
+</tr></table>
+</td></tr></table>
+</td>
+</tr>
+</table>
+
+<br>
+
+<!--/header-->
+<!---->
+<!--/menu-->
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="73">
+<tr valign="top">
+<td width="6"><img src="/img/empty.gif" height="1" width="6"></td>
+<td>
+<div class="course_content">
+
+
+<span 
+	title="Спонсорская поддержка проекта"
+	class="course_title_right">
+<a 
+	class="course_title_right" 
+	href="/user/account/sponsor.xhtml"><img 
+		width="15"
+		height="17"
+	src="/img/rubm.gif"></a>
+<a 
+	class="course_title_right" 
+	href="/user/account/sponsor.xhtml">поддержка курса</a></span>
+
+
+<a href="/goto/course/toopincsharp30/" class="course_title">Объектное программирование в классах на С# 3.0</a>
+
+
+<br>
+
+
+
+
+
+
+
+<span class="course_lecture_info_block"
+		style="cursor: pointer; cursor: hand">
+
+
+
+<span
+	style="display:none;"
+	onClick="course_show_info(false)"
+
+	title="скрыть информацию о курсе"
+	id="lecture_show_info_off">
+<span class="course_lecture_info">информация</span>
+<span style="font-weight: bold;">
+[<span 
+	style="font-weight: 900;"
+	onMouseOver="this.style.color='blue'"
+	onMouseOut="this.style.color='#000000'"
+
+>-</span>]</span>
+
+</span>
+
+
+
+<span
+	onClick="course_show_info(true)"
+
+	title="показать информацию о курсе"
+	id="lecture_show_info_on">
+<span class="course_lecture_info">информация</span>
+<span style="font-weight: bold;">
+[<span 
+	style="font-weight: 900;"
+	onMouseOver="this.style.color='blue'"
+	onMouseOut="this.style.color='#000000'"
+
+>+</span>]</span>
+
+</span>
+
+
+</span>
+
+
+Автор:
+
+<a class="course_author"  
+	title="Биллиг Владимир Арнольдович"
+	href="/lector/39.html">В.А. Биллиг</a>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+<div 
+	id="course_stat" 
+	style="display: none"
+>
+<hr class="course_hr">
+<table border="0" cellpadding="2" cellspacing="2" width="100%" ><tr>
+
+<td valign="BOTTOM">
+<a 
+	class="course_stat"
+	onClick="window.open(this.href,'', 'toolbars=no,status=no,location=no,resizable=yes,scrollbars=no');return false;"
+	href="/help/popup/course_info.html">?</a>
+</td>
+<td valign="top" class="course_stat">
+Уровень: <span id="course_level" class="course_stat_data">для специалистов</span>
+||
+Статус: <span id="course_status" class="course_stat_data">бесплатный</span>
+||
+Опубликован: <span id="course_pub_time" class="course_stat_data">02.12.2009</span>
+
+<br>
+<span title="оценка курса выпускниками">Рейтинг: <span id="course_rating" class="course_stat_data">4.52</span></span>
+||
+<span title="количество студентов за последний месяц">Популярность: <span id="course_pop" class="course_stat_data">31</span></span>
+||
+Студентов: <span class="course_stat_data" id="course_stud1" title="всего студентов">991</span>/<span class="course_stat_data" id="course_stud2"  title="всего выпускников">83</span>
+
+</td>
+
+</tr></table>
+</div>
+
+
+
+<hr class="course_hr">
+
+<div class="course_menu">
+
+Студентам: 
+
+<span class="course_offline">
+<a 
+	title="Автономная система для изучения курса без подключения к интернету, включает тексты лекций и все тесты."
+	href="/shop/courses/?media=download&expand_selected=1&courses=604">версия для локальной работы</a>
+</span>
+
+
+
+
+
+
+
+|
+<a href="/department/pl/toopincsharp30/lit.html" class="course_menu_item">литература</a>
+
+
+
+|
+<a href="/shop/books/departments/pl/toopincsharp30/" class="course_menu_item">учебники</a>
+
+
+|
+<a href="/department/pl/toopincsharp30/forum/" class="course_menu_item">форум</a>
+
+|
+<a href="/department/pl/toopincsharp30/class/opinions/" class="course_menu_item">мнения</a>
+|
+<a href="/department/pl/toopincsharp30/class/classmates/" class="course_menu_item">однокурсники</a>
+|
+<a href="/department/pl/toopincsharp30/class/rating/" class="course_menu_item">рейтинг</a>
+
+</div>
+<hr class="course_hr">
+
+
+
+<div class="course_menu_lection">
+
+
+
+<span class="course_title_right">
+
+
+<div class="name">
+<div class="left">&nbsp;</div>
+<div class="text"><a 
+	href="/department/pl/toopincsharp30/class/examination/">экзамен</a></div>
+<div class="right">&nbsp;</div>
+</div>
+
+<div class="name">
+<div class="left">&nbsp;</div>
+<div class="text"><a 
+	href="/department/pl/toopincsharp30/class/examination_extern/">экстернат</a></div>
+<div class="right">&nbsp;</div>
+</div>
+
+
+<div class="name">
+<div class="left">&nbsp;</div>
+<div class="text"><a 
+	title="образец диплома"
+	onClick="return popup_diploma(this)" 
+	target="_blank" 
+	href="/department/pl/toopincsharp30/diplom/ru/">диплом</a></div>
+<div class="right">&nbsp;</div>
+</div>
+
+</span>
+
+
+
+
+
+
+
+
+
+
+<div class="menu_lections">
+
+<div class="name">
+<div class="left">&nbsp;</div>
+<div class="text">Лекции:</div>
+<div class="right">&nbsp;</div>
+</div>
+
+
+<div class="lections">
+<ul>
+
+<li title="Классы"><a href="../1/" class="normal">1</a></li>
+
+<li class="selected" title="Структуры">2</li>
+
+
+
+<li title="Перечисления"><a href="../3/" class="normal">3</a></li>
+
+<li title="Отношения между классами. Клиенты и наследники"><a href="../4/" class="normal">4</a></li>
+
+<li title="Интерфейсы. Множественное наследование"><a href="../5/" class="normal">5</a></li>
+
+<li title="Делегаты. Функциональный тип данных"><a href="../6/" class="normal">6</a></li>
+
+<li title="Классы с событиями"><a href="../7/" class="normal">7</a></li>
+
+<li title="Универсальность. Классы с родовыми параметрами"><a href="../8/" class="normal">8</a></li>
+
+<li title="Декларативность. Атрибуты и теги"><a href="../9/" class="normal">9</a></li>
+
+<li title="Корректность и устойчивость программных систем"><a href="../10/" class="normal">10</a></li>
+
+</ul>
+    <div class="clear">&nbsp;</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
+
+	<!-- content -->
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+
+
+<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+</td></tr>
+
+
+
+
+
+<tr>
+<td colspan="2" align=left>
+<div class="lecture_title">2. Лекция:
+ Структуры</div>
+</td>
+</tr>
+
+<tr>
+
+<td width="75%" align=left><font class="rtitle">Страницы:</font>
+
+
+<font class="rtitle">1</font>
+
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="2.html">2</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="3.html">3</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="test/">вопросы</a> <font class="stitle">|</font> 
+<a class="rtitle" href="2.html"><b>&raquo;</b></a>
+</td>
+<td align=right>
+
+<a href="print/" class="rtitle" target="_blank">для печати и PDA</a>
+
+
+</td>
+
+</tr>
+
+
+
+
+	<tr><td height="2" colspan=2><img src="/img/empty.gif" width="1" height="2"></td></tr>
+
+<tr><td align="left" class="lecture_pl1" colspan="2">
+<div class="lecture_write_to_us">Если Вы заметили ошибку - <a class="llecture_red" target="_blank" href="/help/askform.xhtml?course=604&url=http://www.intuit.ru/department/pl/toopincsharp30/2/1.html">сообщите нам</a>
+или выделите ее и нажмите Ctrl+Enter</div>
+</td></tr>
+
+
+<tr><td class="lecture_pl1" colspan="2">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr id="menu_lecture">
+<td><div id="la_indicator" style="display:none;" /></td>
+<td>
+<div id="comments_nav" >
+<a id="comments_toggle" style="display:none;" class="comments_nav" href="javascript:toggle_write_to_us();_toggleComments();"> Включить комментарии</a>
+<span id="comments_configure" style="display:none;">||&nbsp;<a class="comments_nav" href="javascript:_configureComments()">Настройки</a></span>
+<span id="comments_moderate" style="display:none;" >||&nbsp;<a class="comments_nav" href="javascript:_moderateComments()">Модерация</a></span>
+<span id="comments_help" style="display:none;">||&nbsp;<a class="comments_nav" href="javascript:_helpComments()">Помощь</a></span>
+</div>
+</td>
+</tr>
+</table>
+
+</td></tr>
+	<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+
+	<tr><td colspan=2>
+
+
+<div id="lecture_annotation" class="lecture_annotation">
+<div id="lecture_annotation_content">Структуры, как частный случай класса, позволяют задавать развернутый тип данных. Подробно обсуждаются отличия ссылочных и развернутых типов данных, когда и где следует применять тот или иной тип – выбирать структуру или ссылочный класс. Лекция сопровождается задачами.
+</div>
+<hr class="course_hr">
+</div>
+
+
+<div class="_ga1_on_">
+<div id="lecture_container">
+<div id="lecture_body">
+
+<!---->
+<div class="bannere240x400">
+<div id="banner-240x400" style="display: none;"></div>
+
+</div>
+<!---->
+
+
+
+
+<div  id="lecture_content"><h1>Содержание</h1><div id="lecture_content_adds"></div><ul><li><a href="#sect2">Развернутые и ссылочные типы</a></li><ul><li><a href="#sect3">Классы и структуры</a></li></ul><li><a href="#sect4">Структуры</a></li><ul><li><a href="#sect5">Синтаксис структур</a></li><li><a href="#sect6">Структуры и наследование</a></li><li><a href="#sect7">Структуры и инициализация полей</a></li><li><a href="2.html#sect8">Класс Rational или структура Rational</a></li><li><a href="3.html#sect9">Встроенные структуры</a></li><ul><li><a href="3.html#sect10">Еще раз о двух семантиках присваивания</a></li></ul></ul><li><a href="3.html#sect11">Архитектура Решения</a></li><li><a href="3.html#sect12">Задачи</a></li><ul><li><a href="3.html#sect13">Проекты</a></li></ul></ul></div><a  name="sect1"></a><h3 ></h3><p  id="id_244"><b>Проект к данной лекции  Вы можете скачать</b>  <a target="_blank" href="Ch2.zip"><img border="0" src="http://www.intuit.ru/img/icons/zip.gif"></a> <a target="_blank" href="Ch2.zip">здесь</a>.</p><div  class="lecture_mark" id="mark_244"></div><a  name="sect2"></a><h3 >Развернутые и ссылочные типы</h3><p  id="id_1">В ООП главная роль, которую играют классы, состоит в задании типа данных. В этой лекции, как и во многих других, говоря о классах, будем иметь в виду именно эту роль. Хотя следует помнить, что некоторые классы могут играть только одну роль - роль модуля, и для них невозможно создавать объекты. Такие сервисные классы подробно рассматривались в предыдущей лекции, а примеры таких классов появлялись многократно.</p><div  class="lecture_mark" id="mark_1"></div><p  id="id_2">Итак, будем рассматривать классы, задающие тип данных. Такой класс <span class="texample">Т</span>  представляет описание множества объектов - экземпляров класса, задавая их свойства и поведение. Если класс представляет собой текст - статическое описание, то объекты класса создаются динамически в процессе работы программы. Как правило, объекты класса <span class="texample">Т</span>  создаются в других классах, являющихся клиентами класса <span class="texample">Т</span>. Рассмотрим в клиентском классе объявление объекта класса <span class="texample">T</span>, выполненное с инициализацией:</p><div  class="lecture_mark" id="mark_2"></div><div  class="example" id="id_7"><pre>T x = new T();</pre></div><div  class="lecture_mark" id="mark_7"></div><p  id="id_8">Напомню, как выполняется этот оператор, создающий объект класса <span class="texample">Т</span>. Объектам нужна память, чтобы с ними можно было работать. Рассмотрим две классические стратегии выделения памяти и связывания объекта, создаваемого в памяти, и сущности, объявленной в тексте. Есть два типа памяти  - стек ( <span class="texample">stack</span> ) и куча ( <span class="texample">heap</span> ). Сущности <span class="texample">x</span>  в стеке всегда отводится память, но какая память  - зависит от того, к развернутому или ссылочному типу относится класс Т.</p><div  class="lecture_mark" id="mark_8"></div><p  id="id_13"><b>Определение 1</b>.Если класс <span class="texample">T</span>  относится к <b>развернутому типу</b>, то в стеке сущности <span class="texample">x</span>  отводится память, необходимая объекту класса <span class="texample">T</span>.  Говорят, что объект разворачивается на памяти, жестко связанной с сущностью <span class="texample">x</span>. Эту память сущность <span class="texample">x</span>  ни с кем не разделяет.</p><div  class="lecture_mark" id="mark_13"></div><p  id="id_19"><b>Определение 2</b>.Если класс <span class="texample">T</span>  относится к <b>ссылочному типу</b>, то память объекту отводится  в куче, а в стеке сущности <span class="texample">x</span>  отводится дополнительная память, содержащая ссылку на объект.</p><div  class="lecture_mark" id="mark_19"></div><p  id="id_22">Для развернутого типа характерно то, что каждая сущность ни с кем не разделяет свою память; сущность жестко связывается со своим объектом. В этом случае сущность и объект можно и не различать, они становятся неделимым понятием. Для ссылочных типов ситуация иная - несколько сущностей могут ссылаться на один и тот же объект. Такие сущности разделяют память и являются разными именами одного объекта. Полезно понимать разницу между сущностью, заданной ссылкой, и объектом, на который в текущий момент указывает ссылка. Заметим, что тип объекта в куче может не совпадать с базовым типом сущности, заданным классом <span class="texample">T</span>. Более того, типы объектов, с которыми динамически связывается сущность, могут быть различными, хотя и требуется определенное согласование типов. Подробнее эти вопросы будут обсуждаться при рассмотрении наследования.</p><div  class="lecture_mark" id="mark_22"></div><p  id="id_24">Развернутые и ссылочные типы порождают две различные семантики. Рассмотрим присваивание:</p><div  class="lecture_mark" id="mark_24"></div><div  class="example" id="id_25"><pre>y = x;</pre></div><div  class="lecture_mark" id="mark_25"></div><p  id="id_26">Когда сущность <span class="texample">y</span>  принадлежит развернутому типу, значения полей объекта, связанного с сущностью <span class="texample">y</span>, при присваивании изменяются, получая значения полей объекта, связанного с <span class="texample">x</span>. Напомним, что поля <span class="texample">y</span>  хранятся в стеке.</p><div  class="lecture_mark" id="mark_26"></div><p  id="id_31">Когда сущность <span class="texample">y</span>  принадлежит ссылочному типу, происходит присваивание ссылок. Ссылка <span class="texample">y</span>  получает значение ссылки <span class="texample">x</span>, и обе они после присваивания указывают на один и тот же объект. Объект в куче, на который до присваивания указывала ссылка <span class="texample">y</span>, теряет одну из своих ссылок и, возможно, становится "висячим" объектом без ссылок, становясь добычей для сборщика мусора.</p><div  class="lecture_mark" id="mark_31"></div><p  id="id_36">Рассмотрим операцию проверки объектов на эквивалентность:</p><div  class="lecture_mark" id="mark_36"></div><div  class="example" id="id_37"><pre>if (x == y)</pre></div><div  class="lecture_mark" id="mark_37"></div><p  id="id_38">Для развернутых типов объекты <span class="texample">x</span>  и <span class="texample">y</span>  эквивалентны, если эквивалентны значения всех их полей. Для ссылочных типов объекты <span class="texample">x</span>  и <span class="texample">y</span>  эквивалентны, если эквивалентны значения ссылок.</p><div  class="lecture_mark" id="mark_38"></div><p  id="id_43">Язык программирования должен позволять программисту в момент определения класса указать, к развернутому или ссылочному типу относится класс. В языке C# это делается следующим образом. Если объявление класса задается с использованием служебного слова <span class="texample">class</span>, то такой класс относится к ссылочным типам.</p><div  class="lecture_mark" id="mark_43"></div><div  class="example" id="id_45"><pre>public class A { ... }</pre></div><div  class="lecture_mark" id="mark_45"></div><p  id="id_46">Если объявление класса задается с использованием служебного слова <span class="texample">struct</span>, то такой класс относится к развернутым типам, которые также называют значимыми типами или <span class="texample">value</span>  типами.</p><div  class="lecture_mark" id="mark_46"></div><div  class="example" id="id_49"><pre>public struct B { ... }</pre></div><div  class="lecture_mark" id="mark_49"></div><p  id="id_50">Напомню: к значимым типам относятся все встроенные арифметические типы, булевский тип, перечисления, структуры. К ссылочным типам относятся массивы, строки, классы. Так можно ли в C# спроектировать свой собственный класс так, чтобы он относился к значимым типам? Ответ на этот вопрос - положительный, хотя и с рядом оговорок. Для того чтобы класс отнести к значимым типам, его достаточно объявить как структуру.</p><div  class="lecture_mark" id="mark_50"></div><a  name="sect3"></a><h4 >Классы и структуры</h4><p  id="id_51"><b>Структура</b>  - это частный случай класса. Исторически структуры используются в языках программирования раньше классов. В языках PL/1, C, Pascal они представляли собой только совокупность данных (полей класса), но не включали ни методов, ни событий. В языке С++ возможности структур были существенно расширены, и они стали настоящими классами, хотя и c некоторыми ограничениями. В языке C# сохранен именно такой подход к структурам.</p><div  class="lecture_mark" id="mark_51"></div><p  id="id_52">Чем следует руководствоваться, делая выбор между структурой и классом? Полагаю, можно пользоваться следующими правилами:</p><div  class="lecture_mark" id="mark_52"></div><ul  id="id_53"><li>если необходимо отнести класс к развернутому типу, делайте его структурой;</li><li>если у класса число полей относительно невелико, а число возможных объектов относительно велико, делайте его структурой. В этом случае память объектам будет отводиться в стеке, не будут создаваться лишние ссылки, что позволит повысить эффективность использования памяти;</li><li>в остальных случаях проектируйте настоящие классы.</li></ul><div  class="lecture_mark" id="mark_53"></div><p  id="id_57">Поскольку на структуры накладываются дополнительные ограничения, может возникнуть необходимость в компромиссе - согласиться с ограничениями и использовать структуру либо пожертвовать развернутостью и эффективностью и работать с настоящим классом. Стоит отметить: когда говорится, что встроенные типы - <span class="texample">int</span>  и другие - представляют собой классы, то, на самом деле, речь идет о классах, реализованных в виде структур.</p><div  class="lecture_mark" id="mark_57"></div><a  name="sect4"></a><h3 >Структуры</h3><p  id="id_59">Рассмотрим теперь более подробно  вопросы описания структур, их синтаксиса, семантики и тех особенностей, что отличают их от классов.</p><div  class="lecture_mark" id="mark_59"></div><a  name="sect5"></a><h4 >Синтаксис структур</h4><p  id="id_60">Синтаксис объявления структуры аналогичен синтаксису объявления класса:</p><div  class="lecture_mark" id="mark_60"></div><div  class="example" id="id_61"><pre>[атрибуты][модификаторы]struct имя_структуры[:список_интерфейсов]
+{тело_структуры}</pre></div><div  class="lecture_mark" id="mark_61"></div><p  id="id_62">Какие изменения произошли в синтаксисе заголовка структуры в сравнении с синтаксисом класса? Их немного. Перечислим их:</p><div  class="lecture_mark" id="mark_62"></div><ul  id="id_63"><li>ключевое слово <span class="texample">class</span>  изменено на слово <span class="texample">struct</span> ;</li><li>список родителей, который мог включать имя родительского класса, заменен списком, допускающим только имена интерфейсов. Для структур не может быть задан родитель (класс или структура). Заметьте, структура может наследовать интерфейсы;</li><li>для структур не применимы модификаторы <span class="texample">abstract</span>  и <span class="texample">sealed</span>. Причиной является отсутствие механизма наследования.</li></ul><div  class="lecture_mark" id="mark_63"></div><p  id="id_71">Все, что может быть вложено в тело класса, может быть вложено и в тело структуры: поля, методы, конструкторы и прочее, включая классы и интерфейсы.</p><div  class="lecture_mark" id="mark_71"></div><p  id="id_72">Аналогично классу, структура может иметь статические и нестатические поля и методы, может иметь несколько конструкторов, в том числе статические и закрытые конструкторы. Для структур можно создавать собственные константы, используя поля с атрибутом <span class="texample">readonly</span>  и статический конструктор. Структуры похожи на классы по своему описанию и ведут себя сходным образом, хотя и имеют существенные различия в семантике присваивания и проверке эквивалентности.</p><div  class="lecture_mark" id="mark_72"></div><p  id="id_74">Рассмотрим ограничения, накладываемые на структуры.</p><div  class="lecture_mark" id="mark_74"></div><a  name="sect6"></a><h4 >Структуры и наследование</h4><p  id="id_75">Самое серьезное ограничение связано с ограничением наследования. Для структуры не может быть задан родительский класс или родительская структура. У структуры не может быть наследников. Конечно, всякая структура, как и любой класс в C#, является наследником класса <span class="texample">object</span>, наследуя все свойства и методы этого класса. Структура может наследовать один или несколько интерфейсов, реализуя методы этих интерфейсов.</p><div  class="lecture_mark" id="mark_75"></div><p  id="id_77">С чем связано такое серьезное ограничение.  Одно из объяснений состоит в следующем. Рассмотрим присваивание</p><div  class="lecture_mark" id="mark_77"></div><div  class="example" id="id_78"><pre>y = x;</pre></div><div  class="lecture_mark" id="mark_78"></div><p  id="id_79">При присваивании допустимо, чтобы <span class="texample">y</span>  принадлежал родительскому классу, а <span class="texample">x</span>  - его потомку. При ссылочном присваивании никаких проблем не возникает. В результате присваивания ссылка <span class="texample">y</span>  будет указывать на объект потомка, который помимо полей родителя может иметь дополнительные поля. Главное, что все поля родителя будут определены. После такого присваивания возможно и обратное присваивание с приведением типа</p><div  class="lecture_mark" id="mark_79"></div><div  class="example" id="id_83"><pre>x = (T)y;</pre></div><div  class="lecture_mark" id="mark_83"></div><p  id="id_84">Для структур, принадлежащих к значимому типу, подобное присваивание между родителем и потомком было бы невозможным. Родителю нельзя присвоить объект потомка, поскольку у родителя меньше полей, чем у потомка, поэтому можно было бы присвоить лишь часть полей. А уж в обратную сторону операция присваивания была бы принципиально невозможна. И это одна из причин, по которой решились отказаться от наследования для значимых типов в языке C#.</p><div  class="lecture_mark" id="mark_84"></div><a  name="sect7"></a><h4 >Структуры и инициализация полей</h4><p  id="id_85">Второе серьезное ограничение связано с процессом создания объектов и их инициализацией.</p><div  class="lecture_mark" id="mark_85"></div><p  id="id_86">Рассмотрим объявление:</p><div  class="lecture_mark" id="mark_86"></div><div  class="example" id="id_87"><pre>int[] x;
+int y = x[0];</pre></div><div  class="lecture_mark" id="mark_87"></div><p  id="id_88">Это объявление корректно. А теперь рассмотрим похожее объявление:</p><div  class="lecture_mark" id="mark_88"></div><div  class="example" id="id_89"><pre>int u; 
+int v = u;</pre></div><div  class="lecture_mark" id="mark_89"></div><p  id="id_90">Это объявление некорректно, возникнет ошибка периода компиляции, сообщающая, что переменная <span class="texample">v</span>  не инициализирована и не может быть использована в вычислениях. В чем разница? Сущность <span class="texample">x</span>  - это массив и, следовательно, относится к ссылочным типам. При создании объектов ссылочного типа все поля объектов инициализируются некоторыми значениями. В данном конкретном случае все элементы целочисленного типа получат значение по умолчанию, равное нулю. Сущность <span class="texample">u</span>  арифметического типа относится к развернутому типу. Все поля объектов развернутого типа должны быть инициализированы явно или стандартным конструктором по умолчанию в момент создания объекта. Разная семантика инициализации приводит к следующим ограничениям на структуры.</p><div  class="lecture_mark" id="mark_90"></div><ul  id="id_94"><li>Если в классе поля можно объявлять с инициализацией, то поля структуры не допускают инициализацию при их объявлении. Объявление с инициализацией полей означало бы их неявную инициализацию, а потому запрещено.</li><li>Стандартный конструктор по умолчанию у структур имеется,  он в стеке создает объект, инициализируя поля созданного объекта значениями по умолчанию. Этот конструктор нельзя заменить собственным конструктором без аргументов.</li></ul><div  class="lecture_mark" id="mark_94"></div>
+
+    
+
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+on_load_lecture();
+</script>
+
+	</td>
+	</tr>
+	<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+
+	<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+	<tr><td colspan=2 align="center">
+
+<a href="2.html" class="attention">Дальше &raquo;</b></a>
+
+	</td></tr>
+	<tr><td height="16" colspan=2><img src="/img/empty.gif" width="1" height="16"></td></tr>
+
+	<tr><td height="2" colspan=2><img src="/img/empty.gif" width="1" height="2"></td></tr>
+<tr>
+
+<td width="75%" align=left><font class="rtitle">Страницы:</font>
+
+
+<font class="rtitle">1</font>
+
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="2.html">2</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="3.html">3</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="test/">вопросы</a> <font class="stitle">|</font> 
+<a class="rtitle" href="2.html"><b>&raquo;</b></a>
+</td>
+<td align=right>
+
+<a href="print/" class="rtitle" target="_blank">для печати и PDA</a>
+
+
+</td>
+
+</tr>
+
+	<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+	<tr><td class="orang" height="1" colspan=2><img src="/img/empty.gif" width="1" height="1"></td></tr>
+	</table>
+	<!-- /content -->
+</div>
+</td>
+
+
+<td width="6"><img src="/img/empty.gif" width="6"></td>
+<td width="1" class="gray"><img src="/img/empty.gif"></td>
+<td width="6"><img src="/img/empty.gif" width="6"></td>
+<td width="160">
+<table border="0" cellpadding="0" cellspacing="0" background="" width="100%">
+<tr><td>
+<div id="last_qa" style="display: none"><div class="last_qa">
+<h1><a onClick="return open_last_qa(this);" href="http://ask.intuit.ru/">Вопросы и Ответы</a></h1>
+
+Помогите ответить на вопрос: <script type="text/javascript">write_lastq()</script>
+
+<div>
+<a onClick="return open_last_qa(this);" href="http://ask.intuit.ru/">Задайте свой вопрос &raquo;</a>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+	if(lastq_exists) {
+		var t = document.getElementById('last_qa');
+		if(t) t.style.display = 'block';
+	}
+</script>
+<div id="intuit_banner_01" style="display: none"></div>
+</td></tr>
+
+<tr><td align="center">&nbsp;</td></tr>
+<tr>
+<td align="center">
+<div id="banner-160x600" style="display: none;"></div>
+
+</td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+
+<tr><td align="center">
+<div class="google160x600">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-3229713645839679";
+/* Intuit_160x600 */
+google_ad_slot = "9981759856";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+
+
+</td></tr>
+</table>
+</td>
+
+
+
+</table>
+
+
+<!-- /bottom -->
+<br>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="white">
+<!---->
+<!---->
+<tr>
+<td align="center" class="border">
+    <table border="0" cellpadding="0" cellspacing="8" bgcolor="white" width="100%">
+    <tr>
+    <td width="1"><iframe id="errorHandling" src="/content-operation/error.xhtml" width="1" height="1" frameborder="0" scrolling="no"></iframe></td>
+    <td align="center" width="100%" class="rtxt">
+    Внимание! Если Вы увидите ошибку на нашем сайте, выделите её и нажмите Ctrl+Enter.
+    </td>
+    </tr>
+    </table>
+</td>
+</tr>
+<!---->
+
+<tr>
+<td align="center" class="border">
+<script type="text/javascript">
+//<![CDATA[
+yandex_partner_id = 14351;
+yandex_site_bg_color = 'FFFFFF';
+yandex_site_charset = 'windows-1251';
+yandex_ad_format = 'direct';
+yandex_font_size = 1;
+yandex_direct_type = 'horizontal';
+yandex_direct_border_type = 'ad';
+yandex_direct_limit = 4;
+yandex_direct_header_bg_color = 'FEEAC7'; yandex_direct_bg_color = 'FFF9F0'; yandex_direct_border_color = 'FF9900'; yandex_direct_title_color = '0000CC'; yandex_direct_url_color = '006600'; yandex_direct_all_color = '0000CC'; yandex_direct_text_color = '000000'; yandex_direct_hover_color = '0066FF'; yandex_direct_favicon = true; document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/system/context.js"></sc'+'ript>');
+//]]>
+</script>
+
+</td>
+</tr>
+
+
+
+
+<tr>
+<td align="center" class="border">
+    <table border="0" cellpadding="0" cellspacing="8" bgcolor="white" width="100%">
+    <tr>
+    <td>
+<b>Нужна помощь?</b><br>
+&#149; Забыли пароль? <a href="/user/remind/">Вам сюда...</a><br>
+&#149; Есть вопрос? <a href="/help/askform.xhtml">Спрашивайте!</a>
+    </td>
+    <td>
+<b>Вы можете:</b><br>
+&#149; Изменить персональные <a href="/user/edit/">данные</a><br>
+&#149; Изменить параметры <a href="/user/subscribe/">подписки</a>
+    </td>
+    <td>
+<b>Интернет-магазин:</b><br>
+&#149; Ваши заказы <a href="/shop/order/history.xhtml">здесь</a><br>
+&#149; Ваш личный <a href="/user/account/">счет</a>
+    </td>
+    </tr>
+    </table>
+</td>
+</tr>
+<!---->
+<tr>
+<td align="center" class="copy" bgcolor="#ff9900">
+    <a href="/courses.html" class="bot">Курсы</a> |
+    <a href="/speciality/" class="bot">Учебные программы</a> |
+    <a href="/shop/" class="bot">Учебники</a> | 
+    <a href="http://ask.intuit.ru/" class="bot" target="_new">Вопросы и Ответы</a> | 
+    <a href="/forum/" class="bot">Форум</a> |
+    <a href="/news/" class="bot">Новости</a> | 
+    <a href="/help/" class="bot">Помощь</a>
+    <br><br>
+    Телефон: +7 (499) 253-9312, 253-9313, факс: +7 (499) 253-9310, email: <a href="mailto:info@intuit.ru" class="bot">info@intuit.ru</a><br>
+    &copy; <a href="http://www.intuit.ru/" class="bot">INTUIT.ru::Интернет-Университет Информационных Технологий - дистанционное образование, 2003-2011</a>
+</td>
+</tr>
+</table>
+<!-- /bottom -->
+
+
+<center>
+<table width=100% border=0 cellpadding=4>
+<tr valign=top>
+<td class="topnavi" align="left">
+Проект <b><a href="http://www.osp.ru/" target="_blank">Издательства "Открытые Системы"</a></b>.<br>
+Партнеры: <a href="http://www.rmt.ru/" target="_blank">РМ Телеком</a>, <a href="http://www.kraftway.ru/" target="_blank">KRAFTWAY COMPUTERS</a>.
+</td>
+<td align=right>
+<!--begin of Rambler's Top100 code -->
+<img src="http://counter.rambler.ru/top100.cnt?435517" alt="" width=1 height=1 border=0><a href="http://top100.rambler.ru/top100/"><img src="/img/rambler.gif" alt="Rambler's Top100" width=88 height=31 border=0></a>
+<!--end of Top100 code-->
+&nbsp;
+
+<!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=496301"'+
+' target=_top><img src="http://d2.c9.b7.a0.top.list.ru/counter'+
+'?id=496301;t=75;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=496301"><img
+src="http://d2.c9.b7.a0.top.list.ru/counter?js=na;id=496301;t=75"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+&nbsp;
+
+<!-- SpyLOG -->
+<script src="http://tools.spylog.ru/counter2.2.js" type="text/javascript" id="spylog_code" counter="459372" ></script>
+<noscript>
+<a href="http://u4593.72.spylog.com/cnt?cid=459372&f=3&p=0" target="_blank">
+<img src="http://u4593.72.spylog.com/cnt?cid=459372&p=0&f=4" alt='SpyLOG' border='0' width=88 height=31 ></a> 
+</noscript>
+<!--/ SpyLOG -->
+&nbsp;
+<!--
+<script language="javascript">
+function getCookie(name) {
+var prefix = name + "="
+var cookieStartIndex = document.cookie.indexOf(prefix)
+if (cookieStartIndex == -1)
+        return null
+var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length)
+if (cookieEndIndex == -1)
+        cookieEndIndex = document.cookie.length
+return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex))
+}
+if (getCookie('adskip') == null && (getCookie('adcnt') == null || getCookie('adcnt') < 6)) {  window.open('/popup/1/','adpopup','width=300,height=320,location=no,scrollbars=no,resizable=yes,status=no,history=no,toolbar=no'); }
+</script>
+-->
+&nbsp;
+
+<!--LiveInternet counter--><script language="JavaScript"><!--
+document.write('<a href="http://www.liveinternet.ru/click" '+
+'target=_blank><img src="http://counter.yadro.ru/hit?t44.6;r'+
+escape(document.referrer)+((typeof(screen)=='undefined')?'':
+';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+';'+Math.random()+
+'" border=0 width=31 height=31 alt="liveinternet.ru"></a>')//--></script><!--/LiveInternet-->
+
+&nbsp;
+
+<!-- bigmir)net TOP 100 --><a href="http://www.bigmir.net/" target=_blank onClick='img = new Image();img.src="http://www.bigmir.net/?cl=143122";' ><script language="javascript"><!--
+bmQ='<img src=http://c.bigmir.net/?s143122&t8'
+bmD=document
+bmD.cookie="b=b"
+if(bmD.cookie)bmQ+='&c1'
+//--></script><script language="javascript1.2"><!-- 
+bmS=screen;bmQ+='&d'+(bmS.colorDepth?bmS.colorDepth:bmS.pixelDepth)+"&r"+bmS.width;
+//--></script><script language="javascript"><!--
+bmF = bmD.referrer.slice(7);
+((bmI=bmF.indexOf('/'))!=-1)?(bmF=bmF.substring(0,bmI)):(bmI=bmF.length);
+if(bmF!=window.location.href.substring(7,7+bmI))bmQ+='&f'+escape(bmD.referrer);
+bmD.write(bmQ+" border=0 width=88 height=31 alt='bigmir TOP100'>");
+//--></script></a>
+
+
+</td>
+</tr></table>
+
+</center>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17929409-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type =
+'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- GoodADVERT (SMART VIDEO in text) for http://www.intuit.ru -->
+<script type="text/javascript"><!--
+var _ga1_channel='199';
+// -->
+</script>
+<script type="text/javascript" src="http://files.goodadvert.ru/ga_1.js" charset="utf-8"></script>
+<!-- GoodADVERT -->
+
+<!--BEGIN RichBanner http://www.intuit.ru (Video)-->
+<script language="JavaScript">
+<!--
+var _rbn={};
+_rbn.v={};
+_rbn.v.inline_color = "#009900";
+_rbn.v.inline_count_max=5;
+_rbn.v.is_use_marked=0;
+_rbn.v.autostart_video = 1;
+_rbn.v.ad=[];
+document.write('<scr' + 'ipt language="JavaScript" src="http://drive.richbanner.ru/code?pid=22632&gid=19&oin=1&rid=' + (Math.floor(Math.random() * 1000000000)) +'" charset="utf-8" type="text/JavaScript"></scr' + 'ipt>');
+// -->
+</script>
+<script language="JavaScript" src="http://folder.richbanner.ru/rbn.js" charset="utf-8" type="text/JavaScript"></script>
+<!--END RichBanner -->
+
+<script type="text/javascript" src="/ssi/banner/intuit_is_bottom.js"></script>
+
+
+
+</body>
+</html>

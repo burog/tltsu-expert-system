@@ -1,0 +1,1070 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+
+
+<link href="http://popup.osp.ru/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://popup.osp.ru/tooltip_js_cfg/tooltip-core.js"></script>
+<script type="text/javascript" src="http://popup.osp.ru/tooltip_js_cfg/tooltip-dynamic.js"></script>
+<script type="text/javascript">document.write('<script type="text/javascript" src="http://popup.osp.ru/tooltip_cfg/tooltip-cfg-16.js?rnd=' + Math.round(Math.random() * 100000) + '"><\/script>')</script>
+
+
+<title>INTUIT.ru: Курс: Объектное ..: Лекция №1: Классы</title>
+
+<meta name="description" content="INTUIT.ru: учебный курс: Объектное программирование в классах на С# 3.0. Лекция: Классы"/>
+
+<meta name="keywords" content="учебный курс Объектное программирование в классах на С# 3.0 Классы
+INTUIT"/> 
+
+<script type="text/javascript" src="/ssi/menu.js?2009-06-04"></script>
+<link rel="shortcut icon" href="/favicon.ico" />
+
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+<meta name="Pragma" content="no-cache" />
+<meta name="Cache-Control" content="no-cache" />
+<link href="/ssi/course.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/ssi/course.js"></script>
+
+<link href="/ssi/lecture.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">var lid=6416</script>
+<script type="text/javascript" src="/ssi/prototype.js"></script>
+<script type="text/javascript" src="/ssi/lecture_lib.js"></script>
+
+<link href="/ssi/int4/history/history.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/ssi/AC_OETags.js" language="javascript"></script>
+<script type="text/javascript" src="/ssi/video2.js" language="javascript"></script>
+<script type="text/javascript" src="/ssi/video4x.js" language="javascript"></script>
+<script type="text/javascript" src="/ssi/int4/history/history.js" language="javascript"></script>
+<script type="text/javascript" src="/ssi/int4/jquery-1.4.2.js" language="javascript"></script>
+
+<script type="text/javascript" src="/ssi/last_qa.js"></script>
+<link href="/ssi/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body bgcolor="white">
+<!---->
+<!--header-->
+<!---->
+<div class="topbanner">
+<div style="text-align: center;">
+<div id="banner-top" style="display: none;"></div>
+
+<script type="text/javascript">
+// <!--
+	var body = document.getElementById('body');
+	if(body) {
+		body.topmargin = 0;
+		body.marginheight = 0;
+		body.style.topmargin='0';
+		body.style.marginTop = 0;
+	}
+// -->
+</script>
+
+
+<!---->
+</div></div>
+
+
+<!-- topbox -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="white">
+<tr>
+<td class="border">
+
+<!-- header:logo, menu -->
+<table border="0" cellpadding="6" cellspacing="0" width="100%">
+
+<tr valign="top">
+<td align="left" width="33%"><a href="/"><img src="/img/logo.gif" border="0" width="285" height="52" alt="Интернет Университет информационных технологий"></a></td>
+
+<td width="34%"></td>
+
+<td valign=top align=right class="epigraph">Твой путь к знаниям</a></td>
+</tr>
+
+</table>
+<!-- //header:logo, menu -->
+<!-- menu -->
+<table border="0" cellpadding="" cellspacing="0" width="100%" bgcolor="#ff9900" background="/img/bgtopmenu2.gif">
+<tr>
+<td align="left" height="24" class="topmenu"><form action="/search" name="ya_search">
+<input name="text" type="text" value="" style="margin-left:3px; margin-top:3px;">&nbsp;&nbsp;<a href=# onClick="document.ya_search.submit();">Искать!</a></td>
+</form></td>
+<td align="right" height="24" class="topmenu">
+<a 
+	id="menu_courses"
+	onMouseOver="return menu_mov('courses');" 
+	onMouseOut="return menu_mot('courses');" 
+	href="/courses.html">Курсы</a> 
+|
+<a 
+	id="menu_education"
+	onMouseOver="return menu_mov('education');" 
+	onMouseOut="return menu_mot('education');" 
+	href="/speciality/">Обучение</a> 
+|
+<a 
+	id="menu_school"
+	onMouseOver="return menu_mov('school');" 
+	onMouseOut="return menu_mot('school');" 
+	href="/catalog/school/">Школа</a> 
+|
+<a 
+	id="menu_shop"
+	onMouseOver="return menu_mov('shop');" 
+	onMouseOut="return menu_mot('shop');" 
+	href="/shop/">Магазин</a> 
+|
+<a 
+	id="menu_communication"
+	onMouseOver="return menu_mov('communication');" 
+	onMouseOut="return menu_mot('communication');" 
+	href="http://forum.intuit.ru/">Общение</a> 
+|
+
+
+<a 
+	id="menu_news"
+	onMouseOver="return menu_mov('news');" 
+	onMouseOut="return menu_mot('news');" 
+	href="/news/">Новости</a>  
+
+|
+<a 
+	id="menu_help"
+	onMouseOver="return menu_mov('help');" 
+	onMouseOut="return menu_mot('help');" 
+	href="/help/">Помощь</a> 
+
+
+</td></tr>
+<tr>
+<td align="right" colspan="2" 
+	onMouseOver="return menu2_mov();" 
+	onMouseOut="return menu2_mot();" 
+	class="menu2">
+<div 
+	class="menu_collections"
+	id="cmenu_courses">
+<div class="menu_polosa">
+<a href="/courses.html">все</a>
+| 
+<a href="/video/">видеокурсы</a>
+| 
+<a href="/rating_courses/?sort=start">новые</a>
+| 
+<a href="/rating_courses/?sort=mstudents">популярные</a>
+| 
+<a href="/video/tree/video/speech/">доклады</a>
+<div class="delim">||</div>
+<a href="/underway_courses.html">курсы в разработке</a>
+| 
+<a href="/author_list.html">авторы</a>
+</div>
+</div>
+
+<div 
+	class="menu_collections"
+	id="cmenu_shop">
+<div class="menu_polosa">
+<a href="/shop/books/">книги</a>
+| 
+<a href="/shop/soft/">курсы на CD</a>
+| 
+<a href="/shop/video/">видеокурcы на DVD</a>
+| 
+<a href="/shop/books/sale/">распродажа</a>
+| 
+<a href="/shop/books/novelty/">новинки</a>
+<div class="delim">||</div>
+<a href="/user/cart/">корзина</a>
+| 
+<a href="/user/account/">личный счет</a> 
+|
+<a href="/shop/order/history.xhtml">заказы</a>
+| 
+<a href="/user.html">настройка</a>
+</div>
+</div>
+
+
+<div 
+	class="menu_collections"
+	id="cmenu_education">
+<div class="menu_polosa">
+
+<a href="/groups/catalog/">учебные группы</a>
+| 
+<a href="/speciality/">учебные программы</a>
+<div class="delim">||</div> 
+<a href="http://hpcu.ru" target="_blank">HPCU.ru: Суперкомпьютерные технологии</a>
+|
+<a target="_blank" href="http://www.aspiranttest.com/">АспирантТест</a>
+|
+<a target="_blank" href="http://www.diofant.ru/" target="_blank">Diofant.ru</a>
+</div>
+</div>
+
+<div 
+	class="menu_collections"
+	id="cmenu_school">
+<div class="menu_polosa">
+<a href="/catalog/school/">курсы</a>
+| 
+<a href="/catalog/school/school/">видеокурсы</a>
+| 
+<a href="/shop/video/school/">видеокурсы на DVD</a>
+</div>
+</div>
+
+
+<div 
+	class="menu_collections"
+	id="cmenu_communication">
+<div class="menu_polosa">
+<a href="http://forum.intuit.ru/">форум</a>
+| 
+<a href="http://ask.intuit.ru/">вопросы и ответы</a>
+| 
+<a href="/help/askform.xhtml">задать вопрос</a>
+<div class="delim">||</div>
+<a href="/rating_students/">рейтинг студентов</a>
+</div>
+</div>
+
+
+<div 
+	class="menu_collections"
+	id="cmenu_help">
+<div class="menu_polosa">
+<a href="/help/about.html">о проекте</a>
+| 
+<a href="/help/learning.html">об учебе</a>
+| 
+<a href="/help/how.html">как учиться</a>
+| 
+<a href="/help/pay.html">платное обучение</a>
+| 
+<a href="/help/user.html">настройки</a>
+| 
+<a href="/help/orders.html">магазин</a>
+| 
+<a href="/help/groups.html">группы</a>
+</div>
+</div>
+
+<div
+	class="menu_collections"
+	id="cmenu_news">
+<div class="menu_polosa">
+<a href="/news/">лента новостей</a>
+|
+<a 
+	title="RSS" href="/news.rss" 
+	target="_blank"><img class="rss" border="0" width="12" height="12" src="/img/rss.gif">RSS</a>
+| 
+<a href="/job/">работа</a>
+| 
+<a href="http://www.intuit.ru/user/subscribe/">подписка</a>
+<div class="delim">||</div>
+<a target="_blank" href="http://www.osp.ru/">OSP.ru</a>
+| 
+<a target="_blank" href="http://tv.osp.ru/">видеоновости</a>
+</div>
+</div>
+
+
+<div 
+	class="menu_collections"
+	id="cmenu_default">
+<div class="menu_polosa">
+&nbsp;
+</div>
+</div>
+
+</td>
+</tr>
+</table>
+<script>
+	menu_reset();
+</script>
+<!-- //menu -->
+</td>
+</tr>
+</table>
+<!-- //topbox -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td align="center" class="menu">
+<table border=0 cellpadding=1 cellspacing=0 width=100% class="orang_border"><tr><td>
+<table border=0 cellpadding=4 cellspacing=0 width=100% bgcolor="#ffffcc">
+<tr align=center>
+<td width="100%" class="rtxt">
+<!--
+<a href="http://www.intuit.ru/department/graphics/bapscs5/"><b><font color="#990000">Очный курс по Photoshop в Москве</font></b></a> 
+||
+<a href="http://www.intuit.ru/job/"><b><font color="#000099">Работа в ИНТУИТ: специалисты по Java, Python</font></b></a> 
+||
+-->
+<a href="http://www.intuit.ru/ms-grants/"><b><font color="#990000">НОВЫЙ КОНКУРС ГРАНТОВ ОТ MICROSOFT</font></b></a> 
+|| 
+<a href="http://www.intuit.ru/konkurs/"><font color="#009900">Приглашаем авторов курсов</font></a> 
+|| 
+<a href="http://www.intuit.ru/shop/other/"><font color="#990000">ВСЕ ВИДЕОКУРСЫ</font> на одном диске</a> 
+<!--
+||
+<a href="http://www.intuit.ru/ms-grants/"><b><font color="#990000">НОВЫЙ КОНКУРС ГРАНТОВ ОТ MICROSOFT</font></b></a> 
+ и <a href="/shop/product-2493478.html"><font color="#990000">381 КУРС</font> на DVD</a>
+-->
+</td>
+</tr></table>
+</td></tr></table>
+</td>
+</tr>
+</table>
+
+<br>
+
+<!--/header-->
+<!---->
+<!--/menu-->
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="73">
+<tr valign="top">
+<td width="6"><img src="/img/empty.gif" height="1" width="6"></td>
+<td>
+<div class="course_content">
+
+
+<span 
+	title="Спонсорская поддержка проекта"
+	class="course_title_right">
+<a 
+	class="course_title_right" 
+	href="/user/account/sponsor.xhtml"><img 
+		width="15"
+		height="17"
+	src="/img/rubm.gif"></a>
+<a 
+	class="course_title_right" 
+	href="/user/account/sponsor.xhtml">поддержка курса</a></span>
+
+
+<a href="/goto/course/toopincsharp30/" class="course_title">Объектное программирование в классах на С# 3.0</a>
+
+
+<br>
+
+
+
+
+
+
+
+<span class="course_lecture_info_block"
+		style="cursor: pointer; cursor: hand">
+
+
+
+<span
+	style="display:none;"
+	onClick="course_show_info(false)"
+
+	title="скрыть информацию о курсе"
+	id="lecture_show_info_off">
+<span class="course_lecture_info">информация</span>
+<span style="font-weight: bold;">
+[<span 
+	style="font-weight: 900;"
+	onMouseOver="this.style.color='blue'"
+	onMouseOut="this.style.color='#000000'"
+
+>-</span>]</span>
+
+</span>
+
+
+
+<span
+	onClick="course_show_info(true)"
+
+	title="показать информацию о курсе"
+	id="lecture_show_info_on">
+<span class="course_lecture_info">информация</span>
+<span style="font-weight: bold;">
+[<span 
+	style="font-weight: 900;"
+	onMouseOver="this.style.color='blue'"
+	onMouseOut="this.style.color='#000000'"
+
+>+</span>]</span>
+
+</span>
+
+
+</span>
+
+
+Автор:
+
+<a class="course_author"  
+	title="Биллиг Владимир Арнольдович"
+	href="/lector/39.html">В.А. Биллиг</a>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+<div 
+	id="course_stat" 
+	style="display: none"
+>
+<hr class="course_hr">
+<table border="0" cellpadding="2" cellspacing="2" width="100%" ><tr>
+
+<td valign="BOTTOM">
+<a 
+	class="course_stat"
+	onClick="window.open(this.href,'', 'toolbars=no,status=no,location=no,resizable=yes,scrollbars=no');return false;"
+	href="/help/popup/course_info.html">?</a>
+</td>
+<td valign="top" class="course_stat">
+Уровень: <span id="course_level" class="course_stat_data">для специалистов</span>
+||
+Статус: <span id="course_status" class="course_stat_data">бесплатный</span>
+||
+Опубликован: <span id="course_pub_time" class="course_stat_data">02.12.2009</span>
+
+<br>
+<span title="оценка курса выпускниками">Рейтинг: <span id="course_rating" class="course_stat_data">4.52</span></span>
+||
+<span title="количество студентов за последний месяц">Популярность: <span id="course_pop" class="course_stat_data">31</span></span>
+||
+Студентов: <span class="course_stat_data" id="course_stud1" title="всего студентов">991</span>/<span class="course_stat_data" id="course_stud2"  title="всего выпускников">83</span>
+
+</td>
+
+</tr></table>
+</div>
+
+
+
+<hr class="course_hr">
+
+<div class="course_menu">
+
+Студентам: 
+
+<span class="course_offline">
+<a 
+	title="Автономная система для изучения курса без подключения к интернету, включает тексты лекций и все тесты."
+	href="/shop/courses/?media=download&expand_selected=1&courses=604">версия для локальной работы</a>
+</span>
+
+
+
+
+
+
+
+|
+<a href="/department/pl/toopincsharp30/lit.html" class="course_menu_item">литература</a>
+
+
+
+|
+<a href="/shop/books/departments/pl/toopincsharp30/" class="course_menu_item">учебники</a>
+
+
+|
+<a href="/department/pl/toopincsharp30/forum/" class="course_menu_item">форум</a>
+
+|
+<a href="/department/pl/toopincsharp30/class/opinions/" class="course_menu_item">мнения</a>
+|
+<a href="/department/pl/toopincsharp30/class/classmates/" class="course_menu_item">однокурсники</a>
+|
+<a href="/department/pl/toopincsharp30/class/rating/" class="course_menu_item">рейтинг</a>
+
+</div>
+<hr class="course_hr">
+
+
+
+<div class="course_menu_lection">
+
+
+
+<span class="course_title_right">
+
+
+<div class="name">
+<div class="left">&nbsp;</div>
+<div class="text"><a 
+	href="/department/pl/toopincsharp30/class/examination/">экзамен</a></div>
+<div class="right">&nbsp;</div>
+</div>
+
+<div class="name">
+<div class="left">&nbsp;</div>
+<div class="text"><a 
+	href="/department/pl/toopincsharp30/class/examination_extern/">экстернат</a></div>
+<div class="right">&nbsp;</div>
+</div>
+
+
+<div class="name">
+<div class="left">&nbsp;</div>
+<div class="text"><a 
+	title="образец диплома"
+	onClick="return popup_diploma(this)" 
+	target="_blank" 
+	href="/department/pl/toopincsharp30/diplom/ru/">диплом</a></div>
+<div class="right">&nbsp;</div>
+</div>
+
+</span>
+
+
+
+
+
+
+
+
+
+
+<div class="menu_lections">
+
+<div class="name">
+<div class="left">&nbsp;</div>
+<div class="text">Лекции:</div>
+<div class="right">&nbsp;</div>
+</div>
+
+
+<div class="lections">
+<ul>
+
+<li title="Классы"><a  href="../1/" class="active">1</a></li>
+
+
+<li title="Структуры"><a href="../2/" class="normal">2</a></li>
+
+<li title="Перечисления"><a href="../3/" class="normal">3</a></li>
+
+<li title="Отношения между классами. Клиенты и наследники"><a href="../4/" class="normal">4</a></li>
+
+<li title="Интерфейсы. Множественное наследование"><a href="../5/" class="normal">5</a></li>
+
+<li title="Делегаты. Функциональный тип данных"><a href="../6/" class="normal">6</a></li>
+
+<li title="Классы с событиями"><a href="../7/" class="normal">7</a></li>
+
+<li title="Универсальность. Классы с родовыми параметрами"><a href="../8/" class="normal">8</a></li>
+
+<li title="Декларативность. Атрибуты и теги"><a href="../9/" class="normal">9</a></li>
+
+<li title="Корректность и устойчивость программных систем"><a href="../10/" class="normal">10</a></li>
+
+</ul>
+    <div class="clear">&nbsp;</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
+
+	<!-- content -->
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+
+
+<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+</td></tr>
+
+
+
+
+
+<tr>
+<td colspan="2" align=left>
+<div class="lecture_title">1. Лекция:
+ <a href="../1/">Классы</a></div>
+</td>
+</tr>
+
+<tr>
+
+<td width="75%" align=left><font class="rtitle">Страницы:</font>
+<a class="rtitle" href="4.html">&laquo;</a> <font class="stitle">|</font>
+
+
+<a class="rtitle" href="1.html">1</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="2.html">2</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="3.html">3</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="4.html">4</a>
+<font class="stitle">|</font>
+
+<font class="rtitle">5</font>
+
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="test/">вопросы</a> <font class="stitle">|</font> 
+<a class="rtitle" href="test/"><b>&raquo;</b></a>
+</td>
+<td align=right>
+
+<a href="print/" class="rtitle" target="_blank">для печати и PDA</a>
+
+
+</td>
+
+</tr>
+
+
+
+
+	<tr><td height="2" colspan=2><img src="/img/empty.gif" width="1" height="2"></td></tr>
+
+<tr><td align="left" class="lecture_pl1" colspan="2">
+<div class="lecture_write_to_us">Если Вы заметили ошибку - <a class="llecture_red" target="_blank" href="/help/askform.xhtml?course=604&url=http://www.intuit.ru/department/pl/toopincsharp30/1/5.html">сообщите нам</a>
+или выделите ее и нажмите Ctrl+Enter</div>
+</td></tr>
+
+
+<tr><td class="lecture_pl1" colspan="2">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr id="menu_lecture">
+<td><div id="la_indicator" style="display:none;" /></td>
+<td>
+<div id="comments_nav" >
+<a id="comments_toggle" style="display:none;" class="comments_nav" href="javascript:toggle_write_to_us();_toggleComments();"> Включить комментарии</a>
+<span id="comments_configure" style="display:none;">||&nbsp;<a class="comments_nav" href="javascript:_configureComments()">Настройки</a></span>
+<span id="comments_moderate" style="display:none;" >||&nbsp;<a class="comments_nav" href="javascript:_moderateComments()">Модерация</a></span>
+<span id="comments_help" style="display:none;">||&nbsp;<a class="comments_nav" href="javascript:_helpComments()">Помощь</a></span>
+</div>
+</td>
+</tr>
+</table>
+
+</td></tr>
+	<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+
+	<tr><td colspan=2>
+
+
+
+<div class="_ga1_on_">
+<div id="lecture_container">
+<div id="lecture_body">
+
+<!---->
+<div class="bannere240x400">
+<div id="banner-240x400" style="display: none;"></div>
+
+</div>
+<!---->
+
+
+
+
+
+
+    <a  name="sect31"></a><h4 >Класс RationalException</h4><p  id="id_323">При проектировании класса необходимо предусмотреть возможность возникновения исключительных ситуаций при работе с объектами класса, не дающими возможность нормально продолжить работу.  Когда такая ситуация возникает, класс должен выбросить исключение, указывающее на причину возникновения ситуации, и тогда клиент, вызвавший метод, приведший к возникновению ситуации, должен позаботиться о том, чтобы корректно ее обработать и по возможности продолжить работу.</p><div  class="lecture_mark" id="mark_323"></div><p  id="id_324">Как правило, при  проектировании класса параллельно с ним проектируется и класс, задающий исключительные ситуации. Такой класс должен быть объявлен как наследник класса <span class="texample">Exception</span>  из  библиотеки FCL, наследуя тем самым свойства и методы, общие для всех объектов, задающих исключения. Чаще всего, как это имеет быть место и в нашем случае, класс потомок устроен довольно просто  и содержит набор конструкторов, вызывающих конструктор родительского класса, передавая ему информацию о возникшей ситуации. Более подробно поговорим об этом в соответствующей лекции, посвященной исключениям, а сейчас приведу код класса <span class="texample">RationalException</span>:</p><div  class="lecture_mark" id="mark_324"></div><div  class="example" id="id_327"><pre>/// &lt;summary&gt;
+/// Класс, задающий исключения при работе
+/// с рациональными числами.
+/// &lt;/summary&gt;
+public class RationalException : Exception
+{
+    public RationalException() { }
+    public RationalException(string message) :
+        base(message) { }
+    public RationalException(string message,
+        Exception e)
+        : base(message, e) { }
+}</pre></div><div  class="lecture_mark" id="mark_327"></div><a  name="sect32"></a><h4 >Итоги. Как проектировать класс</h4><p  id="id_328">Класс <span class="texample">Rational</span>  является простым, но хорошим примером проектирования класса. Давайте перечислим основные вопросы, которые приходится решать при создании класса.</p><div  class="lecture_mark" id="mark_328"></div><ul  id="id_330"><li>Тщательно спроектировать поля класса, сделав их закрытыми для клиентов. Для класса <span class="texample">Rational</span>  эта проблема решается просто, поскольку свойств у рациональных чисел немного и они понятны.</li><li>Продумать стратегии доступа к закрытым полям класса, реализовав их в виде методов свойств. Для класса <span class="texample">Rational</span>  естественной является стратегия "ни чтения, ни записи", поэтому такие методы отсутствуют у класса. Рациональное число рассматривается в операциях как неделимое целое, поэтому у клиентов не должно быть доступа к отдельным полям, представляющим части числа.</li><li>Тщательно спроектировать набор конструкторов класса. Класс <span class="texample">Rational</span>  служит хорошим примером. Здесь есть конструктор без параметров, полный конструктор, закрытый конструктор и статический конструктор.</li><li>Задать при необходимости константы класса, используя для этого статический конструктор, как это сделано в классе <span class="texample">Rational</span>.</li><li>Тщательно спроектировать интерфейс класса - набор открытых методов, доступных клиентам класса и позволяющих выполнять различные операции над объектами класса. Для класса <span class="texample">Rational</span>  набор таких методов определяется естественным образом. Это методы, выполняющие основные операции над числами - сложение, умножение и другие операции.</li><li>При необходимости добавить в класс перегрузку операций, что позволит клиентам класса строить выражения над объектами, используя привычные знаки операций и скобки.</li><li>Добавить в класс перегруженные операции отношения, позволяющие выполнять сравнение объектов на равенство и больше - меньше.</li><li>Переопределить  методы, наследованные от родительского класса <span class="texample">Object</span>, в первую очередь переопределить метод <span class="texample">ToString</span>.</li><li>Параллельно с проектированием класса создать класс, описывающий исключительные ситуации, что позволит выбрасывать исключения в момент их возникновения, а клиентам класса позволит распознать и организовать обработку возникающих ситуаций.</li></ul><div  class="lecture_mark" id="mark_330"></div><a  name="sect33"></a><h3 >Архитектура Решения</h3><p  id="id_347">Как обычно, для демонстрации примеров данной лекции построено Решение с именем главы  Ch3_1. В Решение включены три проекта. Проект DLL с именем <span class="texample">ClassSamples</span>  содержит три класса - <span class="texample">Person</span>, <span class="texample">Rational</span>  и <span class="texample">SRational</span>, служащих примерами описания классов и структур.  Структура <span class="texample">SRational</span>  этой DLL используется в проекте, построенном для примеров следующей лекции этого курса. Проект DLL с именем Geometrical_Figures содержит примеры классов, задающих геометрические фигуры и понятия, используемые в вычислительной геометрии. Эта DLL также будет использоваться в примерах, приводимых в последующих лекции курса. Консольный проект <span class="texample">ConsoleWithClasses</span>   содержит традиционный класс <span class="texample">Testing</span>, большое число методов которого представляют собой различные тесты, иллюстрирующие работу с различными объектами классов из DLL, присоединенных к консольному проекту.</p><div  class="lecture_mark" id="mark_347"></div><a  name="sect34"></a><h4 >Задачи</h4><ol  id="id_355"><li>Создать DLL с классом <span class="texample">Point</span>, описывающим точку на плоскости, заданную декартовыми и полярными координатами. Среди методов класса <span class="texample">Point</span>   предусмотреть метод <span class="texample">Distance</span>, вычисляющий расстояние до заданной точки. Построить Windows-проект, предоставляющий пользователю интерфейс для работы с классом <span class="texample">Point</span>.</li><li>Создать DLL с классами <span class="texample">Point</span>  и <span class="texample">Line</span>, описывающими точку и линию на плоскости. Построить Windows-проект, предоставляющий пользователю интерфейс для работы с DLL. Среди методов класса <span class="texample">Line</span>  предусмотреть метод, определяющий принадлежность заданной точки линии.</li><li>Создать DLL с классами <span class="texample">Point</span>  и <span class="texample">Square</span>, описывающими точку и квадрат на плоскости со сторонами, параллельными осям координат. Построить Windows-проект, предоставляющий пользователю интерфейс для работы с DLL. Среди методов класса <span class="texample">Square</span>  предусмотреть метод, определяющий принадлежность заданной точки квадрату.</li><li>Создать DLL с классами <span class="texample">Point</span>  и <span class="texample">Circle</span>, описывающими точку и круг на плоскости. Построить Windows-проект, предоставляющий пользователю интерфейс для работы с DLL. Среди методов класса <span class="texample">Circle</span>  предусмотреть метод, определяющий принадлежность заданной точки кругу.</li><li>Создать DLL с классами <span class="texample">Point</span>  и <span class="texample">Rectangle</span>, описывающими точку и прямоугольник на плоскости со сторонами, параллельными осям координат. Построить Windows-проект, предоставляющий пользователю интерфейс для работы с DLL. Среди методов класса <span class="texample">Rectangle</span>  предусмотреть метод, определяющий принадлежность заданной точки прямоугольнику.</li><li>Создать DLL с классами <span class="texample">Point</span>  и <span class="texample">Rhomb</span>, описывающими точку и ромб на плоскости с осями, параллельными осям координат. Построить Windows-проект, предоставляющий пользователю интерфейс для работы с DLL. Среди методов класса <span class="texample">Rhomb</span>  предусмотреть метод, определяющий принадлежность заданной точки ромбу.</li><li>Создать DLL с классами <span class="texample">Point</span>  и <span class="texample">Tetragon</span>, описывающими точку и четырехугольник на плоскости. Построить Windows-проект, предоставляющий пользователю интерфейс для работы с DLL. Среди методов класса <span class="texample">Tetragon</span>  предусмотреть метод, определяющий принадлежность заданной точки четырехугольнику.</li><li>Создать DLL с классами <span class="texample">Point</span>  и <span class="texample">Triangle</span>, описывающими точку и треугольник на плоскости. Построить Windows-проект, предоставляющий пользователю интерфейс для работы с DLL. Среди методов класса <span class="texample">Triangle</span>  предусмотреть метод, определяющий принадлежность заданной точки треугольнику.</li><li>Создать DLL с классами <span class="texample">Account</span>  и <span class="texample">Accounts</span>, описывающими счет в банке и множество  счетов клиентов, хранящихся в файле. Построить Windows-проект, предоставляющий пользователю интерфейс для работы с DLL.</li></ol><div  class="lecture_mark" id="mark_355"></div><a  name="sect35"></a><h4 >Трансляция выражений</h4><p  id="id_392">Пусть строка <span class="texample">s</span>  задает некоторое выражение, значение которого требуется вычислить. Вот несколько примеров возможных выражений:</p><div  class="lecture_mark" id="mark_392"></div><div  class="example" id="id_394"><pre>S1 = 2 +3*5/7;
+S2 = 2 * sin(x) - (3 + cos(x)) * (x +5);
+S3 = (x &gt; y) &amp;&amp; (x &lt; 10) || (y &gt; 5).</pre></div><div  class="lecture_mark" id="mark_394"></div><p  id="id_395">Рассмотрим классическую схему решения этой задачи. Первым делом производится разбор выражения - лексический анализ, где выражение преобразуется в последовательность лексем. Затем выражение записывается в виде обратной польской записи, а затем уже вычисляется значение преобразованного выражения.</p><div  class="lecture_mark" id="mark_395"></div><p  id="id_396">На этапе лексического анализа выражения оно представляется в виде последовательности лексем, задающих операнды выражения, операции и скобки. Операндами являются константы и переменные, к операциям относятся знаки унарных и бинарных операций, а также функции из фиксированного набора стандартных функций. Результат лексического анализа обычно представляется некоторой динамической структурой данных - массивом, списком, очередью или стеком. На этом этапе обычно обнаруживается большинство синтаксических ошибок в записи выражения.</p><div  class="lecture_mark" id="mark_396"></div><p  id="id_397">Обратная польская запись выражения - это бесскобочная запись, где операции непосредственно предшествуют операнды операции. Наши выражения <span class="texample">S1 </span> - <span class="texample">S3</span>   в обратной польской записи имеют вид:</p><div  class="lecture_mark" id="mark_397"></div><div  class="example" id="id_400"><pre>CS1 = 2 3 5 * 7 / +;
+CS2 = 2 x sin * 3 x cos + x 5 + * -;
+CS3 = x y &gt; x 10 &lt; &amp;&amp; y 5 &gt; ||;</pre></div><div  class="lecture_mark" id="mark_400"></div><p  id="id_401">Рассмотрим возможный алгоритм решения задачи. Пусть результатом лексического анализа выражения является стек лексем - <span class="texample">stackExpression</span>. Выходом алгоритма является очередь лексем - <span class="texample">queueBackExpression</span>, представляющая обратную польскую запись выражения. В качестве промежуточных данных используется очередь операций - <span class="texample">queueOperations</span>.</p><div  class="lecture_mark" id="mark_401"></div><p  id="id_405">Пока <span class="texample">stackExpression</span>  не пуст, читается очередная лексема <span class="texample">Lex</span>  с вершины стека. Затем производится анализ типа этой лексемы и приоритета, если лексема задает операцию. Если лексема - операнд, то она помещается в очередь <span class="texample">queueBackExpression</span>. Если лексема - открывающая скобка, то она записывается в очередь <span class="texample">queueOperations</span>. Если лексема - закрывающая скобка, то из очереди <span class="texample">queueOperations</span>  выгружаются все элементы вплоть до открывающей скобки. Эти элементы записываются в выходную очередь <span class="texample">queueBackExpression</span>. Знаки скобок в выходной стек не записываются. Если лексема - операция, то анализируется ее приоритет. Если приоритет лексемы выше приоритета последней операции, записанной в <span class="texample">queueOperations</span>, то новая операция записывается в очередь <span class="texample">queueOperations</span>. В противном случае операция из очереди выгружается и записывается в очередь <span class="texample">queueBackExpression</span>. Когда стек <span class="texample">stackExpression</span>  опустоша
+ется, то все операции, оставшиеся в очереди <span class="texample">queueOperations</span>, выгружаются и записываются в очередь <span class="texample">queueBackExpression</span>.</p><div  class="lecture_mark" id="mark_405"></div><p  id="id_418">Очередь <span class="texample">queueBackExpression</span>  является входом для метода, вычисляющего значение выражения. Для вычисления выражения можно использовать стек <span class="texample">stackResult</span>. Алгоритм вычисления значения выражения можно описать следующим образом. Пока очередь <span class="texample">queueBackExpression</span>  не пуста, читается очередная лексема. Если лексема - операнд, то она записывается в стек <span class="texample">stackResult</span>. Если лексема  - операция, то из стека <span class="texample">stackResult</span>  выгружаются предшествующие операции операнды, один или два в зависимости от того, является операция унарной или бинарной. Далее выполняется операция над операндами, и ее результат как операнд записывается в стек <span class="texample">stackResult</span>. Если все корректно, то по опустошению очереди на вершине стека <span class="texample">stackResult</span>  будет операнд, представляющий значение выражения.</p><div  class="lecture_mark" id="mark_418"></div><p  id="id_426">В следующих задачах требуется построить классы, поддерживающие процесс трансляции выражений в соответствии с описанным алгоритмом или какой либо его модификацией.</p><div  class="lecture_mark" id="mark_426"></div><a  name="sect36"></a><h4 >Задачи на трансляцию выражений</h4><ol  id="id_427"><li>Создать DLL с классом <span class="texample">Lexeme</span>, описывающим лексему. Построить Windows-проект, предоставляющий пользователю интерфейс для работы с DLL и позволяющий выполнить лексический анализ текста, задающего программу (фрагмент программы) на языке C#.</li><li>(*) Создать DLL с классами <span class="texample">Lexeme</span>   и <span class="texample">AriphmeticExpression</span>, описывающими лексему и арифметическое выражение. Выражение строится из чисел, функций, знаков операций и скобок и задается строкой текста. В классе предусмотреть метод, позволяющий вычислить значение выражения. Среди методов класса <span class="texample">AriphmeticExpression</span>   предусмотреть метод разбора выражения, представляющий выражение в виде последовательности лексем.  Построить Windows-проект, предоставляющий пользователю интерфейс для работы с DLL.</li><li>(*) Создать DLL с классами <span class="texample">Lexeme</span>   и <span class="texample">AriphmeticExpression</span>, описывающими лексему и арифметическое выражение с одной переменной <span class="texample">x</span>. Выражение строится из чисел, переменной <span class="texample">x</span>, функций, знаков операций и скобок и задается строкой текста. В классе предусмотреть метод, позволяющий вычислить значение выражения. Среди методов класса <span class="texample">AriphmeticExpression</span>   предусмотреть метод разбора выражения, представляющий выражение в виде последовательности лексем.  Построить Windows-проект, предоставляющий пользователю интерфейс для работы с DLL.</li><li>(*) Создать DLL с классами <span class="texample">Lexeme</span>   и <span class="texample">AriphmeticExpression</span>, описывающими лексему и арифметическое выражение с  двумя переменными <span class="texample">x</span>  и <span class="texample">y</span>. Выражение строится из чисел, переменных <span class="texample">x</span>  и <span class="texample">y</span>, функций, знаков операций и скобок и задается строкой текста. В классе предусмотреть метод, позволяющий вычислить значение выражения. Среди методов класса <span class="texample">AriphmeticExpression</span>   предусмотреть метод разбора выражения, представляющий выражение в виде последовательности лексем.  Построить Windows-проект, предоставляющий пользователю интерфейс для работы с DLL.</li><li>(**) Создать DLL с классами <span class="texample">Lexeme</span>   и <span class="texample">LogicExpression</span>, описывающими лексему и логическое выражение. Выражение строится из констант <span class="texample">true</span>  и <span class="texample">false</span>, отношений, функций, знаков операций и скобок и задается строкой текста. Отношение представляет собой пару арифметических выражений, связанных операцией отношения. В классе предусмотреть метод, позволяющий вычислить значение выражения. Среди методов класса <span class="texample">LogicExpression</span>   предусмотреть метод, представляющий выражение в виде последовательности лексем.  Построить Windows-проект, предоставляющий пользователю интерфейс для работы с DLL.</li><li>(**) Создать DLL с классами <span class="texample">Lexeme</span>   и <span class="texample">LogicExpression</span>, описывающими лексему и логическое выражение с одной переменной <span class="texample">x</span>. Выражение строится из констант <span class="texample">true</span>  и <span class="texample">false</span>, отношений, функций, знаков операций и скобок и задается строкой текста. Отношение представляет собой пару арифметических выражений c переменной <span class="texample">x</span>, связанных операцией отношения. В классе предусмотреть метод, позволяющий вычислить значение выражения. Среди методов класса <span class="texample">LogicExpression</span>   предусмотреть метод, представляющий выражение в виде последовательности лексем.  Построить Windows-проект, предоставляющий пользователю интерфейс для работы с DLL.</li><li>(**) Создать DLL с классами <span class="texample">Lexeme</span>   и <span class="texample">LogicExpression</span>, описывающими лексему и логическое выражение c двумя переменными <span class="texample">x</span>  и <span class="texample">y</span>. Выражение строится из констант <span class="texample">true</span>  и <span class="texample">false</span>, отношений, функций, знаков операций и скобок и задается строкой текста. Отношение представляет собой пару арифметических выражений с переменными <span class="texample">x</span>  и <span class="texample">y</span>, связанных операцией отношения. В классе предусмотреть метод, позволяющий вычислить значение выражения. Среди методов класса <span class="texample">LogicExpression</span>   предусмотреть метод, представляющий выражение в виде последовательности лексем.  Построить Windows-проект, предоставляющий пользователю интерфейс для работы с DLL.</li><li>(**) Создать DLL с классами <span class="texample">Lexeme</span>, <span class="texample">Expression</span>  и <span class="texample">Assignment</span>, описывающими лексему, выражение и оператор присваивания вида <span class="texample">z = expression</span>.  Выражение в правой части оператора присваивания может быть одним из выражений, заданных в предыдущих задачах этого раздела. Построить Windows-проект, предоставляющий пользователю интерфейс для работы с DLL.</li><li>Создать DLL с классами <span class="texample">Student</span>   и <span class="texample">Exam</span>, описывающими студента и экзамен. Построить Windows-проект, предоставляющий пользователю интерфейс для работы с DLL.</li><li>Создать DLL с сервисным классом <span class="texample">Poisk</span>, содержащего методы линейного и бинарного поиска.  Построить Windows-проект, предоставляющий пользователю интерфейс для работы с DLL.</li><li>Создать DLL с сервисным классом <span class="texample">Sorting</span>, содержащего методы сортировки.  Построить Windows-проект, предоставляющий пользователю интерфейс для работы с DLL.</li><li>Создать DLL с интерфейсным классом <span class="texample">InputArray</span>, позволяющий вводить одномерный массив с проверкой корректности ввода элементов.  Построить Windows-проект, предоставляющий пользователю интерфейс для работы с DLL.</li></ol><div  class="lecture_mark" id="mark_427"></div><a  name="sect37"></a><h4 >Проекты</h4><ol  id="id_486"><li>Дано множество точек <span class="texample">P<sub>1</sub></span>, <span class="texample">P<sub>2</sub></span>, <img src="/img/tex/bf0b6b71aba2821376cfb0bec4d208b6.png" alt="\dots" style="display: inline; position: relative; top: 1;" width="25" height="5">  <span class="texample">P<sub>n</sub></span>  со случайными координатами. Построить множество точек <span class="texample">P<sub>1</sub></span>, <span class="texample">P<sub>2</sub></span>, <img src="/img/tex/bf0b6b71aba2821376cfb0bec4d208b6.png" alt="\dots" style="display: inline; position: relative; top: 1;" width="25" height="5">  <span class="texample">P<sub>m</sub></span>  ( <span class="texample">m &lt;= n</span> ), обход которых позволяет построить многоугольник без пересечений, если это возможно. Уметь вычислять площадь многоугольника, определять, является ли он выпуклым, принадлежит ли заданная точка внутренней области (границам) многоугольника. Построить реализацию в виде класса <span class="texample">Polygon</span>, включенного в состав DLL. Построить Windows-проект, предоставляющий пользователю интерфейс для работы с объектами класса <span class="texample">Polygon</span>.</li><li>Построить Windows-проект, реализующий трансляцию выражений.</li></ol><div  class="lecture_mark" id="mark_486"></div>
+
+
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+on_load_lecture();
+</script>
+
+	</td>
+	</tr>
+	<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+
+	<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+	<tr><td colspan=2 align="center">
+
+<a href="test/" class="attention">Перейти к вопросам &raquo;</a>
+
+	</td></tr>
+	<tr><td height="16" colspan=2><img src="/img/empty.gif" width="1" height="16"></td></tr>
+
+	<tr><td height="2" colspan=2><img src="/img/empty.gif" width="1" height="2"></td></tr>
+<tr>
+
+<td width="75%" align=left><font class="rtitle">Страницы:</font>
+<a class="rtitle" href="4.html">&laquo;</a> <font class="stitle">|</font>
+
+
+<a class="rtitle" href="1.html">1</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="2.html">2</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="3.html">3</a>
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="4.html">4</a>
+<font class="stitle">|</font>
+
+<font class="rtitle">5</font>
+
+<font class="stitle">|</font>
+
+
+<a class="rtitle" href="test/">вопросы</a> <font class="stitle">|</font> 
+<a class="rtitle" href="test/"><b>&raquo;</b></a>
+</td>
+<td align=right>
+
+<a href="print/" class="rtitle" target="_blank">для печати и PDA</a>
+
+
+</td>
+
+</tr>
+
+	<tr><td height="8" colspan=2><img src="/img/empty.gif" width="1" height="8"></td></tr>
+	<tr><td class="orang" height="1" colspan=2><img src="/img/empty.gif" width="1" height="1"></td></tr>
+	</table>
+	<!-- /content -->
+</div>
+</td>
+
+
+<td width="6"><img src="/img/empty.gif" width="6"></td>
+<td width="1" class="gray"><img src="/img/empty.gif"></td>
+<td width="6"><img src="/img/empty.gif" width="6"></td>
+<td width="160">
+<table border="0" cellpadding="0" cellspacing="0" background="" width="100%">
+<tr><td>
+<div id="last_qa" style="display: none"><div class="last_qa">
+<h1><a onClick="return open_last_qa(this);" href="http://ask.intuit.ru/">Вопросы и Ответы</a></h1>
+
+Помогите ответить на вопрос: <script type="text/javascript">write_lastq()</script>
+
+<div>
+<a onClick="return open_last_qa(this);" href="http://ask.intuit.ru/">Задайте свой вопрос &raquo;</a>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+	if(lastq_exists) {
+		var t = document.getElementById('last_qa');
+		if(t) t.style.display = 'block';
+	}
+</script>
+<div id="intuit_banner_01" style="display: none"></div>
+</td></tr>
+
+<tr><td align="center">&nbsp;</td></tr>
+<tr>
+<td align="center">
+<div id="banner-160x600" style="display: none;"></div>
+
+</td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+
+<tr><td align="center">
+<div class="google160x600">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-3229713645839679";
+/* Intuit_160x600 */
+google_ad_slot = "9981759856";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+
+
+</td></tr>
+</table>
+</td>
+
+
+
+</table>
+
+
+<!-- /bottom -->
+<br>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="white">
+<!---->
+<!---->
+<tr>
+<td align="center" class="border">
+    <table border="0" cellpadding="0" cellspacing="8" bgcolor="white" width="100%">
+    <tr>
+    <td width="1"><iframe id="errorHandling" src="/content-operation/error.xhtml" width="1" height="1" frameborder="0" scrolling="no"></iframe></td>
+    <td align="center" width="100%" class="rtxt">
+    Внимание! Если Вы увидите ошибку на нашем сайте, выделите её и нажмите Ctrl+Enter.
+    </td>
+    </tr>
+    </table>
+</td>
+</tr>
+<!---->
+
+<tr>
+<td align="center" class="border">
+<script type="text/javascript">
+//<![CDATA[
+yandex_partner_id = 14351;
+yandex_site_bg_color = 'FFFFFF';
+yandex_site_charset = 'windows-1251';
+yandex_ad_format = 'direct';
+yandex_font_size = 1;
+yandex_direct_type = 'horizontal';
+yandex_direct_border_type = 'ad';
+yandex_direct_limit = 4;
+yandex_direct_header_bg_color = 'FEEAC7'; yandex_direct_bg_color = 'FFF9F0'; yandex_direct_border_color = 'FF9900'; yandex_direct_title_color = '0000CC'; yandex_direct_url_color = '006600'; yandex_direct_all_color = '0000CC'; yandex_direct_text_color = '000000'; yandex_direct_hover_color = '0066FF'; yandex_direct_favicon = true; document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/system/context.js"></sc'+'ript>');
+//]]>
+</script>
+
+</td>
+</tr>
+
+
+
+
+<tr>
+<td align="center" class="border">
+    <table border="0" cellpadding="0" cellspacing="8" bgcolor="white" width="100%">
+    <tr>
+    <td>
+<b>Нужна помощь?</b><br>
+&#149; Забыли пароль? <a href="/user/remind/">Вам сюда...</a><br>
+&#149; Есть вопрос? <a href="/help/askform.xhtml">Спрашивайте!</a>
+    </td>
+    <td>
+<b>Вы можете:</b><br>
+&#149; Изменить персональные <a href="/user/edit/">данные</a><br>
+&#149; Изменить параметры <a href="/user/subscribe/">подписки</a>
+    </td>
+    <td>
+<b>Интернет-магазин:</b><br>
+&#149; Ваши заказы <a href="/shop/order/history.xhtml">здесь</a><br>
+&#149; Ваш личный <a href="/user/account/">счет</a>
+    </td>
+    </tr>
+    </table>
+</td>
+</tr>
+<!---->
+<tr>
+<td align="center" class="copy" bgcolor="#ff9900">
+    <a href="/courses.html" class="bot">Курсы</a> |
+    <a href="/speciality/" class="bot">Учебные программы</a> |
+    <a href="/shop/" class="bot">Учебники</a> | 
+    <a href="http://ask.intuit.ru/" class="bot" target="_new">Вопросы и Ответы</a> | 
+    <a href="/forum/" class="bot">Форум</a> |
+    <a href="/news/" class="bot">Новости</a> | 
+    <a href="/help/" class="bot">Помощь</a>
+    <br><br>
+    Телефон: +7 (499) 253-9312, 253-9313, факс: +7 (499) 253-9310, email: <a href="mailto:info@intuit.ru" class="bot">info@intuit.ru</a><br>
+    &copy; <a href="http://www.intuit.ru/" class="bot">INTUIT.ru::Интернет-Университет Информационных Технологий - дистанционное образование, 2003-2011</a>
+</td>
+</tr>
+</table>
+<!-- /bottom -->
+
+
+<center>
+<table width=100% border=0 cellpadding=4>
+<tr valign=top>
+<td class="topnavi" align="left">
+Проект <b><a href="http://www.osp.ru/" target="_blank">Издательства "Открытые Системы"</a></b>.<br>
+Партнеры: <a href="http://www.rmt.ru/" target="_blank">РМ Телеком</a>, <a href="http://www.kraftway.ru/" target="_blank">KRAFTWAY COMPUTERS</a>.
+</td>
+<td align=right>
+<!--begin of Rambler's Top100 code -->
+<img src="http://counter.rambler.ru/top100.cnt?435517" alt="" width=1 height=1 border=0><a href="http://top100.rambler.ru/top100/"><img src="/img/rambler.gif" alt="Rambler's Top100" width=88 height=31 border=0></a>
+<!--end of Top100 code-->
+&nbsp;
+
+<!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=496301"'+
+' target=_top><img src="http://d2.c9.b7.a0.top.list.ru/counter'+
+'?id=496301;t=75;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=38/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=496301"><img
+src="http://d2.c9.b7.a0.top.list.ru/counter?js=na;id=496301;t=75"
+border=0 height=31 width=38
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+&nbsp;
+
+<!-- SpyLOG -->
+<script src="http://tools.spylog.ru/counter2.2.js" type="text/javascript" id="spylog_code" counter="459372" ></script>
+<noscript>
+<a href="http://u4593.72.spylog.com/cnt?cid=459372&f=3&p=0" target="_blank">
+<img src="http://u4593.72.spylog.com/cnt?cid=459372&p=0&f=4" alt='SpyLOG' border='0' width=88 height=31 ></a> 
+</noscript>
+<!--/ SpyLOG -->
+&nbsp;
+<!--
+<script language="javascript">
+function getCookie(name) {
+var prefix = name + "="
+var cookieStartIndex = document.cookie.indexOf(prefix)
+if (cookieStartIndex == -1)
+        return null
+var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length)
+if (cookieEndIndex == -1)
+        cookieEndIndex = document.cookie.length
+return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex))
+}
+if (getCookie('adskip') == null && (getCookie('adcnt') == null || getCookie('adcnt') < 6)) {  window.open('/popup/1/','adpopup','width=300,height=320,location=no,scrollbars=no,resizable=yes,status=no,history=no,toolbar=no'); }
+</script>
+-->
+&nbsp;
+
+<!--LiveInternet counter--><script language="JavaScript"><!--
+document.write('<a href="http://www.liveinternet.ru/click" '+
+'target=_blank><img src="http://counter.yadro.ru/hit?t44.6;r'+
+escape(document.referrer)+((typeof(screen)=='undefined')?'':
+';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+';'+Math.random()+
+'" border=0 width=31 height=31 alt="liveinternet.ru"></a>')//--></script><!--/LiveInternet-->
+
+&nbsp;
+
+<!-- bigmir)net TOP 100 --><a href="http://www.bigmir.net/" target=_blank onClick='img = new Image();img.src="http://www.bigmir.net/?cl=143122";' ><script language="javascript"><!--
+bmQ='<img src=http://c.bigmir.net/?s143122&t8'
+bmD=document
+bmD.cookie="b=b"
+if(bmD.cookie)bmQ+='&c1'
+//--></script><script language="javascript1.2"><!-- 
+bmS=screen;bmQ+='&d'+(bmS.colorDepth?bmS.colorDepth:bmS.pixelDepth)+"&r"+bmS.width;
+//--></script><script language="javascript"><!--
+bmF = bmD.referrer.slice(7);
+((bmI=bmF.indexOf('/'))!=-1)?(bmF=bmF.substring(0,bmI)):(bmI=bmF.length);
+if(bmF!=window.location.href.substring(7,7+bmI))bmQ+='&f'+escape(bmD.referrer);
+bmD.write(bmQ+" border=0 width=88 height=31 alt='bigmir TOP100'>");
+//--></script></a>
+
+
+</td>
+</tr></table>
+
+</center>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17929409-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type =
+'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- GoodADVERT (SMART VIDEO in text) for http://www.intuit.ru -->
+<script type="text/javascript"><!--
+var _ga1_channel='199';
+// -->
+</script>
+<script type="text/javascript" src="http://files.goodadvert.ru/ga_1.js" charset="utf-8"></script>
+<!-- GoodADVERT -->
+
+<!--BEGIN RichBanner http://www.intuit.ru (Video)-->
+<script language="JavaScript">
+<!--
+var _rbn={};
+_rbn.v={};
+_rbn.v.inline_color = "#009900";
+_rbn.v.inline_count_max=5;
+_rbn.v.is_use_marked=0;
+_rbn.v.autostart_video = 1;
+_rbn.v.ad=[];
+document.write('<scr' + 'ipt language="JavaScript" src="http://drive.richbanner.ru/code?pid=22632&gid=19&oin=1&rid=' + (Math.floor(Math.random() * 1000000000)) +'" charset="utf-8" type="text/JavaScript"></scr' + 'ipt>');
+// -->
+</script>
+<script language="JavaScript" src="http://folder.richbanner.ru/rbn.js" charset="utf-8" type="text/JavaScript"></script>
+<!--END RichBanner -->
+
+<script type="text/javascript" src="/ssi/banner/intuit_is_bottom.js"></script>
+
+
+
+</body>
+</html>

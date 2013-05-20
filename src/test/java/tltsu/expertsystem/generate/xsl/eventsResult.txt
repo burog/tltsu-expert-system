@@ -1,0 +1,7 @@
+
+           static String _A = "a" ;
+        
+           static String _S = " " ;
+        
+           static String _N = "\n" ;
+        
